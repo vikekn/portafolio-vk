@@ -640,19 +640,22 @@ img.meme {
 
 
 #carouselExampleIndicators.carousel.slide {
-    width: 70rem; /* Ancho del carrusel */
-    height: 50rem; /* Altura aumentada para alargar la imagen hacia abajo */
-    padding-left: 2rem; /* Añade espacio a la izquierda */
-    padding-right: 15rem; /* Añade espacio a la derecha */
-    margin: 70px 209px; /* Centra el carrusel horizontalmente */
+    @media (max-width: 1024rem) {
+        width: 70rem; /* Ancho del carrusel */
+        height: 50rem; /* Altura aumentada para alargar la imagen hacia abajo */
+        padding-left: 2rem; /* Añade espacio a la izquierda */
+        padding-right: 15rem; /* Añade espacio a la derecha */
+        margin: 70px 209px; /* Centra el carrusel horizontalmente */
+    }
+
     /* Otros estilos adicionales según tus necesidades */
     /* Media query para pantallas más pequeñas */
-    @media only screen and (max-width: 767px) {
+    @media only screen and (max-width: 1324px) {
         width: 90%; /* Ancho del carrusel para pantallas pequeñas */
         height: auto; /* Altura automática para adaptarse al contenido */
         padding-left: 1rem; /* Ajuste de espacio a la izquierda para pantallas pequeñas */
         padding-right: 1rem; /* Ajuste de espacio a la derecha para pantallas pequeñas */
-        margin: 80px 20px; ;
+        margin: 80px 20px; 
     }
 }
 
@@ -708,7 +711,7 @@ img.meme {
     
     
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1575px) {
     #carouselExampleIndicators .carousel-indicators {
         display: none;
     }
