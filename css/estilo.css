@@ -1010,7 +1010,7 @@ footer .arriba{
 
 @media screen and (min-width: 481px) and (max-width: 1000px) {
     .nav-responsive {
-        transform: translateY(0%) translateX(-1000%);
+        transform: translateY(0%) translateX(-1500%);
     }
 }
 
@@ -1022,7 +1022,7 @@ footer .arriba{
 
 @media screen and (min-width: 481px) and (max-width: 1000px) {
     nav.responsive {
-        transform: translateY(0%) translateX(-350%);
+        transform: translateY(0%) translateX(-450%);
     }
 }
 
