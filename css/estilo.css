@@ -681,28 +681,34 @@ img.meme {
     width: auto; /* Mantiene la proporción de la imagen */
 }
 
-.carousel-control-prev {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-670%) translateX(-600%);
+@media only screen and (min-width: 1025px) {
+    .carousel-control-prev {
+        transform: translateY(-670%) translateX(-600%);
+    }
+    
+    .carousel-control-next {
+        transform: translateY(-802%) translateX(600%);
+    }
 }
-@media only screen and (max-width: 1024px) {
+
+
+@media only screen and (max-width: 568px) {
     .carousel-control-prev {
         transform: translateY(200%) translateX(-130%);
     }
-}
-.carousel-control-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-802%) translateX(600%);
-
-}
-
-@media only screen and (max-width: 1024px) {
     .carousel-control-next {
         transform: translateY(67%) translateX(130%);
     }
 }
+
+@media screen and (min-width: 569px) and (max-width: 1000px) {
+    #oculto {
+        display: none;
+    }
+}
+
+
+
 
 .carousel-indicators{
     position: absolute;
@@ -1022,7 +1028,7 @@ footer .arriba{
 
 @media screen and (min-width: 481px) and (max-width: 1000px) {
     nav.responsive {
-        transform: translateY(-6%) translateX(-450%);
+        transform: translateY(-15%) translateX(-470%);
     }
 }
 
