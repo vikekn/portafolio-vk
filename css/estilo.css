@@ -1022,7 +1022,7 @@ footer .arriba{
 
 @media screen and (min-width: 481px) and (max-width: 1000px) {
     nav.responsive {
-        transform: translateY(0%) translateX(-450%);
+        transform: translateY(-6%) translateX(-450%);
     }
 }
 
