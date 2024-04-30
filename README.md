@@ -1,2 +1,2 @@
 # portafolio-vk
-html / jss
+html / js
