@@ -50,7 +50,11 @@
     <section id="inicio" class="inicio">
         <div class="contenido-banner">
             <div class="contenedor-img">
-                <img src="img/hero.png" alt="">
+                <picture>
+                    <source srcset="img/hero.webp" type="image/webp">
+                    <source srcset="img/hero.png" type="image/jpeg">
+                    <img loading="lazy" src="img/hero.webp" alt="hero">
+                </picture>
             </div>
             <h1>Kevin Mármol</h1>
             <h2>Técnico Superior en Desarrollo de Software </h2>
@@ -76,7 +80,7 @@
                 principal recaen en PHP, donde he acumulado experiencia significativa y he llevado a cabo numerosos
                 proyectos exitosos que demuestran mi destreza en esta área. Mi portafolio refleja mi dedicación y
                 habilidades en PHP, proporcionando ejemplos concretos de mi trabajo en esta tecnología.</p>
-             <p>
+                <p>
                     Tengo certificaciones en cursos de 
                     <span style="color: rgb(204, 150, 150);">PHP</span>, 
                     <span style="color: green;">Python</span>, 
@@ -89,6 +93,7 @@
                     Además, tengo experiencia en el manejo de bases de datos relacionales, especialmente en <span style="color: orange;">MySql</span> y en lenguajes
                     de marcado como <span style="color: red;">HTML5</span> .
                 </p>
+
             <p> Durante mis prácticas universitarias, adquirí capacitación en el uso de Visual Studio Community para el
                 desarrollo web con .NET en C# y en JavaScript y Typescript, lo que complementa mi conjunto de
                 habilidades técnicas.
@@ -144,15 +149,16 @@
                             <strong> </strong>
                             DDR3 | 2 monitores de VGA y 1 de HDMI 
                         </li>
+                        
+                        
                         <li>
                             <strong> </strong>
                             Micrófono Blue Yeti y Teléfono S9+
                         </li>
                         <li>
                             <strong> </strong>
-                            Laptop Dell Latitude e6430 | i5 |  8gb RAM
+                            Laptop Dell Latitude e6430 | i5 | 8gb RAM
                         </li>
-                        
                         <li>
                             <strong><i class="fa-solid fa-gear"></i> Programas Usados:</strong>
                             Visual Studio Code, Photoshop, 
@@ -167,7 +173,12 @@
                         </li>
                         <li>
                             <strong> </strong>
-                            <img class="meme" src="img/meme.png">
+                            
+                            <picture>
+                                <source srcset="img/meme.webp" type="image/webp">
+                                <source srcset="img/meme.png" type="image/jpeg">
+                                <img class="meme" loading="lazy" src="img/meme.webp" alt="meme">
+                            </picture>
                         </li>
                     </ul>
                 </div>
@@ -405,7 +416,12 @@
                         <span class="casa">Universidad Blas Pascal</span>
                         <span class="fecha">2020 - 2023</span>
                         <table class="tabla">
-                            <th><img src="img/hero2.png"></th>
+                            <th> <picture>
+                                <source srcset="img/hero2.webp" type="image/webp">
+                                <source srcset="img/hero2.png" type="image/jpeg">
+                                <img class="meme" loading="lazy" src="img/hero2.webp" alt="meme">
+                                </picture>
+                           </th>
                         
                             <th> <p>Comencé mis estudios en la Universidad Blas Pascal a distancia, luego de abandonar Ingeniería en Sistemas
                                 por problemas económicos allá por 2016 como consecuencia del  divorcio de mis padres y 
@@ -504,8 +520,8 @@
                         </p>
                         <p>Algún día me gustaría aprender también Kotline para el desarrollo en Android, soy muy polifacético, me gustaría que me de 
                             la vida para aprenderlo todo, me entusiasma y disfruto mucho 
-                            programar webs, apps y videojuegos.
-                           
+                            programar webs, apps y videojuegos o exploits y scripts maliciosos, pero esto último es un secreto a voces, 
+                            respeto a todos y sigo la filosofía de <span>Dont Tread on Me</span>.
                         </p>
 
                         <div class="conectori">
@@ -592,8 +608,12 @@
 
                             
 
-                                <th><img src="img/hero3.png"></th>
-                            </th>
+                                <th><picture>
+                                    <source srcset="img/hero3.webp" type="image/webp">
+                                    <source srcset="img/hero3.png" type="image/jpeg">
+                                    <img class="meme" loading="lazy" src="img/hero3.webp" alt="meme">
+                                    </picture></th>
+                                </th>
                     
                         </table>
                         <div class="conectord">
@@ -701,12 +721,12 @@
                     <img src="img/certificaciones/1 (11).jpg" class="d-block w-100 img-clickable" data-bs-toggle="modal" data-bs-target="#exampleModal" alt="12">
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" id="oculto"
                 data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" id="oculto"
                 data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
@@ -838,7 +858,7 @@
 
                 <div class="col">
                     <form action="https://formsubmit.co/kevin.marmolr@gmail.com" method="POST">
-                        <input type="hidden" name="_next" value="https://vikekn.github.io/portafolio-vk/gracias.html">
+                        <input type="hidden" name="_next" value="http://127.0.0.1:5500/portfolio-vike-main/Gracias.html">
                         <input type="text" name="Nombre" placeholder="Tú Nombre">
                         <input type="tel" name="Telefono" placeholder="Número telefónico">
                         <input type="email" name="Email" placeholder="Dirección de correo">
