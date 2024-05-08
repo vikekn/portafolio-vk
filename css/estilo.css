@@ -316,6 +316,11 @@ img.meme {
     font-size: 30px; 
     text-shadow: 0 0 12px black;
 }
+.skills .skill .fa-brands.fa-sass {
+    color: rgb(238, 133, 192);
+    font-size: 30px; 
+    text-shadow: 0 0 12px black;
+}
 .skills .skill .fa-solid.fa-photo-film {
     color: rgb(236, 188, 56);
     font-size: 30px; 
