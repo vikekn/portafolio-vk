@@ -187,13 +187,23 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 //ocultar meme
-function mostrarImagen() {
-    var imagen = document.getElementById("meme-img");
-    imagen.classList.remove("meme");
-    imagen.classList.add("meme-vista");
-    var overlay = document.querySelector(".overlay");
-    overlay.classList.add("oculto"); // Añade la clase 'oculto' al overlay
-}
+// function mostrarImagen() {
+//     var imagen = document.getElementById("meme-img");
+//     imagen.classList.remove("meme");
+//     imagen.classList.add("meme-vista");
+//     var overlay = document.querySelector(".overlay");
+//     overlay.classList.add("oculto"); // Añade la clase 'oculto' al overlay
+// }
+
+document.addEventListener("DOMContentLoaded", function() {
+    var toggleButton = document.getElementById("toggleButton");
+    var memeImg = document.getElementById("meme-img");
+
+    toggleButton.addEventListener("click", function() {
+        memeImg.classList.toggle("hidden");
+    });
+});
+
 
 //glitch
 

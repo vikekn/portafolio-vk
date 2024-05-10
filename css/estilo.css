@@ -652,18 +652,44 @@ html {
     border-radius: 1rem;
 }
 
+
 .meme {
     display: block;
     width: 100%;
     height: auto;
-    filter: blur(10px);
+    border-radius: 1rem;
+    /* filter: blur(10px); */
     /* Aplica desenfoque inicial */
-    transition: filter 0.5s ease, opacity 0.5s ease;
+    /* transition: filter 0.5s ease, opacity 0.5s ease; */
     /* Transición para el filtro y la opacidad */
-    opacity: 1;
+    /* opacity: 1;  */
     /* Asegura que la imagen sea inicialmente visible */
 }
+.hidden {
+    display: none;
+}
+#toggleButton{
 
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-weight: 500;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    height: 36px;
+    line-height: 34px;
+    font-size: 14px;
+    color: #ffffff;
+    background-color: #1CB698;
+    transition: background-color 0.2s ease-in-out 0s, opacity 0.2s ease-in-out 0s;
+    padding: 0 18px;
+    margin: 5px -2px;
+}
+
+#toggleButton:hover {
+    color: #ffffff;
+    background-color: #117b66;
+}
 .meme.oculto {
     opacity: 0;
     /* Oculta la imagen */
@@ -868,10 +894,45 @@ html {
 .skills .skill .fa-solid.fa-database {
     color: rgb(224, 189, 142);
     font-size: 30px;
-
-
 }
 
+.skills .skill .fa-brands.fa-node-js {
+    color: rgb(22, 113, 67);
+    font-size: 30px;
+}
+.skills .skill .fa-solid.fa-leaf {
+    color: rgb(57, 188, 122);
+    font-size: 25px;
+}
+.skills .skill .fa-brands.fa-react {
+    color: rgb(80, 180, 225);
+    font-size: 30px;
+}
+
+.skills .skill .fa-brands.fa-vuejs {
+    color: rgb(42, 173, 108);
+    font-size: 30px;
+}
+
+.skills .skill .fa-brands.fa-laravel {
+    color: rgb(232, 76, 58);
+    font-size: 30px;
+}
+
+.skills .skill .fa-brands.fa-symfony {
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+}
+
+.skills .skill .fa-brands.fa-angular {
+    color: rgb(234, 29, 29);
+    font-size: 30px;
+}
+
+.skills .skill .fa-brands.fa-docker {
+    color: rgb(59, 117, 241);
+    font-size: 30px;
+}
 
 .skills .skill .barra-skill {
     height: 8px;
@@ -882,7 +943,7 @@ html {
 }
 
 .skills .skill .progreso {
-    background-color: #22b5cf;
+    background-color: #1CB698;
     position: absolute;
     top: 0;
     left: 0;
@@ -893,7 +954,7 @@ html {
     position: absolute;
     height: 40px;
     width: 40px;
-    background-color: #0d5c81;
+    background-color: #177763;
     ;
     border-radius: 50px;
     line-height: 40px;
