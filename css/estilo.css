@@ -1,14 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;300;400;600;800&display=swap');
-*{
+
+* {
     box-sizing: border-box;
     font-family: 'Work Sans';
     margin: 0;
     padding: 0;
 }
-html{
+
+
+html {
     /* me permite deslizar cuando hago clic en los links del menu */
     scroll-behavior: smooth;
 }
+
 /*POPUP*/
 .popup {
     display: none;
@@ -20,151 +24,308 @@ html{
     padding: 20px;
     border-radius: 10px;
     color: white;
-  }
-  
-  .popup-content {
+}
+
+.popup-content {
     text-align: center;
-  }
-  
-  .close {
+}
+
+.close {
     position: absolute;
     top: 10px;
     right: 10px;
     cursor: pointer;
-  }
+}
+
 /* MENU */
-.contenedor-header{
-    background: #1e2326;
+.contenedor-header {
+    background: #191d1f;
     position: fixed;
-    width: 150%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     top: 0;
     left: 0;
     z-index: 99;
+
 }
-.contenedor-header header{
-    max-width: 1100px;
-    margin: 0 0 -15px 258px;
+
+
+.contenedor-header .derecha {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    padding: 15px 20px;
+
 }
-.contenedor-header header .logo a{
+
+@media (min-width: 968px) {
+    .contenedor-header .derecha {
+        align-items: flex-end;
+    }
+}
+
+.contenedor-header .barra {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1.5rem;
+    margin: -15px;
+    /* Esta propiedad se aplicará en dispositivos móviles */
+}
+
+@media (min-width: 968px) {
+    .contenedor-header .barra {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding: 5px;
+        margin: 0;
+        /* Restablece el margen en dispositivos de escritorio */
+
+    }
+}
+
+.contenedor-header .logo {
+    padding-left: 4rem;
+
+}
+
+@media only screen and (max-width: 968px) {
+    .contenedor-header .logo {
+        padding-left: 0;
+        /* Establece el padding a cero para dispositivos móviles */
+    }
+}
+
+.contenedor-header .logo a {
     font-family: 'Righteous';
     font-size: 36px;
     color: #1CB698;
     text-decoration: none;
-    margin: 0 0 0 -180px;
-}
-.contenedor-header header ul{
-    display: flex;
-    list-style: none;
-    
+
 }
 
-.contenedor-header header nav ul li {
-    margin: 0 10px; 
+.contenedor-header .navegacion {
+
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    transition: visibility .0s ease-in-out, opacity .5s linear, height .1s linear;
+    margin-top: -25px;
 }
-.contenedor-header header nav ul li a{
-    text-align: none;
-    color: #fff;
-    margin: 10 15px;
-    padding: 3px;
-    transition: .5s;
+
+@media (min-width: 968px) {
+    .contenedor-header .navegacion {
+        display: flex;
+        align-items: center;
+        opacity: 1;
+        visibility: visible;
+        margin-bottom: 5rem;
+    }
+}
+
+.contenedor-header .navegacion {
+    margin-bottom: 1rem;
+    padding: 2rem;
+    margin: -10px -35px;
+
+}
+
+.contenedor-header .navegacion a {
     text-decoration: none;
-}
-.contenedor-header header nav ul li a:hover{
-    color: #4d5dee;
-}
-
-
-.nav-responsive{
-    background-color: #1CB698;
-    color:#fff;
-    padding: 5px 10px;
-    border-radius: 5px;
+    font-size: 1.2rem;
+    display: block;
+    text-align: center;
+    color: white;
     cursor: pointer;
-    display: none;
-    
+
+    @media (max-width: 967px) {
+        border-bottom: 1px solid #fff;
+        box-sizing: border-box;
+    }
+
+    @media (min-width: 968px) {
+        margin-right: 1rem;
+        font-size: 1rem;
+
+        .contenedor-header .navegacion a:last-of-type {
+            margin-right: 0;
+        }
+    }
 }
-/* SECCION I N I C I O */
-.inicio{
-    background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,1)),
-    url(../img/fondo2.jpg);
+
+
+
+.contenedor-header .navegacion a:hover {
+    color: #1CB698;
+    background-color: #1e2326;
+    padding: 0.1rem 0.3rem -1px;
+    /* Ajusta el padding según sea necesario */
+    border-radius: 0.1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    /* Ajusta los valores de la sombra según sea necesario */
+    margin-top: 1px;
+    /* Ajusta el margen superior para dar profundidad */
+}
+
+.contenedor-header .navegacion a.activo {
+    color: white;
+    background-color: #0d0e0f;
+    padding: 0.1rem 0.3rem;
+    /* Ajusta el padding según sea necesario */
+    border-radius: 0.2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    /* Ajusta los valores de la sombra según sea necesario */
+    margin-top: 2px;
+    /* Ajusta el margen superior para dar profundidad */
+}
+
+
+.contenedor-header .mobile-menu {
+    display: block;
+
+    img {
+        width: 2rem;
+    }
+}
+
+@keyframes vibrar {
+    0% {
+        transform: translateX(-1px);
+    }
+
+    50% {
+        transform: translateX(1px);
+    }
+
+    100% {
+        transform: translateX(-1px);
+    }
+}
+
+@media (min-width: 968px) {
+    .contenedor-header .mobile-menu {
+        display: none;
+    }
+}
+
+.contenedor-header .navegacion.mostrar {
+    visibility: visible;
+    opacity: 1;
+    height: auto;
+    padding-top: 20px;
+
+}
+/*sec cv*/
+
+
+
+
+.sec-cv {
+    background: linear-gradient(to top, rgba(30, 35, 38, .8), rgba(30, 35, 38, 1)),
+        url(../img/fondo2.jpg);
     background-size: cover;
     height: 100vh;
     color: #fff;
     display: flex;
     align-items: center;
 }
-.inicio .contenido-banner{
+
+.sec-cv embed{
+    
+    width: 480px;
+    height: 485px;
+    padding: 1rem;
+    
+}
+@media (max-width: 968px) 
+{
+    
+.sec-cv embed{
+    
+   display: none;
+    
+}
+}
+
+.sec-cv .contenido-banner {
     padding: 0.95rem;
     background-color: #1e2326;
     max-width: 350px;
-    margin: 6.5rem auto 0.5rem;
+    margin: 0.5rem auto 0.5rem;
     text-align: center;
     border-radius: 2rem;
+    z-index: 2;
 }
+
+
+
 @media screen and (max-width: 768px) {
-    .inicio .contenido-banner {
-        max-width: 350px; /* Puedes ajustar este valor según tus necesidades */
-        margin: 8.5rem auto 0.5rem;
+    .sec-cv .contenido-banner {    
+        margin: 1.5rem auto 0.5rem;
     }
 }
 
-.inicio .contenido-banner img{
+@keyframes float {
+    0% {
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+        transform: translatey(0px);
+    }
+
+    50% {
+        box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+        transform: translatey(-20px);
+    }
+
+    100% {
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+        transform: translatey(0px);
+    }
+}
+
+.sec-cv .contenido-banner img {
     margin-top: 40px;
     border: 10px solid #1CB698;
     display: block;
     width: 80%;
     margin: auto;
     border-radius: 50%;
+    animation: float 6s ease-in-out infinite;
+
+
 }
-.inicio .contenido-banner h1 {
+
+.sec-cv .contenido-banner h1 {
     margin-top: 40px !important;
     font-size: 42px !important;
     font-family: 'Righteous' !important;
 }
 
-/* Desactivar estilos de Bootstrap para h2 */
 .inicio .contenido-banner h2 {
     font-size: 15px !important;
     font-weight: normal !important;
 }
-.fondo-negro {
-    background-color: black; /* Establece el color de fondo en negro */
-    padding: 10px; /* Añade relleno alrededor del texto para que se vea mejor */
-    display: inline-block; /* Permite que el fondo se aplique solo al área ocupada por el texto */
-}
-.botonCopiar{
-    padding: 0.5rem;
-    border: none;
-    background-color: #1CB698;
-    font-family: 'Righteous';
-}
-.botonCopiar:hover {
-    background-color: #0c594a;
-}
-.inicio .contenido-banner h2 a {
+
+
+.sec-cv .contenido-banner h2 a {
     font-size: 15px !important;
     font-weight: normal !important;
 }
+
 .contenido-banner h2 a,
-.inicio h2 a {
-    /* Estilos para los enlaces dentro de h2 en contenido-banner y inicio */
-    color: #1CB698; /* Color del texto */
-    text-decoration: none; /* Quita el subrayado del enlace */
-    font-weight: bold; /* Peso de la fuente */
-    /* Agrega otros estilos según tu diseño */
+.sec-cv h2 a {
+    color: #1CB698;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .contenido-banner h2 a:hover,
-.inicio h2 a:hover {
-    /* Estilos para cuando el cursor pasa sobre los enlaces */
-    color: #FF6600; /* Cambia el color del texto al pasar el cursor */
-    /* Agrega otros estilos según tu diseño */
+.sec-cv h2 a:hover {
+    color: #FF6600;
 }
-.inicio .contenido-banner .redes a{
+
+.sec-cv .contenido-banner .redes a {
     color: #fff;
     display: inline-block;
     text-decoration: none;
@@ -177,75 +338,420 @@ html{
     font-size: 20px;
     transition: .3s;
 }
-.inicio .contenido-banner .redes a:hover{
+
+.sec-cv .contenido-banner .redes a:hover {
+    background-color: #1CB698;
+} 
+
+
+
+
+
+
+
+/* SECCION I N I C I O */
+
+.inicio {
+    background: linear-gradient(to top, rgba(30, 35, 38, .8), rgba(30, 35, 38, 1)),
+        url(../img/fondo2.jpg);
+    background-size: cover;
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.box {
+    display: none;
+}
+
+@media (min-width: 1080px) {
+    .box {
+        display: block;
+        position: absolute;
+        background: url(../img/fondo2.jpg);
+        background-attachment: fixed;
+        background-size: cover;
+        height: 100vh;
+        align-items: center;
+        z-index: 1;
+    }
+}
+
+.inicio .contenido-banner {
+    padding: 0.95rem;
+    background-color: #1e2326;
+    max-width: 350px;
+    margin: 6.5rem auto 0.5rem;
+    text-align: center;
+    border-radius: 2rem;
+    z-index: 2;
+}
+
+@media screen and (max-width: 968px) and (min-width: 739px) {
+    .inicio .contenido-banner {
+        max-width: 480px;
+        height: 17rem;
+        margin: 8.5rem auto 0.5rem;
+        padding: 0.95rem;
+        background-color: #1e2326;
+        border-radius: 2rem;
+        z-index: 2;
+        display: grid; /* Usar CSS Grid */
+        grid-template-rows: auto auto 1fr; /* Definir tres filas: una para h1, otra para h2, y otra para las redes */
+        gap: 1rem; /* Espacio entre las filas */
+    }
+    
+    .inicio .contenido-banner h1 {
+        justify-self: end;
+        grid-row: 1; /* Colocar h1 en la primera fila */
+    }
+    
+    .inicio .contenido-banner h2 {
+        justify-self: end;
+        grid-row: 2; /* Colocar h2 en la segunda fila */
+    }
+    .inicio .contenido-banner h4 {
+        justify-self: end;
+        grid-row: 3; /* Colocar h4 en la tercera fila */
+    }
+    
+    .inicio .contenido-banner .redes {
+        margin: -40px 0 0 0;
+        grid-row: 4; /* Colocar las redes en la cuarta fila */
+    }
+    .inicio .contenido-banner .contenedor-img {
+        justify-self: left;
+        margin: -270px 300px 0 0;
+        grid-row: 5; /* Colocar el contenedor de imagen en la quinta fila */
+    }
+    .inicio .contenido-banner .contenedor-img-gracias {
+        justify-self: left;
+        margin: -232px 319px 0 -9px;
+        grid-row: 5;
+    }
+    .inicio .contenido-banner .contenedor-img-discord {
+        justify-self: left;
+        margin: -274px 150px 0px -19px;
+        grid-row: 5;
+    }
+
+    .redes .discord{
+        margin: -20px -185px 0 0;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .inicio .contenido-banner {    
+        /* Puedes ajustar este valor según tus necesidades */
+        margin: 8.5rem auto 0.5rem;
+    }
+}
+
+@keyframes float {
+    0% {
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+        transform: translatey(0px);
+    }
+
+    50% {
+        box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+        transform: translatey(-20px);
+    }
+
+    100% {
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+        transform: translatey(0px);
+    }
+}
+
+.inicio .contenido-banner img {
+    margin-top: 40px;
+    border: 10px solid #1CB698;
+    display: block;
+    width: 80%;
+    margin: auto;
+    border-radius: 50%;
+    animation: float 6s ease-in-out infinite;
+
+
+}
+
+.inicio .contenido-banner h1 {
+    margin-top: 40px !important;
+    font-size: 42px !important;
+    font-family: 'Righteous' !important;
+}
+
+/* Desactivar estilos de Bootstrap para h2 */
+.inicio .contenido-banner h2 {
+    font-size: 15px !important;
+    font-weight: normal !important;
+}
+
+
+.fondo-negro {
+    background-color: black;
+    /* Establece el color de fondo en negro */
+    padding: 10px;
+    /* Añade relleno alrededor del texto para que se vea mejor */
+    display: inline-block;
+    /* Permite que el fondo se aplique solo al área ocupada por el texto */
+}
+
+.botonCopiar {
+    padding: 0.5rem;
+    border: none;
+    background-color: #1CB698;
+    font-family: 'Righteous';
+}
+
+.botonCopiar:hover {
+    background-color: #0c594a;
+}
+
+.inicio .contenido-banner h2 a {
+    font-size: 15px !important;
+    font-weight: normal !important;
+}
+
+.contenido-banner h2 a,
+.inicio h2 a {
+    /* Estilos para los enlaces dentro de h2 en contenido-banner y inicio */
+    color: #1CB698;
+    /* Color del texto */
+    text-decoration: none;
+    /* Quita el subrayado del enlace */
+    font-weight: bold;
+    /* Peso de la fuente */
+    /* Agrega otros estilos según tu diseño */
+}
+
+.contenido-banner h2 a:hover,
+.inicio h2 a:hover {
+    /* Estilos para cuando el cursor pasa sobre los enlaces */
+    color: #FF6600;
+    /* Cambia el color del texto al pasar el cursor */
+    /* Agrega otros estilos según tu diseño */
+}
+
+.inicio .contenido-banner .redes a {
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 40px 8px;
+    font-size: 20px;
+    transition: .3s;
+}
+
+.inicio .contenido-banner .redes a:hover {
     background-color: #1CB698;
 }
-.sobremi{
+
+
+
+.sobremi {
     background-color: #1e2326;
     color: #fff;
-    padding: 50px 20px;
+    padding: 80px 20px;
+
+
 }
-.sobremi .contenido-seccion{
+
+@media (min-width: 968px) {
+
+    .sobremi {
+        background-color: #1e2326;
+        color: #fff;
+        padding: 25px 20px;
+        z-index: 2;
+
+
+    }
+}
+
+.sobremi .contenido-seccion {
     max-width: 1100px;
     margin: auto;
 }
-.sobremi h2{
+
+/* keys */
+.sobremi h2 {
+    color: #1CB698;
     font-size: 48px !important;
     font-family: 'Righteous' !important;
     text-align: center !important;
     padding: 20px 0 !important;
 
 }
-.sobremi .contenido-seccion p{
+
+.static-text {
+    color: white;
+    padding: 20px 0;
+    font-family: 'Righteous' !important;
+}
+
+/* Media query para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    .static-text {
+        font-size: 36px; 
+    }
+}
+
+.left-bracket,
+.right-bracket {
+    color: #1CB698;
+    font-size: 48px;
+    animation: opacity 2s infinite;
+}
+
+@keyframes opacity {
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+
+
+.sobremi .contenido-seccion p {
     font: 18px;
     line-height: 22px;
     margin-bottom: 20px;
 }
-.sobremi .contenido-seccion p span{
+
+.sobremi .contenido-seccion p span {
     color: #1CB698;
     font-weight: bold;
 }
-.sobremi .fila{
+
+.sobremi .fila {
     display: flex;
 }
-img.meme {
-    width: 30rem; /* ajusta el ancho a 200 píxeles */
-    height: auto; /* ajusta automáticamente la altura para mantener la proporción */
+
+.imagen-container {
+    position: relative;
+    width: 100%;
+    /* Utiliza porcentaje para hacerlo responsive */
+    max-width: 600px;
+    /* Máximo de 500px */
+    margin: 0 auto;
+    /* Centra horizontalmente */
+    overflow: hidden;
     border-radius: 1rem;
-    
 }
 
-.sobremi .fila .col
-{
+.meme {
+    display: block;
+    width: 100%;
+    height: auto;
+    filter: blur(10px);
+    /* Aplica desenfoque inicial */
+    transition: filter 0.5s ease, opacity 0.5s ease;
+    /* Transición para el filtro y la opacidad */
+    opacity: 1;
+    /* Asegura que la imagen sea inicialmente visible */
+}
+
+.meme.oculto {
+    opacity: 0;
+    /* Oculta la imagen */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: opacity 0.5s ease;
+    /* Transición para la opacidad */
+    z-index: 1;
+    /* Asegura que el overlay esté por encima de la imagen */
+    opacity: 1;
+    /* Asegura que el overlay sea inicialmente visible */
+}
+
+.overlay.oculto {
+    opacity: 0;
+    /* Oculta el overlay */
+}
+
+.overlay span {
+    font-size: 0.7rem;
+}
+
+@media (min-width: 768px) {
+    .overlay span {
+        font-size: 1.3rem;
+        z-index: 2;
+        /* Ajusta según sea necesario para asegurar que el texto esté por encima del overlay */
+    }
+
+}
+
+.meme-vista {
+    width: 100%;
+    /* Utiliza porcentaje para hacerlo responsive */
+    height: auto;
+    border-radius: 1rem;
+}
+
+
+.sobremi .fila .col {
     width: 50%;
 }
-.sobremi .fila .col h3{
+
+.sobremi .fila .col h3 {
     font-size: 28px;
     font-family: 'Righteous';
     margin-bottom: 25px;
 }
-.sobremi .fila .col ul{
+
+.sobremi .fila .col ul {
     list-style: none;
 }
-.sobremi .fila .col ul li{
+
+.sobremi .fila .col ul li {
     margin: 12px 0;
 }
-.sobremi .fila .col ul li strong{
+
+.sobremi .fila .col ul li strong {
     display: inline-block;
     color: #1CB698;
     width: 130px;
 }
-.sobremi .fila .col ul li span{
+
+.sobremi .fila .col ul li span {
     background-color: #1CB698;
     padding: 3px;
     font-weight: bold;
     border-radius: 5px;
 }
-.sobremi .fila .col .contenedor-intereses{
+
+.sobremi .fila .col .contenedor-intereses {
     display: flex;
     flex-wrap: wrap;
 }
-.sobremi .fila .col .contenedor-intereses .interes{
+
+.sobremi .fila .col .contenedor-intereses .interes {
     width: 100px;
     height: 100px;
     background-color: #252A2E;
@@ -256,119 +762,139 @@ img.meme {
     align-items: center;
     justify-content: center;
     transition: .3s;
-}.sobremi .fila .col .contenedor-intereses .interes:hover{
+}
+
+.sobremi .fila .col .contenedor-intereses .interes:hover {
     background-color: #1CB698;
 }
-.sobremi .fila .col .contenedor-intereses .interes i{
+
+.sobremi .fila .col .contenedor-intereses .interes i {
     font-size: 30px;
     margin-bottom: 10px;
 }
 
 
 /* SECCION S K I L L S */
-.skills{
+.skills {
     background-color: #252A2E;
     color: #fff;
     padding: 50px 20px;
 }
-.skills .contenido-seccion{
+
+.skills .contenido-seccion {
     max-width: 1100px;
     margin: auto;
 }
-.skills h2{
+
+.skills h2 {
     font-size: 48px;
     font-family: 'Righteous';
     text-align: center;
     padding: 20px 0;
 
 }
-.skills .fila{
+
+.skills .fila {
     display: flex;
 }
-.skills .fila .col{
+
+.skills .fila .col {
     width: 50%;
     padding: 0 20px;
 }
 
-.skills .fila .col h3{
+.skills .fila .col h3 {
     font-size: 28px;
     font-family: 'Righteous';
     margin-bottom: 25px;
 }
-.skills .skill > span{
+
+.skills .skill>span {
     font-weight: bold;
     display: block;
     margin-bottom: 10px;
 }
+
 .skills .skill .fa-brands.fa-js {
     color: yellow;
-    font-size: 30px; 
+    font-size: 30px;
     text-shadow: 0 0 12px black;
 }
+
 .skills .skill .fa-brands.fa-html5 {
     color: orangered;
-    font-size: 30px; 
+    font-size: 30px;
     margin-right: 10px;
     text-shadow: 0 0 12px black;
 }
+
 .skills .skill .fa-brands.fa-css3-alt {
     color: rgb(56, 209, 236);
-    font-size: 30px; 
+    font-size: 30px;
     text-shadow: 0 0 12px black;
 }
+
 .skills .skill .fa-brands.fa-sass {
     color: rgb(238, 133, 192);
-    font-size: 30px; 
+    font-size: 30px;
     text-shadow: 0 0 12px black;
 }
+
 .skills .skill .fa-solid.fa-photo-film {
     color: rgb(236, 188, 56);
-    font-size: 30px; 
+    font-size: 30px;
     text-shadow: 0 0 12px black;
 }
+
 .skills .skill .fa-brands.fa-php {
     color: rgb(79, 93, 149);
-    font-size: 35px; 
+    font-size: 35px;
     text-shadow: 0 0 12px rgb(0, 0, 0);
 }
+
 .skills .skill .fa-solid.fa-c {
     color: rgb(0, 115, 150);
-    font-size: 20px; 
+    font-size: 20px;
     text-shadow: 0 0 12px rgb(0, 0, 0);
 }
+
 .skills .skill .fa-brands.fa-python {
-    font-size: 30px; 
+    font-size: 30px;
     background: linear-gradient(to right, rgb(0, 133, 173) 0%, rgb(0, 133, 173) 50%, yellow 50%, yellow 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
 .skills .skill .fa-solid.fa-database {
     color: rgb(224, 189, 142);
-    font-size: 30px; 
-    
-    
+    font-size: 30px;
+
+
 }
 
 
-.skills .skill .barra-skill{
+.skills .skill .barra-skill {
     height: 8px;
     width: 80%;
     background-color: #131517;
     position: relative;
     margin-bottom: 30px;
 }
-.skills .skill .progreso{
+
+.skills .skill .progreso {
     background-color: #22b5cf;
     position: absolute;
     top: 0;
     left: 0;
     height: 8px;
 }
-.skills .skill .barra-skill span{
+
+.skills .skill .barra-skill span {
     position: absolute;
     height: 40px;
     width: 40px;
-    background-color: #0d5c81;;
+    background-color: #0d5c81;
+    ;
     border-radius: 50px;
     line-height: 40px;
     text-align: center;
@@ -376,205 +902,304 @@ img.meme {
     right: -15px;
     font-size: 14px;
 }
+
 /* Estas clases se agregaran dinamicamente mediante javascript */
-.skills .skill .javascript{
+.skills .skill .javascript {
     width: 0%;
     animation: 2s javascript forwards;
 }
+
 @keyframes javascript {
-    0%{width: 0%;}
-    100%{width: 60%;}
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 60%;
+    }
 }
 
-.skills .skill .htmlcss{
+.skills .skill .htmlcss {
     width: 0%;
     animation: 2s htmlcss forwards;
 }
+
 @keyframes htmlcss {
-    0%{width: 0%;}
-    100%{width: 65%;}
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 65%;
+    }
 }
 
-.skills .skill .photoshop{
+.skills .skill .photoshop {
     width: 0%;
     animation: 2s photoshop forwards;
 }
+
 @keyframes photoshop {
-    0%{width: 0%;}
-    100%{width: 95%;}
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 95%;
+    }
 }
 
-.skills .skill .php{
+.skills .skill .php {
     width: 0%;
     animation: 2s php forwards;
 }
+
 @keyframes php {
-    0%{width: 0%;}
-    100%{width: 81%;}
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 81%;
+    }
 }
 
-.skills .skill .c{
+.skills .skill .c {
     width: 0%;
     animation: 2s c forwards;
 }
+
 @keyframes c {
-    0%{width: 0%;}
-    100%{width: 60%;}
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 55%;
+    }
 }
 
-.skills .skill .python{
+.skills .skill .python {
     width: 0%;
     animation: 2s python forwards;
 }
+
 @keyframes python {
-    0%{width: 0%;}
-    100%{width: 60%;}
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 60%;
+    }
 }
 
-.skills .skill .mysql{
+.skills .skill .mysql {
     width: 0%;
     animation: 2s mysql forwards;
 }
+
 @keyframes mysql {
-    0%{width: 0%;}
-    100%{width: 67%;}
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 67%;
+    }
 }
 
-.skills .skill .comunicacion{
+.skills .skill .comunicacion {
     width: 0%;
     animation: 2s comunicacion forwards;
 }
+
 @keyframes comunicacion {
-    0%{width: 0%;}
-    100%{width: 80%;}
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 80%;
+    }
 }
 
-.skills .skill .trabajo{
+.skills .skill .trabajo {
     width: 0%;
     animation: 2s trabajo forwards;
 }
+
 @keyframes trabajo {
-    0%{width: 0%;}
-    100%{width: 85%;}
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 85%;
+    }
 }
 
-.skills .skill .creatividad{
+.skills .skill .creatividad {
     width: 0%;
     animation: 2s creatividad forwards;
 }
+
 @keyframes creatividad {
-    0%{width: 0%;}
-    100%{width: 99%;}
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 99%;
+    }
 }
 
-.skills .skill .dedicacion{
+.skills .skill .dedicacion {
     width: 0%;
     animation: 2s dedicacion forwards;
 }
+
 @keyframes dedicacion {
-    0%{width: 0%;}
-    100%{width: 99%;}
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 99%;
+    }
 }
 
-.skills .skill .proyect{
+.skills .skill .proyect {
     width: 0%;
     animation: 2s proyect forwards;
 }
+
 @keyframes proyect {
-    0%{width: 0%;}
-    100%{width: 90%;}
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 90%;
+    }
 }
 
-.skills .skill .autodidacta{
+.skills .skill .autodidacta {
     width: 0%;
     animation: 2s autodidacta forwards;
 }
+
 @keyframes autodidacta {
-    0%{width: 0%;}
-    100%{width: 100%;}
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
 }
+
 /* SECCION CURRICULUM */
-.curriculum{
+.curriculum {
     background-color: #1e2326;
     color: #fff;
     padding: 50px 20px;
 }
-.curriculum .contenido-seccion{
+
+.curriculum .contenido-seccion {
     max-width: 1100px;
     margin: auto;
 }
-.curriculum h2{
+
+.curriculum h2 {
     font-size: 48px;
     font-family: 'Righteous';
     text-align: center;
     padding: 20px 0;
 
 }
-.curriculum .fila{
+
+.curriculum .fila {
     display: flex;
     justify-content: space-between;
 }
+
 .curriculum .fila .col {
-    width: 100%; /* Cambia el ancho a 100% para que ocupe todo el espacio disponible */
-    display: flex; /* Cambia el display a flex para alinear los elementos */
-    align-items: center; /* Centra verticalmente los elementos dentro de la columna */
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan si no caben en una sola línea */
+    width: 100%;
+    /* Cambia el ancho a 100% para que ocupe todo el espacio disponible */
+    display: flex;
+    /* Cambia el display a flex para alinear los elementos */
+    align-items: center;
+    /* Centra verticalmente los elementos dentro de la columna */
+    flex-wrap: wrap;
+    /* Permite que los elementos se envuelvan si no caben en una sola línea */
 }
 
 
 
 
 
-.curriculum .fila .col h3{
+.curriculum .fila .col h3 {
     font-size: 28px;
     font-family: 'Righteous';
     margin-bottom: 25px;
     padding: 1rem;
     margin: auto;
 }
-.curriculum .fila .izquierda{
+
+.curriculum .fila .izquierda {
     border-right: 2px solid #252A2E;
 }
-.curriculum .fila .derecha{
+
+.curriculum .fila .derecha {
     border-left: 2px solid #252A2E;
 }
-.curriculum .fila .item{
+
+.curriculum .fila .item {
     padding: 25px;
     margin-bottom: 30px;
     background-color: #252A2E;
     position: relative;
 }
-.curriculum .fila .item h4{
+
+.curriculum .fila .item h4 {
     font-size: 20px !important;
     margin-bottom: 10px !important;
 }
-.curriculum .fila .item .casa{
+
+.curriculum .fila .item .casa {
     color: #1CB698;
     font-size: 22px;
     font-weight: bold;
     display: block;
 }
-.curriculum .fila .item .fecha{
+
+.curriculum .fila .item .fecha {
     display: block;
     color: #1CB698;
     margin-bottom: 10px;
 }
-.curriculum .fila .item p{
+
+.curriculum .fila .item p {
     line-height: 24px;
 }
-.curriculum .contenido-seccion p span{
+
+.curriculum .contenido-seccion p span {
     color: #1CB698;
     font-weight: bold;
 }
-.curriculum .fila .izq{
+
+.curriculum .fila .izq {
     border-right: 2px solid #1CB698;
     margin-right: 20px;
 }
-.curriculum .fila .der{
+
+.curriculum .fila .der {
     border-left: 2px solid #1CB698;
     margin-left: 20px;
 }
-.curriculum .fila .item .conectori{
+
+.curriculum .fila .item .conectori {
     height: 2px;
     background-color: #1CB698;
     width: 47px;
@@ -583,7 +1208,8 @@ img.meme {
     right: -47px;
     z-index: 5;
 }
-.curriculum .fila .item .conectori .circuloi{
+
+.curriculum .fila .item .conectori .circuloi {
     display: block;
     height: 10px;
     width: 10px;
@@ -593,7 +1219,8 @@ img.meme {
     position: relative;
     bottom: 4px;
 }
-.curriculum .fila .item .conectord{
+
+.curriculum .fila .item .conectord {
     height: 2px;
     background-color: #1CB698;
     width: 47px;
@@ -602,7 +1229,8 @@ img.meme {
     left: -47px;
     z-index: 5;
 }
-.curriculum .fila .item .conectord .circulod{
+
+.curriculum .fila .item .conectord .circulod {
     display: block;
     height: 10px;
     width: 10px;
@@ -617,125 +1245,112 @@ img.meme {
     border-collapse: collapse;
     border-spacing: 0;
     width: 100%;
-    display: flex; /* Convertir la tabla en un contenedor flexible */
-    align-items: flex-start; /* Alinear los elementos al principio del contenedor */
+    display: flex;
+    /* Convertir la tabla en un contenedor flexible */
+    align-items: flex-start;
+    /* Alinear los elementos al principio del contenedor */
 }
 
-.tabla th, .tabla td {
+.tabla th,
+.tabla td {
     font-weight: normal;
     vertical-align: top;
     padding: 8px;
 }
 
 .tabla th {
-    width: 30%; /* Ancho fijo para la celda de la imagen */
+    width: 30%;
+    /* Ancho fijo para la celda de la imagen */
 }
 
 .tabla td {
-    width: 70%; /* Ancho fijo para la celda del párrafo */
-    padding-left: 20px; /* Espacio a la izquierda del párrafo para separarlo de la imagen */
+    width: 70%;
+    /* Ancho fijo para la celda del párrafo */
+    padding-left: 20px;
+    /* Espacio a la izquierda del párrafo para separarlo de la imagen */
 }
 
 .tabla img {
-    max-width: 100%; /* Establece el ancho máximo de la imagen al 50% del contenedor */
-    margin-right: 20px; /* Agrega un margen a la derecha de la imagen para separarla del párrafo */
+    max-width: 100%;
+    /* Establece el ancho máximo de la imagen al 50% del contenedor */
+    margin-right: 20px;
+    /* Agrega un margen a la derecha de la imagen para separarla del párrafo */
 }
 
 
+.contenedor-carrusel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    max-width: 70%;
+    height: auto;
+    margin: 50px auto 50px;
 
-
-#carouselExampleIndicators.carousel.slide {
-    @media (max-width: 1024rem) {
-        width: 70rem; /* Ancho del carrusel */
-        height: 50rem; /* Altura aumentada para alargar la imagen hacia abajo */
-        padding-left: 2rem; /* Añade espacio a la izquierda */
-        padding-right: 15rem; /* Añade espacio a la derecha */
-        margin: 70px 209px; /* Centra el carrusel horizontalmente */
-    }
-
-    /* Otros estilos adicionales según tus necesidades */
-    /* Media query para pantallas más pequeñas */
-    @media only screen and (max-width: 1324px) {
-        width: 90%; /* Ancho del carrusel para pantallas pequeñas */
-        height: auto; /* Altura automática para adaptarse al contenido */
-        padding-left: 1rem; /* Ajuste de espacio a la izquierda para pantallas pequeñas */
-        padding-right: 1rem; /* Ajuste de espacio a la derecha para pantallas pequeñas */
-        margin: 80px 20px; 
-    }
 }
 
-
-
-.carousel-inner {
-    height: 625px;
-    margin: 0;
-    /* ajusta la altura del carrusel */
-}
-@media only screen and (max-width: 767px) {
-    .carousel-inner {
-        width: 150%;
-        
-        margin: 0 0 -34rem 0;
-        
-        /* ajusta la altura del carrusel */
-    }
-}
-
-.carousel-item img {
-    height: 100%; /* Ajusta la altura de la imagen al 100% del contenedor */
-    width: auto; /* Mantiene la proporción de la imagen */
-}
-
-@media only screen and (min-width: 1025px) {
-    .carousel-control-prev {
-        transform: translateY(-670%) translateX(-600%);
-    }
-    
-    .carousel-control-next {
-        transform: translateY(-802%) translateX(600%);
-    }
-}
-
-
-@media only screen and (max-width: 568px) {
-    .carousel-control-prev {
-        transform: translateY(200%) translateX(-130%);
-    }
-    .carousel-control-next {
-        transform: translateY(67%) translateX(130%);
-    }
-}
-
-@media screen and (min-width: 569px) and (max-width: 950px) {
-    #oculto {
-        display: none;
-    }
-}
-
-
-
-
-.carousel-indicators{
+.contenedor-carrusel .carousel-control-prev,
+.contenedor-carrusel .carousel-control-next {
     position: absolute;
-    top: 50%;
-    transform: translateY(60%) translateX(-106px);
-    
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    width: 100px; /* Ancho deseado */
+    height: 100px; /* Altura deseada */
+    margin: auto -105px auto;
+    padding: 10px 22px;
+    font-size: 16px;
+    color: #fff;
     
 }
-@media only screen and (max-width: 1575px) {
-    #carouselExampleIndicators .carousel-indicators {
+@media (max-width: 666px) {
+.contenedor-carrusel .carousel-control-prev,
+.contenedor-carrusel .carousel-control-next {
+    position: absolute;
+    width: 60px; /* Ancho deseado */
+    height: 60px; /* Altura deseada */
+    margin: 200px 5px auto;
+    padding: 10px 22px;
+    
+}
+}
+
+@media (max-width: 666px) and (min-width: 740px) {
+    .contenedor-carrusel .carousel-control-prev,
+    .contenedor-carrusel .carousel-control-next {
+        position: absolute;
+        width: 60px; /* Ancho deseado */
+        height: 60px; /* Altura deseada */
+        margin: 338px 5px auto;
+        padding: 10px 22px;
+        
+    }
+    }
+
+
+.contenedor-carrusel .carousel-indicators {
+    margin: -60px;
+}
+
+@media (max-width: 968px) {
+    .contenedor-carrusel .carousel-indicators {
         display: none;
     }
 }
+
 
 .modal-dialog {
-    max-width: 90%; /* Ajusta el ancho máximo del modal */
+    max-width: 90%;
+    /* Ajusta el ancho máximo del modal */
 }
 
 .modal-content {
-    width: 100%; /* Ajusta el ancho del contenido del modal */
-    height: auto; /* Hace que la altura del contenido se ajuste automáticamente */
+    width: 100%;
+    /* Ajusta el ancho del contenido del modal */
+    height: auto;
+    /* Hace que la altura del contenido se ajuste automáticamente */
 }
+
 .modal-body {
     display: flex;
     justify-content: center;
@@ -743,13 +1358,18 @@ img.meme {
 }
 
 .modal-body img {
-    max-width: none; /* Elimina el ancho máximo de la imagen */
-    max-height: 130vh; /* Altura máxima igual al de la ventana */
+    max-width: none;
+    /* Elimina el ancho máximo de la imagen */
+    max-height: 130vh;
+    /* Altura máxima igual al de la ventana */
 }
+
 @media only screen and (max-width: 768px) {
     .modal-body img {
-        max-width: 110%; /* Ajusta el ancho máximo para que ocupe todo el ancho disponible */
-        max-height: 90vh; /* Reduzca la altura máxima para adaptarse mejor a la pantalla del móvil */
+        max-width: 110%;
+        /* Ajusta el ancho máximo para que ocupe todo el ancho disponible */
+        max-height: 90vh;
+        /* Reduzca la altura máxima para adaptarse mejor a la pantalla del móvil */
     }
 }
 
@@ -757,7 +1377,7 @@ img.meme {
 
 
 
-.curriculum button .overlay{
+.curriculum button .overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -767,10 +1387,12 @@ img.meme {
     z-index: -1;
     transition: 1s;
 }
-.curriculum button:hover .overlay{
+
+.curriculum button:hover .overlay {
     width: 100%;
 }
-.curriculum button{
+
+.curriculum .bt-descargar {
     cursor: pointer;
     background-color: transparent;
     border: 2px solid #fff;
@@ -783,24 +1405,28 @@ img.meme {
     position: relative;
     z-index: 10;
 }
+
 a.button-link {
-    text-decoration: none; /* Elimina el subrayado del enlace */
+    text-decoration: none;
+    /* Elimina el subrayado del enlace */
 }
 
 /* SECCION PORTFOLIO */
-.portfolio{
+.portfolio {
     background-color: #252A2E;
     color: #fff;
     padding: 50px 20px;
 }
-.portfolio .contenido-seccion{
+
+.portfolio .contenido-seccion {
     max-width: 1100px;
     margin: auto;
 }
-.portfolio .contenido-seccion p{
+
+.portfolio .contenido-seccion p {
     text-align: center;
 
-    span{
+    span {
         color: yellow;
         background-color: #131517;
         border-radius: 0.5rem;
@@ -808,55 +1434,63 @@ a.button-link {
     }
 }
 
-.portfolio h2{
-    font-size: 48px !important; 
+.portfolio h2 {
+    font-size: 48px !important;
     font-family: 'Righteous' !important;
     text-align: center !important;
     padding: 20px 0 !important;
 }
-.portfolio .galeria{
+
+.portfolio .galeria {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
-.portfolio .galeria .proyecto{
+
+.portfolio .galeria .proyecto {
     position: relative;
     max-width: 340px;
     height: fit-content;
     margin: 10px;
     cursor: pointer;
 }
+
 .portfolio .galeria .proyecto.destacado::after {
     content: "Destacado ★";
     position: absolute;
     top: 10px;
     left: 10px;
-    background-color: rgba(10, 1, 1, 0.7); /* Fondo semi-transparente */
+    background-color: rgba(10, 1, 1, 0.7);
+    /* Fondo semi-transparente */
     padding: 0.5rem;
     border-radius: 5px;
     color: yellow;
 }
+
 .portfolio .galeria .proyecto.featured::after {
     content: "Featured ★";
     position: absolute;
     top: 10px;
     left: 10px;
-    background-color: rgba(10, 1, 1, 0.7); /* Fondo semi-transparente */
+    background-color: rgba(10, 1, 1, 0.7);
+    /* Fondo semi-transparente */
     padding: 0.5rem;
     border-radius: 5px;
     color: yellow;
 }
-.portfolio .galeria .proyecto img{
+
+.portfolio .galeria .proyecto img {
     width: 100%;
     display: block;
 }
-.portfolio .galeria .proyecto .overlay{
+
+.portfolio .galeria .proyecto .overlay {
     position: absolute;
     top: 0;
     width: 100%;
     height: 100%;
     text-align: center;
-    background: linear-gradient(rgba(28, 100, 182, 0.8), rgba(28,182,152,.8));
+    background: linear-gradient(rgba(28, 100, 182, 0.8), rgba(28, 182, 152, .8));
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -865,48 +1499,59 @@ a.button-link {
     letter-spacing: 3px;
     opacity: 0;
 }
-.portfolio .galeria .proyecto .overlay h3{
+
+.portfolio .galeria .proyecto .overlay h3 {
     margin-bottom: 20px;
     transition: 1s;
     color: white;
 }
-.portfolio .galeria .proyecto .overlay:hover{
+
+.portfolio .galeria .proyecto .overlay:hover {
     opacity: 1;
     color: white;
 }
-.portfolio .galeria .proyecto .overlay:hover h3{
+
+.portfolio .galeria .proyecto .overlay:hover h3 {
     margin-bottom: 0px;
 }
+
 /* SECCION CONTACTO */
-.contacto{
+.contacto {
     background-image: url(../img/contact_bg.png);
     background-color: #1e2326;
     color: #fff;
     padding: 50px 0;
 }
-.contacto .contenido-seccion{
+
+.contacto .contenido-seccion {
     max-width: 1100px;
     margin: auto;
 }
-.contacto h2{
+
+.contacto h2 {
     font-size: 48px !important;
     font-family: 'Righteous' !important;
     text-align: center !important;
     padding: 20px 0 !important;
 }
-.contacto .contenido-seccion p span{
+
+.contacto .contenido-seccion p span {
     color: #1CB698;
     font-weight: bold;
 }
-.contacto .fila{
+
+.contacto .fila {
     display: flex;
 }
-.contacto .col{
+
+.contacto .col {
     width: 50%;
     padding: 10px;
     position: relative;
 }
-.contacto .col input, .contacto .col textarea{
+
+.contacto .col input,
+.contacto .col textarea {
     display: block;
     width: 100%;
     padding: 18px;
@@ -916,7 +1561,8 @@ a.button-link {
     color: #fff;
     font-size: 18px;
 }
-.contacto button{
+
+.contacto button {
     cursor: pointer;
     background-color: transparent;
     border: 2px solid #fff;
@@ -930,7 +1576,7 @@ a.button-link {
     z-index: 10;
 }
 
-.contacto button .overlay{
+.contacto button .overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -940,20 +1586,25 @@ a.button-link {
     z-index: -1;
     transition: 1s;
 }
-.contacto button:hover .overlay{
+
+.contacto button:hover .overlay {
     width: 100%;
 }
 
 .contacto .mapa {
-    height: 400px; /* ajusta la altura según tus preferencias */
-    margin-top: 20px; /* ajusta el margen superior según tus preferencias */
-    border: 1px solid #ffffff; /* añade un borde para visualizar el contenedor */
-    position: relative; 
-    z-index: 0;  /* establece la posición en el eje Z */
+    height: 400px;
+    /* ajusta la altura según tus preferencias */
+    margin-top: 20px;
+    /* ajusta el margen superior según tus preferencias */
+    border: 1px solid #ffffff;
+    /* añade un borde para visualizar el contenedor */
+    position: relative;
+    z-index: 0;
+    /* establece la posición en el eje Z */
 }
 
 
-.contacto .col .info{
+.contacto .col .info {
     position: absolute;
     top: -150%;
     background-color: #ffffff;
@@ -963,29 +1614,36 @@ a.button-link {
     transform: translate(-50%, -50%);
 }
 
-.contacto .col .info ul{
+.contacto .col .info ul {
     list-style: none;
 }
-.contacto .col .info ul li{
+
+.contacto .col .info ul li {
     margin-bottom: 20px;
 }
-.contacto .col .info ul li i{
+
+.contacto .col .info ul li i {
     color: #1CB698;
     display: inline-block;
     margin-right: 20px;
 }
-footer{
+
+
+footer {
     background-color: #252A2E;
     color: #fff;
     padding: 50px 0 30px 0;
     text-align: center;
     position: relative;
     width: 100%;
+    z-index: 2;
 }
-footer .redes{
+
+footer .redes {
     margin-bottom: 20px;
 }
-footer .redes a{
+
+footer .redes a {
     color: #fff;
     display: inline-block;
     text-decoration: none;
@@ -998,7 +1656,8 @@ footer .redes a{
     font-size: 20px;
     transition: .3s;
 }
-footer .arriba{
+
+footer .arriba {
     display: block;
     width: 50px;
     height: 50px;
@@ -1012,127 +1671,82 @@ footer .arriba{
     line-height: 50px;
     font-size: 18px;
 }
+
 /* SECCION RESPONSIVE */
-@media screen and (max-width: 480px) {
-    .nav-responsive {
-        transform: translateY(0%) translateX(-830%);
-    }
-}
 
-@media screen and (min-width: 481px) and (max-width: 1000px) {
-    .nav-responsive {
-        transform: translateY(0%) translateX(-1500%);
-    }
-}
-
-@media screen and (max-width: 1000px) {
-    nav.responsive {
-        transform: translateY(0%) translateX(-168%);
-    }
-}
-
-@media screen and (min-width: 481px) and (max-width: 1000px) {
-    nav.responsive {
-        transform: translateY(-15%) translateX(-470%);
-    }
-}
-
-@media screen and (max-width:1000px){
-    .contenedor-header header {
-        margin: 0; /* Quita el margen izquierdo */
-    }
-    
-    .contenedor-header header .logo a {
-        margin-left: 10px; /* Ajusta el margen izquierdo del logo */
-    }
-    
-    .contenedor-header header nav ul {
-        display: none; /* Oculta el menú de navegación principal */
-    }
-    nav{
-        display: none;
-    }
-    .nav-responsive{
-        display: block;
-    }
-    nav.responsive{
-        display: block;
-        position: absolute;
-        right: 0;
-        top: 75px;
-        background-color: #252A2E;
-        width: 180px;
-    }
-    nav.responsive ul{
-        display: block !important;
-    }
-    nav.responsive ul li{
-        border-bottom: 1px solid #fff;
-        padding: 10px 0;
-    }
-}
 
 .sobremi .fila .col li {
     display: flex;
-    align-items: center; /* Alinea verticalmente los íconos y el texto */
-    padding: 5px 0; /* Añade espacio entre cada elemento de la lista */
-    max-width: 90%; /* Limita el ancho máximo del texto */
-    margin: 0 auto; /* Centra la lista en dispositivos móviles */
+    align-items: center;
+    /* Alinea verticalmente los íconos y el texto */
+    padding: 5px 0;
+    /* Añade espacio entre cada elemento de la lista */
+    max-width: 90%;
+    /* Limita el ancho máximo del texto */
+    margin: 0 auto;
+    /* Centra la lista en dispositivos móviles */
 }
 
 @media (max-width: 768px) {
     .sobremi .fila .col li {
-        font-size: 14px; /* Reducir el tamaño del texto para dispositivos móviles */
-        flex-wrap: wrap; /* Envuelve los elementos en dispositivos móviles si el contenido es demasiado largo */
+        font-size: 14px;
+        /* Reducir el tamaño del texto para dispositivos móviles */
+        flex-wrap: wrap;
+        /* Envuelve los elementos en dispositivos móviles si el contenido es demasiado largo */
     }
 }
 
-@media screen and (max-width:1000px){
-    .sobremi .fila{
+@media screen and (max-width:768px) {
+    .sobremi .fila {
         display: block;
     }
-    .sobremi .fila .col{
+
+    .sobremi .fila .col {
         width: fit-content;
     }
-    .sobremi .fila .col li .meme {
-        max-width: 100%; /* Hacer que la imagen tenga un ancho máximo del 100% del contenedor */
-        height: auto; /* Mantener la proporción de aspecto original */
-    }
 
-    .skills .fila{
+    .skills .fila {
         display: block;
     }
-    .skills .fila .col{
-        width: 100%;
-    }
-    .skills .fila .col .barra-skill{
+
+    .skills .fila .col {
         width: 100%;
     }
 
-    .curriculum .fila{
+    .skills .fila .col .barra-skill {
+        width: 100%;
+    }
+
+    .curriculum .fila {
         display: block;
     }
-    .curriculum .fila .col{
+
+    .curriculum .fila .col {
         width: 90%;
     }
-    .curriculum .fila .derecha{
+
+    .curriculum .fila .derecha {
         margin-left: 20px;
     }
 
-    .portfolio .galeria{
+    .portfolio .galeria {
         display: block;
         width: 100%;
     }
-    .portfolio .galeria .proyecto{
+
+    .portfolio .galeria .proyecto {
         max-width: 100%;
     }
-    .portfolio .galeria .proyecto img{
+
+    .portfolio .galeria .proyecto img {
         width: 100%;
     }
-    .contacto .fila{
+
+    .contacto .fila {
         display: block;
     }
-    .contacto .fila .col{
+
+    .contacto .fila .col {
         width: 100%;
     }
 }

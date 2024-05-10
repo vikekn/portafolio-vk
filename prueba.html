@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Texto deletreado y borrado</title>
+<style>
+  #texto {
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+    border: 1px solid black;
+    padding: 10px;
+    margin-bottom: 20px;
+    display: inline-block;
+  }
+</style>
+</head>
+<body>
+
+<div id="texto"></div>
+
+<script>
+// Texto que quieres deletrear y borrar
+const textoCompleto = "Hola mundo!";
+
+// Elemento donde se mostrará el texto
+const elementoTexto = document.getElementById('texto');
+
+// Función para deletrear el texto
+function deletrearTexto(texto, index = 0) {
+  // Si el índice es menor que la longitud del texto
+  if (index < texto.length) {
+    // Mostrar el texto hasta el índice actual
+    elementoTexto.textContent = texto.substring(0, index + 1) + "_";
+    // Llamar recursivamente a la función con el siguiente índice
+    setTimeout(() => deletrearTexto(texto, index + 1), 100);
+  } else {
+    // Cuando se completa el deletreo, esperar 4 segundos y luego empezar a borrar el texto
+    setTimeout(borrarTexto, 4000);
+  }
+}
+
+// Función para borrar el texto
+function borrarTexto(index = textoCompleto.length) {
+  // Si el índice es mayor que 0
+  if (index > 0) {
+    // Borrar el último caracter del texto
+    elementoTexto.textContent = textoCompleto.substring(0, index - 1) + "_";
+    // Llamar recursivamente a la función con el índice anterior
+    setTimeout(() => borrarTexto(index - 1), 100);
+  } else {
+    // Cuando se completa el borrado, empezar a deletrear nuevamente
+    deletrearTexto(textoCompleto);
+  }
+}
+
+// Función para hacer parpadear el guion bajo
+function parpadearGuion() {
+  // Si el guion está visible, ocultarlo
+  if (elementoTexto.textContent.endsWith("_")) {
+    elementoTexto.textContent = elementoTexto.textContent.slice(0, -1);
+  } else { // Si el guion no está visible, mostrarlo
+    elementoTexto.textContent += "_";
+  }
+  // Llamar recursivamente a la función después de un breve intervalo
+  setTimeout(parpadearGuion, 500);
+}
+
+// Iniciar el proceso
+deletrearTexto(textoCompleto);
+parpadearGuion();
+</script>
+
+</body>
+</html>
