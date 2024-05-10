@@ -593,14 +593,14 @@ html {
 
 .static-text {
     color: white;
-    padding: 16px 0;
+    padding: 20px 0;
     font-family: 'Righteous' !important;
 }
 
 /* Media query para dispositivos móviles */
 @media screen and (max-width: 768px) {
     .static-text {
-        font-size: 36px; 
+        font-size: 30px; 
     }
 }
 
