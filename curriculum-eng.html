@@ -16,7 +16,11 @@
         <embed src="cv/Cover Letter.pdf" type="application/pdf" />
         <div class="contenido-banner">
             <div class="contenedor-img">
-                <img src="img/hero.png" alt="">
+                <picture>
+                    <source srcset="img/hero.webp" type="image/webp">
+                    <source srcset="img/hero.png" type="image/jpeg">
+                    <img loading="lazy" src="img/hero.webp" alt="hero">
+                </picture>
             </div>
             <h3>Cover Letter</h3>
             <h3> and Curriculum</h3>

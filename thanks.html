@@ -14,8 +14,12 @@
 
     <section id="inicio" class="inicio">
         <div class="contenido-banner">
-            <div class="contenedor-img-gracias">
-                <img src="img/hero.png" alt="">
+            <div class="contenedor-img">
+                <picture>
+                    <source srcset="img/hero.webp" type="image/webp">
+                    <source srcset="img/hero.png" type="image/jpeg">
+                    <img loading="lazy" src="img/hero.webp" alt="hero">
+                </picture>
             </div>
             
                 <h1 style="font-size: 1rem;">
