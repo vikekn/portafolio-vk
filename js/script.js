@@ -283,50 +283,65 @@ enlaces.forEach(function (enlace) {
 
 //deletrear
 
-// Función para deletrear el texto en un elemento específico
-function deletrearTexto(texto, elemento, index = 0) {
+// Elemento donde se mostrará el texto
+const elementoTexto = document.getElementById('texto');
+
+// Función para deletrear el texto
+function deletrearTexto(elemento) {
+  const texto = elemento.getAttribute('data-deletrear');
+  let index = 0;
+  
+  function deletrear() {
     // Si el índice es menor que la longitud del texto
     if (index < texto.length) {
       // Mostrar el texto hasta el índice actual
       elemento.textContent = texto.substring(0, index + 1) + "_";
       // Llamar recursivamente a la función con el siguiente índice
-      setTimeout(() => deletrearTexto(texto, elemento, index + 1), 100);
+      setTimeout(deletrear, 100);
+      index++;
     } else {
       // Cuando se completa el deletreo, esperar 4 segundos y luego empezar a borrar el texto
-      setTimeout(() => borrarTexto(texto, elemento), 4000);
+      setTimeout(borrarTexto, 4000);
     }
   }
-  
-  // Función para borrar el texto en un elemento específico
-  function borrarTexto(texto, elemento, index = texto.length) {
+
+  deletrear();
+}
+
+// Función para borrar el texto
+function borrarTexto() {
+  let texto = elementoTexto.getAttribute('data-deletrear');
+  let index = texto.length;
+
+  function borrar() {
     // Si el índice es mayor que 0
     if (index > 0) {
       // Borrar el último caracter del texto
-      elemento.textContent = texto.substring(0, index - 1) + "_";
+      elementoTexto.textContent = texto.substring(0, index - 1) + "_";
       // Llamar recursivamente a la función con el índice anterior
-      setTimeout(() => borrarTexto(texto, elemento, index - 1), 100);
+      setTimeout(borrar, 100);
+      index--;
     } else {
       // Cuando se completa el borrado, empezar a deletrear nuevamente
-      deletrearTexto(texto, elemento);
+      deletrearTexto(elementoTexto);
     }
   }
-  
-  // Función para hacer parpadear el guion bajo en un elemento específico
-  function parpadearGuion(elemento) {
-    // Si el guion está visible, ocultarlo; de lo contrario, mostrarlo
-    elemento.textContent = elemento.textContent.endsWith("_") ? elemento.textContent.slice(0, -1) : elemento.textContent + "_";
-    // Llamar recursivamente a la función después de un breve intervalo
-    setTimeout(() => parpadearGuion(elemento), 500);
-  }
-  
-  // Iniciar el proceso para el primer elemento
-  const primerElemento = document.getElementById('texto');
-  deletrearTexto("CONTACTO", primerElemento);
-  parpadearGuion(primerElemento);
-  
-  // Iniciar el proceso para otro elemento
-  const otroElemento = document.getElementById('otroTexto'); // Ajusta el ID según tu HTML
-  deletrearTexto("CONTACT", otroElemento);
-  parpadearGuion(otroElemento);
-  
 
+  borrar();
+}
+
+// Función para hacer parpadear el guion bajo
+function parpadearGuion() {
+  // Si el guion está visible, ocultarlo
+  if (elementoTexto.textContent.endsWith("_")) {
+    elementoTexto.textContent = elementoTexto.textContent.slice(0, -1);
+  } else { // Si el guion no está visible, mostrarlo
+    elementoTexto.textContent += "_";
+  }
+  // Llamar recursivamente a la función después de un breve intervalo
+  setTimeout(parpadearGuion, 500);
+}
+
+// Iniciar el proceso
+deletrearTexto(elementoTexto);
+parpadearGuion();
