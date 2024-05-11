@@ -560,7 +560,9 @@ html {
     background-color: #1e2326;
     color: #fff;
     padding: 80px 20px;
-
+    position: relative;
+    z-index: 3;
+    
 
 }
 
@@ -570,7 +572,7 @@ html {
         background-color: #1e2326;
         color: #fff;
         padding: 25px 20px;
-        z-index: 2;
+        z-index: 3;
 
 
     }
@@ -884,12 +886,7 @@ html {
     text-shadow: 0 0 12px rgb(0, 0, 0);
 }
 
-.skills .skill .fa-brands.fa-python {
-    font-size: 30px;
-    background: linear-gradient(to right, rgb(0, 133, 173) 0%, rgb(0, 133, 173) 50%, yellow 50%, yellow 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
+
 
 .skills .skill .fa-solid.fa-database {
     color: rgb(224, 189, 142);
@@ -897,22 +894,15 @@ html {
 }
 
 .skills .skill .fa-brands.fa-node-js {
-    color: rgb(22, 113, 67);
+    color:  rgb(57, 188, 122);
     font-size: 30px;
 }
-.skills .skill .fa-solid.fa-leaf {
-    color: rgb(57, 188, 122);
-    font-size: 25px;
-}
+
 .skills .skill .fa-brands.fa-react {
     color: rgb(80, 180, 225);
     font-size: 30px;
 }
 
-.skills .skill .fa-brands.fa-vuejs {
-    color: rgb(42, 173, 108);
-    font-size: 30px;
-}
 
 .skills .skill .fa-brands.fa-laravel {
     color: rgb(232, 76, 58);
@@ -930,9 +920,60 @@ html {
 }
 
 .skills .skill .fa-brands.fa-docker {
-    color: rgb(59, 117, 241);
+    color: rgb(59, 171, 241);
     font-size: 30px;
 }
+
+.python-img{
+    position: relative;
+    top: -7px;
+}
+
+.csharp{
+    position: relative;
+    top: -7px;
+}
+
+.node{
+    position: relative;
+    top: -3px;
+}
+
+.mongo{
+    position: relative;
+    top: -7px;
+}
+
+.vue{
+    position: relative;
+    top: -7px;
+}
+
+.jquery{
+    position: relative;
+    top: -7px;
+}
+.flask{
+    position: relative;
+    top: -7px;
+    color: #fff;
+}
+
+.django{
+    position: relative;
+    top: -7px;
+}
+
+.typescript{
+position: relative;
+top: -7px;
+}
+
+.kotlin{
+    position: relative;
+    top: -7px;
+}
+
 
 .skills .skill .barra-skill {
     height: 8px;
