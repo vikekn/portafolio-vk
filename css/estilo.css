@@ -160,9 +160,9 @@ html {
 .contenedor-header .navegacion a:hover {
     color: #1CB698;
     background-color: #1e2326;
-    padding: 0.1rem 0.3rem -1px;
+    padding: 3px;
     /* Ajusta el padding según sea necesario */
-    border-radius: 0.1rem;
+    border-radius: 0.5rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     /* Ajusta los valores de la sombra según sea necesario */
     margin-top: 1px;
