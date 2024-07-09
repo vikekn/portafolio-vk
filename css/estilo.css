@@ -1859,3 +1859,11 @@ footer .arriba {
         width: 100%;
     }
 }
+.boton-omitir{
+    text-decoration: none;
+    font-weight: bold;
+    }
+.boton-omitir:hover{
+color: #FF6600;
+
+}
