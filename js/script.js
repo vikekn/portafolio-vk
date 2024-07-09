@@ -22,8 +22,7 @@
 // }
 function efectoHabilidades() {
     var skills = document.getElementById("skills");
-    var distancia_skills =
-        window.innerHeight - skills.getBoundingClientRect().top;
+    var distancia_skills = window.innerHeight - skills.getBoundingClientRect().top;
     if (distancia_skills >= 300) {
         var habilidades = document.querySelectorAll(".progreso");
         var clasesHabilidades = [
@@ -41,18 +40,40 @@ function efectoHabilidades() {
             "proyect",
             "autodidacta",
         ];
-        habilidades.forEach(function (habilidad, index) {
-            if (!habilidad.classList.contains(clasesHabilidades[index])) {
-                habilidad.classList.add(clasesHabilidades[index]);
-            }
+
+        habilidades.forEach(function(habilidad, index) {
+            // Utilizamos Intersection Observer para observar las habilidades
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        habilidad.classList.add(clasesHabilidades[index]);
+                    } else {
+                        habilidad.classList.remove(clasesHabilidades[index]);
+                    }
+                });
+            }, observerOptions);
+
+            observer.observe(habilidad);
         });
     }
 }
 
-//detecto el scrolling para aplicar la animacion de la barra de habilidades
+// Detecto el scrolling para aplicar la animación de la barra de habilidades
 window.onscroll = function () {
     efectoHabilidades();
 };
+
+// Ejecuto la función al cargar la página para observar las habilidades desde el inicio
+window.onload = function () {
+    efectoHabilidades();
+};
+
 
 //modal
 document.addEventListener("DOMContentLoaded", function () {

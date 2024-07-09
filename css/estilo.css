@@ -13,6 +13,13 @@ html {
     scroll-behavior: smooth;
 }
 
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
 /*POPUP*/
 .popup {
     display: none;
@@ -39,7 +46,7 @@ html {
 
 /* MENU */
 .contenedor-header {
-    background: #191d1f;
+    background: rgba(25, 29, 31, 0.8);
     position: fixed;
     width: 100%;
     display: flex;
@@ -352,14 +359,14 @@ html {
 /* SECCION I N I C I O */
 
 .inicio {
-    background: linear-gradient(to top, rgba(30, 35, 38, .8), rgba(30, 35, 38, 1)),
-        url(../img/fondo2.jpg);
+    background: linear-gradient(to top, rgba(30, 35, 38, .8), rgba(30, 35, 38, 1)), url(../img/fondo2.jpg);
     background-size: cover;
-    height: 100vh;
+    height: 110vh;
     color: #fff;
     display: flex;
     align-items: center;
 }
+
 
 .box {
     display: none;
@@ -382,7 +389,7 @@ html {
     padding: 0.95rem;
     background-color: #1e2326;
     max-width: 350px;
-    margin: 6.5rem auto 0.5rem;
+    margin: 2.5rem auto 0.5rem;
     text-align: center;
     border-radius: 2rem;
     z-index: 2;

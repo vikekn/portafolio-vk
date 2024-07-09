@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilo.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
         integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -12,10 +14,10 @@
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     <title>Portafolio Dev Kevin Marmol</title>
     <link rel="icon" type="image/png" sizes="16x16" href="img/icon.png">
-    <link rel="stylesheet" href="css/estilo.css">
+
     <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.css">
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
 </head>
 
@@ -59,7 +61,7 @@
     <!-- HOME SECTION -->
     <section id="inicio" class="inicio">
         <div id="contenido-glitch"></div>
-        <div class="contenido-banner">
+        <div class="contenido-banner" data-aos="fade-right">
             <div class="contenedor-img">
                 <picture>
                     <source srcset="img/hero.webp" type="image/webp">
@@ -85,18 +87,18 @@
     <section id="sobremi" class="sobremi">
         <div class="contenido-seccion">
 
-            <h2>
+            <h2 data-aos="fade-down">
                 <span class="left-bracket">[</span>
                 <span class="static-text">About Me</span>
                 <span class="right-bracket">]</span>
             </h2>
-            <p><span>Hello, I'm Kevin Marmol:</span></p>
-            <p>I graduated as a Senior Technician in Software Development from <span>Blas Pascal University</span>,
+            <p data-aos="fade-up"><span>Hello, I'm Kevin Marmol:</span></p>
+            <p data-aos="fade-down">I graduated as a Senior Technician in Software Development from <span>Blas Pascal University</span>,
                 where I further developed my deep passion for software engineering. My main focus and specialization lie
                 in PHP, where I have gained significant experience and carried out numerous successful projects
                 demonstrating my expertise in this area. My portfolio reflects my dedication and skills in PHP,
                 providing concrete examples of my work in this technology.</p>
-            <p>
+            <p data-aos="fade-down">
                 I have certifications in courses
                 <span style="color: rgb(204, 150, 150);">PHP</span>,
                 <span style="color: green;">Python</span>,
@@ -110,25 +112,25 @@
                     style="color: orange;">MySql</span> and in languages
                 markup as <span style="color: red;">HTML5</span> .
             </p>
-            <p>During my university internships, I gained training in the use of Visual Studio Community for web
+            <p data-aos="fade-down">During my university internships, I gained training in the use of Visual Studio Community for web
                 development with .NET in C# and in JavaScript and Typescript, complementing my set of technical skills.
                 I also hold a certificate in cybersecurity, with skills in audits, pentesting, and ethical hacking.</p>
-            <p>Currently, I am expanding my knowledge through practice and using different frameworks such as Laravel or
+            <p data-aos="fade-down">Currently, I am expanding my knowledge through practice and using different frameworks such as Laravel or
                 Symfony for PHP. I learned Angular during my web development practice at university, and I also have
                 knowledge of frameworks such as Django and Flask with Python. I am learning about some JS libraries such
                 as React, Vue, or jQuery, plus bootstrap for web design. I have future aspirations to delve into Java
                 for enterprise applications and Kotlin for mobile applications, but in Java only if the market demands
                 it and I have a great urgency, as you will understand better from my resume haha.</p>
-            <p>I consider myself multifaceted in the field, with experience in game development using C# and Unity game
+            <p data-aos="fade-down">I consider myself multifaceted in the field, with experience in game development using C# and Unity game
                 engine, one of my favorite hobbies, which I cannot currently pursue due to my financial situation, which
                 prevents me from having enough free time, as I must continue working on this portfolio, training, and
                 nurturing my knowledge and skills with the web development courses I am taking.</p>
-            <p>In addition to my immense passion for programming, one of the reasons I am also seeking employment is
+            <p data-aos="fade-down">In addition to my immense passion for programming, one of the reasons I am also seeking employment is
                 because I am interested in improving my English proficiency to open up more opportunities in the
                 professional field. Although I cannot engage in verbal dialogue, I manage very well in interpreting
                 texts and, well, also using new technologies. That's what we people from the computer world are for, to
                 automate things 😎</p>
-            <p>In my social networks, mainly on my Instagram, I currently have 27,000 followers, where I showcase my
+            <p data-aos="fade-down">In my social networks, mainly on my Instagram, I currently have 27,000 followers, where I showcase my
                 great Photoshop skills and express my artistic talent, although I plan to change my content soon, when
                 my financial situation allows it, by making a leap to technological content and creating a new account
                 because I also love bushcraft and enjoy it a lot.</p>
@@ -136,12 +138,12 @@
         <div class="fila">
             <!-- personal data -->
             <div class="col">
-                <h3>
+                <h3 data-aos="fade-right">
                     <span class="left-bracket">[</span>
                     <span class="static-text">Personal Data</span>
                     <span class="right-bracket">]</span>
                 </h3>
-                <ul>
+                <ul data-aos="fade-right">
                     <li>
                         <strong><i class="fa-solid fa-cake-candles"></i> Birthday</strong>
                         25-12-1997
@@ -199,9 +201,9 @@
             </div>
 
             <!-- interests -->
-            <div class="col">
+            <div class="col" data-aos="fade-left">
 
-                <h3>
+                <h3 data-aos="fade-left">
                     <span class="left-bracket">[</span>
                     <span class="static-text">Interests</span>
                     <span class="right-bracket">]</span>
@@ -299,7 +301,7 @@
     <section class="skills" id="skills">
         <div class="contenido-seccion">
 
-            <h2>
+            <h2 data-aos="fade-up">
                 <span class="left-bracket">[</span>
                 <span class="static-text">Skills</span>
                 <span class="right-bracket">]</span>
@@ -308,79 +310,84 @@
                 <!-- Technical Skill -->
 
                 <div class="col">
-                    <h3>Technical Skills</h3>
-                    <div class="skill">
-                        <img width="40" height="40" src="https://img.icons8.com/color/48/javascript--v1.png" alt="javascript--v1"/>
-                        <span>Javascript</span>
-                        <div class="barra-skill">
-                            <div class="progreso">
-                                <span>60%</span>
+                    <h3 data-aos="fade-right">Technical Skills</h3>
+
+                    <div data-aos="fade-right">
+                        <div class="skill">
+                            <img width="40" height="40" src="https://img.icons8.com/color/48/javascript--v1.png" alt="javascript--v1"/>
+                            <span>Javascript</span>
+                            <div class="barra-skill">
+                                <div class="progreso">
+                                    <span>60%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <i class="fa-brands fa-html5"></i><i class="fa-brands fa-css3-alt"></i> <i
+                                class="fa-brands fa-sass"></i>
+                            <span>HTML, CSS & SASS </span>
+                            <div class="barra-skill">
+                                <div class="progreso">
+                                    <span>65%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <img width="48" height="48" src="https://img.icons8.com/color/48/sony-vegas-pro.png" alt="sony-vegas-pro"/>
+                            <img width="48" height="48" src="https://img.icons8.com/color/48/adobe-photoshop--v1.png" alt="adobe-photoshop--v1"/>
+                            <span>Photoshop y Sony Vegas</span>
+                            <div class="barra-skill">
+                                <div class="progreso">
+                                    <span>95%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <i class="fa-brands fa-php"></i>
+                            <span>PHP</span>
+                            <div class="barra-skill">
+                                <div class="progreso">
+                                    <span>81%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <img width="40" height="40" src="https://img.icons8.com/color/48/c-plus-plus-logo.png"
+                                alt="c-plus-plus-logo" />
+                            <span>C#</span>
+                            <div class="barra-skill">
+                                <div class="progreso">
+                                    <span>55%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <img width="40" height="40" src="https://img.icons8.com/color/48/python--v1.png"
+                                alt="python--v1" />
+                            <span>Python</span>
+                            <div class="barra-skill">
+                                <div class="progreso">
+                                    <span>60%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <i class="fa-solid fa-database"></i>
+                            <span>MySQL</span>
+                            <div class="barra-skill">
+                                <div class="progreso">
+                                    <span>67%</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="skill">
-                        <i class="fa-brands fa-html5"></i><i class="fa-brands fa-css3-alt"></i> <i
-                            class="fa-brands fa-sass"></i>
-                        <span>HTML, CSS & SASS </span>
-                        <div class="barra-skill">
-                            <div class="progreso">
-                                <span>65%</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <img width="48" height="48" src="https://img.icons8.com/color/48/sony-vegas-pro.png" alt="sony-vegas-pro"/>
-                        <img width="48" height="48" src="https://img.icons8.com/color/48/adobe-photoshop--v1.png" alt="adobe-photoshop--v1"/>
-                        <span>Photoshop y Sony Vegas</span>
-                        <div class="barra-skill">
-                            <div class="progreso">
-                                <span>95%</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <i class="fa-brands fa-php"></i>
-                        <span>PHP</span>
-                        <div class="barra-skill">
-                            <div class="progreso">
-                                <span>81%</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <img width="40" height="40" src="https://img.icons8.com/color/48/c-plus-plus-logo.png"
-                            alt="c-plus-plus-logo" />
-                        <span>C#</span>
-                        <div class="barra-skill">
-                            <div class="progreso">
-                                <span>55%</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <img width="40" height="40" src="https://img.icons8.com/color/48/python--v1.png"
-                            alt="python--v1" />
-                        <span>Python</span>
-                        <div class="barra-skill">
-                            <div class="progreso">
-                                <span>60%</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <i class="fa-solid fa-database"></i>
-                        <span>MySQL</span>
-                        <div class="barra-skill">
-                            <div class="progreso">
-                                <span>67%</span>
-                            </div>
-                        </div>
-                    </div>
+               
                 </div>
                 <!-- Professional Skills -->
                 <div class="col">
-                    <h3>Professional Skills</h3>
-                    <div class="skill">
+                    <h3 data-aos="fade-left">Professional Skills</h3>
+                    <div data-aos="fade-left">
+                        <div class="skill">
                         <span>Communication</span>
                         <div class="barra-skill">
                             <div class="progreso">
@@ -428,42 +435,47 @@
                             </div>
                         </div>
                     </div>
-                    <h3>Topics in the Learning Process, Continuous Improvement and Update:</h3>
-                    <div class="skill">
-                        <p><span style="font-weight: bold;">Backend in:</span> <img class="python-img" width="35"
-                                height="35" src="https://img.icons8.com/color/48/python--v1.png" alt="python--v1" />
-                            <img class="csharp" width="35" height="35"
-                                src="https://img.icons8.com/color/48/c-plus-plus-logo.png" alt="c-plus-plus-logo" />
-                            <img class="node" width="52" height="52" src="https://img.icons8.com/color/48/nodejs.png"
-                                alt="nodejs" /> <img class="mongo" width="30" height="30"
-                                src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/24/external-mongodb-a-cross-platform-document-oriented-database-program-logo-color-tal-revivo.png"
-                                alt="external-mongodb-a-cross-platform-document-oriented-database-program-logo-color-tal-revivo" />
-                        </p>
                     </div>
-                    <div class="skill">
-                        <p><span style="font-weight: bold;">Frontend/libraries:</span> <i
-                                class="fa-brands fa-react"></i> <img class="vue" width="30" height="30"
-                                src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/24/external-vuejs-an-open-source-javascript-framework-for-building-user-interfaces-and-single-page-applications-logo-shadow-tal-revivo.png"
-                                alt="external-vuejs-an-open-source-javascript-framework-for-building-user-interfaces-and-single-page-applications-logo-shadow-tal-revivo" />
-                            <img class="jquery" width="30" height="30"
-                                src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/24/external-jquery-is-a-javascript-library-designed-to-simplify-html-logo-shadow-tal-revivo.png"
-                                alt="external-jquery-is-a-javascript-library-designed-to-simplify-html-logo-shadow-tal-revivo" />
-                        </p>
+                
+                    <div data-aos="fade-up-left">
+                        <h3>Topics in the Learning Process, Continuous Improvement and Update:</h3>
+                        <div class="skill">
+                            <p><span style="font-weight: bold;">Backend in:</span> <img class="python-img" width="35"
+                                    height="35" src="https://img.icons8.com/color/48/python--v1.png" alt="python--v1" />
+                                <img class="csharp" width="35" height="35"
+                                    src="https://img.icons8.com/color/48/c-plus-plus-logo.png" alt="c-plus-plus-logo" />
+                                <img class="node" width="52" height="52" src="https://img.icons8.com/color/48/nodejs.png"
+                                    alt="nodejs" /> <img class="mongo" width="30" height="30"
+                                    src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/24/external-mongodb-a-cross-platform-document-oriented-database-program-logo-color-tal-revivo.png"
+                                    alt="external-mongodb-a-cross-platform-document-oriented-database-program-logo-color-tal-revivo" />
+                            </p>
+                        </div>
+                        <div class="skill">
+                            <p><span style="font-weight: bold;">Frontend/libraries:</span> <i
+                                    class="fa-brands fa-react"></i> <img class="vue" width="30" height="30"
+                                    src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/24/external-vuejs-an-open-source-javascript-framework-for-building-user-interfaces-and-single-page-applications-logo-shadow-tal-revivo.png"
+                                    alt="external-vuejs-an-open-source-javascript-framework-for-building-user-interfaces-and-single-page-applications-logo-shadow-tal-revivo" />
+                                <img class="jquery" width="30" height="30"
+                                    src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/24/external-jquery-is-a-javascript-library-designed-to-simplify-html-logo-shadow-tal-revivo.png"
+                                    alt="external-jquery-is-a-javascript-library-designed-to-simplify-html-logo-shadow-tal-revivo" />
+                            </p>
+                        </div>
+                        <div class="skill">
+                            <p><span style="font-weight: bold;">Frameworks:</span> <i class="fa-brands fa-laravel"></i> <i
+                                    class="fa-brands fa-symfony"></i> <i class="fa-brands fa-angular"></i> <img
+                                    class="django" width="45" height="45" src="https://img.icons8.com/color/48/django.png"
+                                    alt="django" /> <img class="flask" width="45" height="45" src="img/icon/flask.png"
+                                    alt="flask" /></p>
+                        </div>
+                        <div class="skill">
+                            <p><span style="font-weight: bold;">Others:</span> <i class="fa-brands fa-docker"></i> <img
+                                    class="typescript" width="40" height="40"
+                                    src="https://img.icons8.com/color/48/typescript.png" alt="typescript" /> <img
+                                    class="kotlin" width="40" height="40" src="https://img.icons8.com/color/48/kotlin.png"
+                                    alt="kotlin" /></p>
+                        </div>
                     </div>
-                    <div class="skill">
-                        <p><span style="font-weight: bold;">Frameworks:</span> <i class="fa-brands fa-laravel"></i> <i
-                                class="fa-brands fa-symfony"></i> <i class="fa-brands fa-angular"></i> <img
-                                class="django" width="45" height="45" src="https://img.icons8.com/color/48/django.png"
-                                alt="django" /> <img class="flask" width="45" height="45" src="img/icon/flask.png"
-                                alt="flask" /></p>
-                    </div>
-                    <div class="skill">
-                        <p><span style="font-weight: bold;">Others:</span> <i class="fa-brands fa-docker"></i> <img
-                                class="typescript" width="40" height="40"
-                                src="https://img.icons8.com/color/48/typescript.png" alt="typescript" /> <img
-                                class="kotlin" width="40" height="40" src="https://img.icons8.com/color/48/kotlin.png"
-                                alt="kotlin" /></p>
-                    </div>
+                
                 </div>
             </div>
         </div>
@@ -472,19 +484,19 @@
     <!-- RESUME SECTION -->
     <section id="curriculum" class="curriculum">
         <div class="contenido-seccion">
-            <h2>
+            <h2 data-aos="fade-down">
                 <span class="left-bracket">[</span>
                 <span class="static-text">Curriculum</span>
                 <span class="right-bracket">]</span>
             </h2>
-             <p style="text-align: center;">
+             <p style="text-align: center;" data-aos="fade-up">
                Skip and go to the summarized PDF here: <a href="#desc">Download button</a>
             </p>
             <div class="fila">
                 <div class="col izquierda">
-                    <h3>Education</h3>
+                    <h3 data-aos="fade-right">Education</h3>
 
-                    <div class="item izq">
+                    <div class="item izq" data-aos="fade-right">
                         <h4>Programming</h4>
                         <span class="casa">Blas Pascal University</span>
                         <span class="fecha">2020 - 2023</span>
@@ -514,7 +526,7 @@
                             <div class="circuloi"></div>
                         </div>
                     </div>
-                    <div class="item izq">
+                    <div class="item izq" data-aos="fade-right">
                         <h4>Programming</h4>
                         <span class="casa">Blas Pascal University</span>
                         <span class="fecha">2020 - 2023</span>
@@ -531,7 +543,7 @@
                             <div class="circuloi"></div>
                         </div>
                     </div>
-                    <div class="item izq">
+                    <div class="item izq" data-aos="fade-right">
                         <h4>Programming</h4>
                         <span class="casa">Blas Pascal University</span>
                         <span class="fecha">2020 - 2023</span>
@@ -548,7 +560,7 @@
                             <div class="circuloi"></div>
                         </div>
                     </div>
-                    <div class="item izq">
+                    <div class="item izq" data-aos="fade-right">
                         <h4>Programming</h4>
                         <span class="casa">Blas Pascal University</span>
                         <span class="fecha">2020 - 2023</span>
@@ -573,7 +585,7 @@
                             <div class="circuloi"></div>
                         </div>
                     </div>
-                    <div class="item izq">
+                    <div class="item izq" data-aos="fade-right">
                         <h4>Programming</h4>
                         <span class="casa">After graduating from University</span>
                         <span class="fecha">2020 - 2023</span>
@@ -595,14 +607,16 @@
                 </div>
 
                 <div class="col derecha">
-                    <h3>Work Experience</h3>
-                    <div class="item der">
+                    <h3 data-aos="fade-left">Work Experience</h3>
+                    <div class="item der" data-aos="fade-left">
                         <h4>FullStack Developer</h4>
                         <span class="casa">Freelance</span>
                         <span class="fecha">2023 - Present</span>
-                        <p>About my work experience, well, here I have to speak and be very honest with you, I have no
-                            work experience with any company or office job, but I do have experience as a Freelancer
-                            doing two web projects for some close people.</p>
+                        <p>About my work experience, well, here I have to talk and be very honest with you,
+                            I don't have any type of work experience with any company or office work, but
+                            I have experience as a remote Freelancer and doing two jobs personally in my own town for local businesses.
+                        </p>
+                            
                         <p>The main reason I created this portfolio website project is that I have no previous work
                             experience with any company. As a recent graduate and junior developer, I consider the best
                             way to highlight my talent is through a portfolio that shows each and every project I have
@@ -615,7 +629,7 @@
                             <div class="circulod"></div>
                         </div>
                     </div>
-                    <div class="item der">
+                    <div class="item der" data-aos="fade-left">
                         <h4>FullStack Developer</h4>
                         <span class="casa">Seeking work in my city</span>
                         <span class="fecha">2023 - Present</span>
@@ -638,23 +652,30 @@
                             <div class="circulod"></div>
                         </div>
                     </div>
-                    <div class="item der">
+                    <div class="item der" data-aos="fade-left">
                         <h4>FullStack Developer</h4>
                         <span class="casa">About my Freelance work</span>
                         <span class="fecha">2023 - Present</span>
-                        <p>As I mentioned before, I did two jobs for people close to me, which required a website for
-                            their businesses, but it wasn't a fullstack job since it was entirely frontend with views, I
-                            used as a template the project that is in my portfolio called <span>Freelance Site</span> to
-                            create a website for a school supplies and photocopying store.</p>
-                        <p>The second site was similar, but for a Wholesale Distributor of Refrigerated and Cured
-                            products, where we agreed for the next one to create their Virtual store, with their
-                            shopping cart and user registrations, but the opportunity hasn't arisen yet.</p>
+                        <p>I did freelance work online on different remote work sites, 
+                            and for people from my town, who would require a website
+                            For their businesses, these were in-person and completely
+                            frontend, since I used the project that is in the portfolio section as a template
+                            called
+                            <span>Freelance Site</span> to create a website for a school supply store and
+                            photocopier.
+                        </p>
+                        <p>The second site was similar, but for a Wholesale Distributor of Refrigerated and
+                            Sausages, where
+                            Next time we will create your Virtual store, with your shopping cart and registrations.
+                            of users, but it has not yet occurred
+                            the opportunity.
+                        </p>
 
                         <div class="conectord">
                             <div class="circulod"></div>
                         </div>
                     </div>
-                    <div class="item der">
+                    <div class="item der" data-aos="fade-left">
                         <h4>FullStack Developer</h4>
                         <span class="casa">What work or projects am I currently doing?</span>
                         <span class="fecha">2023 - Present</span>
@@ -686,7 +707,7 @@
                             <div class="circulod"></div>
                         </div>
                     </div>
-                    <div class="item der">
+                    <div class="item der" data-aos="fade-left">
                         <h4>FullStack Developer</h4>
                         <span class="casa">To Conclude</span>
                         <span class="fecha">2023 - Present</span>
@@ -718,7 +739,7 @@
         </div>
         
         
-        <button class="bt-descargar" onclick="descargarCV('2')">
+        <button class="bt-descargar" onclick="descargarCV('2')" data-aos="flip-up">
             Download CV <i class="fa-solid fa-download"></i>
             <span class="overlay"></span>
         </button>
@@ -728,13 +749,13 @@
 
 
         <h2 id="certificaciones"></h2>
-        <h2>
+        <h2 data-aos="fade-up">
             <span class="left-bracket">[</span>
             <span class="static-text">CERTIFICATIONS</span>
             <span class="right-bracket">]</span>
         </h2>
 
-        <div class="contenedor-carrusel">
+        <div class="contenedor-carrusel" data-aos="zoom-in">
             <div id="carouselExampleIndicators" class="carousel slide">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
@@ -846,20 +867,20 @@
     <!-- SECCION PORTFOLIO -->
     <section id="portfolio" class="portfolio">
         <div class="contenido-seccion">
-            <h2>
+            <h2 data-aos="fade-down">
                 <span class="left-bracket">[</span>
                 <span class="static-text">PORTFOLIO</span>
                 <span class="right-bracket">]</span>
             </h2>
             
-            <p>The Projects in <span>Featured ★</span> are uploaded in DomCloud, they have User and Administrator Roles.
+            <p data-aos="fade-up">The Projects in <span>Featured ★</span> are uploaded in DomCloud, they have User and Administrator Roles.
                 To test these functions
                 request it through Discord or Gmail and you will be assigned a disposable account that will expire once
                 I finished testing its functions.
             </p>
-            <p>Each Database has a Backup, so feel free to delete, update, or create any record</p>
+            <p data-aos="fade-up">Each Database has a Backup, so feel free to delete, update, or create any record</p>
             <div class="galeria">
-                <div class="proyecto">
+                <div class="proyecto" data-aos="zoom-in">
                     <a href="https://vikekn.github.io/site-freelance-vk/" target="_blank">
                         <img src="img/p1.jpg" alt="">
                         <div class="overlay">
@@ -868,7 +889,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="proyecto">
+                <div class="proyecto" data-aos="zoom-in">
                     <a href="https://vikekn.github.io/front-store-vk/" target="_blank">
                         <img src="img/p2.jpg" alt="">
                         <div class="overlay">
@@ -877,7 +898,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="proyecto" id="featured">
+                <div class="proyecto"  data-aos="zoom-in">
                     <a href="https://vikekn.github.io/blog-cofee-vk/" target="_blank">
                         <img src="img/p3.jpg" alt="">
                         <div class="overlay">
@@ -886,7 +907,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="proyecto">
+                <div class="proyecto" data-aos="zoom-in">
                     <a href="https://vikekn.github.io/concierto-festival-vk/" target="_blank">
                         <img src="img/p4.jpg" alt="">
                         <div class="overlay">
@@ -895,7 +916,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="proyecto featured">
+                <div class="proyecto featured" data-aos="zoom-in">
                     <div class="proyecto">
                         <a href="https://hijlaqe.nyc.dom.my.id/" target="_blank">
                             <img src="img/p5.jpg" alt="">
@@ -907,7 +928,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="proyecto featured">
+                <div class="proyecto featured" data-aos="zoom-in">
                     <div class="proyecto">
                         <a href="https://maphimu.nyc.dom.my.id/" target="_blank">
                             <img src="img/p6.jpg" alt="">
@@ -919,7 +940,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="proyecto featured">
+                <div class="proyecto featured" data-aos="zoom-in">
                     <div class="proyecto">
                         <a href="https://tawsala.nyc.dom.my.id/" target="_blank">
                             <img src="img/p7.jpg" alt="">
@@ -931,7 +952,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="proyecto">
+                <div class="proyecto" data-aos="zoom-in">
                     <a href="https://github.com/vikekn/angular-shopping-car-vk" target="_blank">
                         <img src="img/p8.jpg" alt="">
                         <div class="overlay">
@@ -943,7 +964,7 @@
                     </a>
                 </div>
 
-                <div class="proyecto">
+                <div class="proyecto" data-aos="zoom-in">
                     <img src="img/yo_anime.jpg" alt="">
                     <div class="overlay">
                         <h3>Coming soon...</h3>
@@ -961,9 +982,9 @@
     <!-- SECCION CONTACTO -->
     <section id="contacto" class="contacto">
         <div class="contenido-seccion">
-            <h2 id="texto" data-deletrear="CONTACT"></h2>
+            <h2 id="texto" data-deletrear="CONTACT" data-aos="zoom-out-down"></h2>
 
-            <p>Fill out the form or write to me at: <span>kevin.marmolr@gmail.com</span> </p>
+            <p data-aos="fade-right">Fill out the form or write to me at: <span>kevin.marmolr@gmail.com</span> </p>
             <div class="fila">
                 <!-- Formulario -->
 
@@ -1000,7 +1021,7 @@
         <a href="#inicio" class="arriba">
             <i class="fa-solid fa-angles-up"></i>
         </a>
-        <p>Software Development Technician - Kevin Mármol - FreeLance - 2024</p>
+        <p data-aos="zoom-out">Software Development Technician - Kevin Mármol - FreeLance - 2024</p>
         <div class="redes">
             <a href="Discord-en" target="_blank"><i class="fa-brands fa-discord"></i></a>
             <a href="https://www.linkedin.com/in/kevinmarmolr/" target="_blank"><i
@@ -1014,6 +1035,10 @@
     <script src="js/script.js"></script>
     <script src="js/mapa.js"></script>
     <script src="bootstrap-5.3.3-dist/js/bootstrap.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
