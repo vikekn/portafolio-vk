@@ -2011,8 +2011,8 @@ color: #FF6600;
 
 .mensaje {
     display: inline-block;
-    animation: desplazar 20s linear infinite; /* Duración y tipo de animación */
-    padding-right: 50rem; /* Espacio entre palabras */
+    animation: desplazar 15s linear infinite; /* Duración y tipo de animación */
+    padding-right: 20rem; /* Espacio entre palabras */
     text-shadow: 0 0 10px rgba(28, 182, 152, 0.8); /* Sombra de texto con efecto neon */
     white-space: nowrap; /* Asegura que el texto no se divida en varias líneas */
   }
