@@ -228,6 +228,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
 //glitch
 
+let glitchInterval;
+
+// Función para activar el glitch
 function activateGlitch() {
     let glitch = document.getElementsByClassName("box");
     let index = 0;
@@ -242,41 +245,30 @@ function activateGlitch() {
 
         index++;
         if (index < glitch.length) {
-            setTimeout(glitchLoop, 70); // Continúa con el siguiente elemento después de 2 segundos
+            glitchInterval = setTimeout(glitchLoop, 70); // Continúa con el siguiente elemento después de 70 milisegundos
         } else {
-            setTimeout(deactivateGlitch, 2000); // Desactiva el glitch después de 1 segundo
+            // Reinicia el glitch después de 2 segundos
+            glitchInterval = setTimeout(activateGlitch, 2000);
         }
     }
 
     glitchLoop();
 }
 
+// Función para detener el glitch
 function deactivateGlitch() {
+    clearTimeout(glitchInterval); // Detiene el intervalo actual de glitch
     let glitch = document.getElementsByClassName("box");
-    let index = 0;
-
-    function applyNextProperty() {
-        if (index < glitch.length) {
-            glitch[index].style.left = "";
-            glitch[index].style.top = "";
-            glitch[index].style.width = "";
-            glitch[index].style.height = "";
-            glitch[index].style.backgroundPosition = "";
-
-            index++;
-
-            // Continúa aplicando las propiedades cada 2 segundos
-            setTimeout(applyNextProperty, 50);
-        } else {
-            // Después de aplicar todas las propiedades, activa el glitch nuevamente después de 4 segundos
-            setTimeout(activateGlitch, 4000);
-        }
+    for (let i = 0; i < glitch.length; i++) {
+        glitch[i].style.left = "";
+        glitch[i].style.top = "";
+        glitch[i].style.width = "";
+        glitch[i].style.height = "";
+        glitch[i].style.backgroundPosition = "";
     }
-
-    // Comienza aplicando la primera propiedad
-    applyNextProperty();
 }
 
+// Crear las cajas de glitch
 let bg = document.getElementById("contenido-glitch");
 let count = 20;
 for (let i = 0; i < count; i++) {
@@ -285,7 +277,21 @@ for (let i = 0; i < count; i++) {
     bg.appendChild(glitchBox);
 }
 
-activateGlitch(); // Inicia el ciclo activando el glitch por primera vez
+// Observar cuando la sección es visible
+let section = document.getElementById("contenido-glitch");
+let observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            activateGlitch();
+        } else {
+            deactivateGlitch();
+        }
+    });
+}, { threshold: 0.5 });
+
+// Comenzar a observar la sección
+observer.observe(section);
+
 
 //nav activo
 // Obtener todos los enlaces de navegación
@@ -376,3 +382,4 @@ function parpadearGuion() {
 // Iniciar el proceso
 deletrearTexto(elementoTexto);
 parpadearGuion();
+

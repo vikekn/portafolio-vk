@@ -636,7 +636,7 @@ html, body {
 
 
 .sobremi .contenido-seccion p {
-    font: 18px;
+    font-size: 18px;
     line-height: 22px;
     margin-bottom: 20px;
 }
@@ -1854,6 +1854,7 @@ footer .arriba {
 
     .contacto .fila {
         display: block;
+        flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
     }
 
     .contacto .fila .col {
@@ -1895,29 +1896,26 @@ color: #FF6600;
       }
 
       
-/* 
+
 :root {
   --neon-text-color: #f40;
   --neon-border-color: #08f;
 }
 
 .foco-led {
-  position: relative;
-  bottom: 160px;
-  margin-right: 6rem;
-  margin-left: 4rem;
-  font-size: 2.6rem;
-  font-weight: 400;
-  font-style: italic;
-  color: #fff;
-  padding: 1rem 2rem 0.5rem;
-  border: 0.4rem solid #fff;
-  border-radius: 2rem;
-  text-transform: uppercase;
-  opacity: 0.5;
-  animation: flicker-led 1.5s infinite;
-  will-change: text-shadow, box-shadow, opacity;
-}
+    font-size: 2.6rem;
+    font-weight: 400;
+    text-align: center;
+    font-style: italic;
+    color: #fff;
+    padding: 1rem 2rem 0.5rem;
+    border: 0.4rem solid #fff;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    margin: 20px 5rem 1.5rem 5rem;
+    animation: flicker-led 1.5s infinite;
+    will-change: text-shadow, box-shadow, opacity;
+  }
 
 .foco-led::-moz-selection {
   background-color: var(--neon-border-color);
@@ -1933,7 +1931,7 @@ color: #FF6600;
   outline: none;
 }
 
-.neonText {
+ /* .neonText {
   color: #fff;
   text-shadow:
     0 0 7px #fff,
@@ -1948,11 +1946,11 @@ color: #FF6600;
   margin-right: 1rem;
   margin-left: 3rem;
   position: relative;
-  top: 220px;
+  top: 220px; 
   opacity: 0.8;
   animation: flicker 1.5s infinite alternate;
   will-change: text-shadow, opacity;
-}
+} */
 
 @keyframes flicker-led {
   0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
@@ -1979,7 +1977,7 @@ color: #FF6600;
   }
 }
 
-@keyframes flicker {
+/* @keyframes flicker {
   0%, 18%, 22%, 25%, 53%, 57%, 100% {
     text-shadow:
       0 0 4px #fff,
@@ -1995,10 +1993,28 @@ color: #FF6600;
   20%, 24%, 55% {
     text-shadow: none;
   }
-}
+} */ 
 
-@media (max-width: 968px) {
+/* @media (max-width: 968px) {
   .foco-led, .neonText {
     display: none;
   }
 } */
+
+/* efecto movimiento */
+.mensaje {
+    display: inline-block;
+    animation: desplazar 20s linear infinite; /* Duración y tipo de animación */
+    padding-right: 50rem; /* Espacio entre palabras */
+    text-shadow: 0 0 10px rgba(28, 182, 152, 0.8); /* Sombra de texto con efecto neon */
+    white-space: nowrap; /* Asegura que el texto no se divida en varias líneas */
+  }
+  
+  @keyframes desplazar {
+    0% {
+      transform: translateX(100%); /* Comienza fuera del borde derecho */
+    }
+    100% {
+      transform: translateX(-100%); /* Termina fuera del borde izquierdo */
+    }
+  }
