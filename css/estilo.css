@@ -1917,6 +1917,12 @@ color: #FF6600;
     will-change: text-shadow, box-shadow, opacity;
   }
 
+  @media (max-width: 968px) {
+    .foco-led {
+      margin: -5px 2rem 5.2rem 3rem;
+    }
+}  
+
 .foco-led::-moz-selection {
   background-color: var(--neon-border-color);
   color: var(--neon-text-color);
@@ -2002,6 +2008,7 @@ color: #FF6600;
 } */
 
 /* efecto movimiento */
+
 .mensaje {
     display: inline-block;
     animation: desplazar 20s linear infinite; /* Duración y tipo de animación */
@@ -2009,6 +2016,8 @@ color: #FF6600;
     text-shadow: 0 0 10px rgba(28, 182, 152, 0.8); /* Sombra de texto con efecto neon */
     white-space: nowrap; /* Asegura que el texto no se divida en varias líneas */
   }
+
+
   
   @keyframes desplazar {
     0% {
@@ -2018,3 +2027,5 @@ color: #FF6600;
       transform: translateX(-100%); /* Termina fuera del borde izquierdo */
     }
   }
+
+  
