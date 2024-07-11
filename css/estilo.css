@@ -230,7 +230,7 @@ html, body {
 
 .sec-cv {
     background: linear-gradient(to top, rgba(30, 35, 38, .8), rgba(30, 35, 38, 1)),
-        url(../img/fondo2.jpg);
+        url(../img/fondo2.webp);
     background-size: cover;
     height: 100vh;
     color: #fff;
@@ -359,7 +359,7 @@ html, body {
 /* SECCION I N I C I O */
 
 .inicio {
-    background: linear-gradient(to top, rgba(30, 35, 38, .8), rgba(30, 35, 38, 1)), url(../img/fondo2.jpg);
+    background: linear-gradient(to top, rgba(30, 35, 38, .8), rgba(30, 35, 38, 1)), url(../img/fondo2.webp);
     background-size: cover;
     height: 110vh;
     color: #fff;
@@ -376,7 +376,7 @@ html, body {
     .box {
         display: block;
         position: absolute;
-        background: url(../img/fondo2.jpg);
+        background: url(../img/fondo2.webp);
         background-attachment: fixed;
         background-size: cover;
         height: 100vh;

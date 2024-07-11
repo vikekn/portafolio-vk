@@ -108,7 +108,12 @@ function modal() {
 }
 
 function openPopup() {
-    document.getElementById("popup").style.display = "block";
+    var popup = document.getElementById("popup");
+    if (popup) {
+        popup.style.display = "block";
+    } else {
+        console.error("Elemento con ID 'popup' no encontrado porque esta versión es en Español.");
+    }
 }
 
 function closePopup() {
