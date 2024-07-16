@@ -242,7 +242,7 @@ function activateGlitch() {
 
     function glitchLoop() {
         glitch[index].style.left = Math.floor(Math.random() * 160) + "vh";
-        glitch[index].style.top = Math.floor(Math.random() * 80) + "vh";
+        glitch[index].style.top = Math.floor(Math.random() * 150) + "vh";
         glitch[index].style.width = Math.floor(Math.random() * 300) + "px";
         glitch[index].style.height = Math.floor(Math.random() * 100) + "px";
         glitch[index].style.backgroundPosition =

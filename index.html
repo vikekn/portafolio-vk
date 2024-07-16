@@ -25,11 +25,11 @@
 <body>
     <!-- MENU ENCABEZADO -->
 
-    <header>
+    <header class="header">
         <div class="contenedor-header">
             <div class="barra">
                 <div class="logo">
-                    <a href="#" class="excluir-activo animacion-hoverme">Vike</a>
+                    <a href="#" class="excluir-activo animacion-hoverme">Kevin <span>Marmol</span></a>
                 </div>
 
                 <div class="mobile-menu">
@@ -56,34 +56,33 @@
 
     <!-- SECCION INICIO -->
     <section id="inicio" class="inicio" >
-
-        
         <div id="contenido-glitch"></div>
-        <div class="contenido-banner" data-aos="fade-right"> 
+        <div class="home-content" data-aos="fade-right">
+            <h1>Hola, soy <span>Kevin</span></h1>
+           
+            <h3 class="text-animation">Yo soy <span></span></h3>
+           
+            <p>Técnico Superior en Desarrollo de Software</p>
+            <p>Universidad Blas Pascal</p>
 
-            <div class="contenedor-img">
-                <picture>
-                    <source srcset="img/hero.webp" type="image/webp">
-                    <source srcset="img/hero.png" type="image/jpeg">
-                    <img loading="lazy" src="img/hero.webp" alt="hero">
-                </picture>
+                <div class="social-icons">
+                    <a href="Discord" name="Discord" target="_blank" ><i class="fa-brands fa-discord"></i></a>
+                    <a href="https://www.linkedin.com/in/kevinmarmolr/" target="_blank"><i
+                            class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://github.com/vikekn" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://lnk.bio/vikekn" target="_blank"><i class="fa-solid fa-link"></i></a>
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#contacto"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+
+            
+                    <a href="#" class="btn" class="bt-descargar" onclick="descargarCV('1')">Descargar Curriculum PDF</a>
+                
             </div>
-            <h1 class="animacion-hoverme">Kevin Mármol</h1>
-            <h2>Técnico Superior en Desarrollo de Software </h2>
-            <h4>Full Stack Dev/Junior Dev </h4>
-            <div class="redes">
-                <a href="Discord" name="Discord" target="_blank" ><i class="fa-brands fa-discord"></i></a>
-                <a href="https://www.linkedin.com/in/kevinmarmolr/" target="_blank"><i
-                        class="fa-brands fa-linkedin-in"></i></a>
-                <a href="https://github.com/vikekn" target="_blank"><i class="fa-brands fa-github"></i></a>
-                <a href="https://lnk.bio/vikekn" target="_blank"><i class="fa-solid fa-link"></i></a>
-                <a href="#contacto"><i class="fa-solid fa-envelope"></i></a>
-            </div>
-        </div>
-        <!-- <h1 class="neonText">
-            404
-      </h1>
-      <h2 class="neonText">Estudiando React</h2>  -->
+                <div class="home-img" data-aos="fade-left">
+                    <img src="/img/perfil1hero.webp" alt="">
+                </div>
+
     </section>
 
     <!-- SECCION SOBRE MI -->
@@ -512,9 +511,6 @@
                 <span class="static-text" >Curriculum</span>
                 <span class="right-bracket">]</span>
             </h2>
-            <p style="text-align: center;" data-aos="fade-up" >
-                Omitir e ir al PDF resumido aquí: <a class="boton-omitir" href="#desc">Botón descarga</a>
-            </p>
             <div class="fila">
                 <div class="col izquierda">
                     <h3 data-aos="fade-right">Educación</h3>
@@ -757,7 +753,7 @@
                                     me encanta seguir aprendiendo, tengo cursos pendientes en para fortalecer mi
                                     conocimiento en Javascript y luego abrirme a React, TypeScript, jQuery, Vue.js,
                                     Node.js,
-                                    y seguir practicando con frameworks de php como Symphony, Laravel</p>
+                                    y seguir practicando con frameworks de php como Symphony, Laravel.</p>
 
 
 

@@ -4,12 +4,18 @@
     font-family: 'Work Sans';
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
 }
 
 
 html {
     /* me permite deslizar cuando hago clic en los links del menu */
     scroll-behavior: smooth;
+    
 }
 
 html, body {
@@ -30,6 +36,7 @@ html, body {
     padding: 20px;
     border-radius: 10px;
     color: white;
+    z-index: 4;
 }
 
 .popup-content {
@@ -44,8 +51,10 @@ html, body {
 }
 
 /* MENU */
+
 .contenedor-header {
     background: rgba(25, 29, 31, 0.8);
+    backdrop-filter: blur(5px);
     position: fixed;
     width: 100%;
     display: flex;
@@ -94,6 +103,11 @@ html, body {
 
 .contenedor-header .logo {
     padding-left: 4rem;
+    transition: 0.3s ease;
+
+}
+.contenedor-header .logo:hover {
+    transform: scale(1.1);
 
 }
 
@@ -107,8 +121,17 @@ html, body {
 .contenedor-header .logo a {
     font-family: 'Righteous';
     font-size: 36px;
-    color: #1CB698;
+    color: #ffffff;
     text-decoration: none;
+
+}
+
+.contenedor-header .logo a span {
+    font-family: 'Righteous';
+    font-size: 40px;
+    color: #00ffee;;
+    text-decoration: none;
+    text-shadow: 0 0 25px  #00ffee;;;
 
 }
 
@@ -165,7 +188,7 @@ html, body {
 
 .contenedor-header .navegacion a:hover {
     color: #1CB698;
-    background-color: #1e2326;
+    background-color: #0d0d0d;
     padding: 3px;
     /* Ajusta el padding según sea necesario */
     border-radius: 0.5rem;
@@ -223,135 +246,6 @@ html, body {
     padding-top: 20px;
 
 }
-/*sec cv*/
-
-
-
-
-.sec-cv {
-    background: linear-gradient(to top, rgba(30, 35, 38, .8), rgba(30, 35, 38, 1)),
-        url(../img/fondo2.webp);
-    background-size: cover;
-    height: 100vh;
-    color: #fff;
-    display: flex;
-    align-items: center;
-}
-
-.sec-cv embed{
-    
-    width: 480px;
-    height: 485px;
-    padding: 1rem;
-    
-}
-@media (max-width: 968px) 
-{
-    
-.sec-cv embed{
-    
-   display: none;
-    
-}
-}
-
-.sec-cv .contenido-banner {
-    margin-right: 5rem;
-    padding: 0.95rem;
-    background-color: #1e2326;
-    max-width: 350px;
-    margin: 0.5rem auto 0.5rem;
-    text-align: center;
-    border-radius: 2rem;
-    z-index: 2;
-}
-
-
-
-@media screen and (max-width: 768px) {
-    .sec-cv .contenido-banner {    
-        margin: 1.5rem auto 0.5rem;
-    }
-}
-
-@keyframes float {
-    0% {
-        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
-        transform: translatey(0px);
-    }
-
-    50% {
-        box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
-        transform: translatey(-20px);
-    }
-
-    100% {
-        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
-        transform: translatey(0px);
-    }
-}
-
-.sec-cv .contenido-banner img {
-    margin-top: 40px;
-    border: 10px solid #1CB698;
-    display: block;
-    width: 80%;
-    margin: auto;
-    border-radius: 50%;
-    animation: float 6s ease-in-out infinite;
-
-
-}
-
-.sec-cv .contenido-banner h1 {
-    margin-top: 40px !important;
-    font-size: 42px !important;
-    font-family: 'Righteous' !important;
-}
-
-.inicio .contenido-banner h2 {
-    font-size: 15px !important;
-    font-weight: normal !important;
-}
-
-
-.sec-cv .contenido-banner h2 a {
-    font-size: 15px !important;
-    font-weight: normal !important;
-}
-
-.contenido-banner h2 a,
-.sec-cv h2 a {
-    color: #1CB698;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.contenido-banner h2 a:hover,
-.sec-cv h2 a:hover {
-    color: #FF6600;
-}
-
-.sec-cv .contenido-banner .redes a {
-    color: #fff;
-    display: inline-block;
-    text-decoration: none;
-    border: 1px solid #fff;
-    border-radius: 100%;
-    width: 42px;
-    height: 42px;
-    line-height: 42px;
-    margin: 40px 8px;
-    font-size: 20px;
-    transition: .3s;
-}
-
-.sec-cv .contenido-banner .redes a:hover {
-    background-color: #1CB698;
-} 
-
-
-
 
 
 
@@ -359,145 +253,416 @@ html, body {
 /* SECCION I N I C I O */
 
 .inicio {
-    background: linear-gradient(to top, rgba(30, 35, 38, .8), rgba(30, 35, 38, 1)), url(../img/fondo2.webp);
+    background: linear-gradient(to top, rgba(30, 35, 38, .8), rgba(30, 35, 38, 1)), url('../img/fondo2.webp');
     background-size: cover;
-    height: 110vh;
+    height: 140vh;
     color: #fff;
     display: flex;
     align-items: center;
-}
-
-
-.box {
-    display: none;
-}
-
-@media (min-width: 1080px) {
-    .box {
-        display: block;
-        position: absolute;
-        background: url(../img/fondo2.webp);
-        background-attachment: fixed;
-        background-size: cover;
-        height: 100vh;
-        align-items: center;
-        z-index: 1;
-    }
-}
-
-.inicio .contenido-banner {
-    padding: 0.95rem;
-    background-color: #1e2326;
-    max-width: 350px;
-    margin: 2.5rem auto 0.5rem;
-    text-align: center;
-    border-radius: 2rem;
-    z-index: 2;
-    
-}
-
-@media screen and (max-width: 968px) and (min-width: 739px) {
-    .inicio .contenido-banner {
-        max-width: 480px;
-        height: 17rem;
-        margin: 8.5rem auto 0.5rem;
-        padding: 0.95rem;
-        background-color: #1e2326;
-        border-radius: 2rem;
-        z-index: 2;
-        display: grid; /* Usar CSS Grid */
-        grid-template-rows: auto auto 1fr; /* Definir tres filas: una para h1, otra para h2, y otra para las redes */
-        gap: 1rem; /* Espacio entre las filas */
-    }
-    
-    .inicio .contenido-banner h1 {
-        justify-self: end;
-        grid-row: 1; /* Colocar h1 en la primera fila */
-    }
-    
-    .inicio .contenido-banner h2 {
-        justify-self: end;
-        grid-row: 2; /* Colocar h2 en la segunda fila */
-    }
-    .inicio .contenido-banner h4 {
-        justify-self: end;
-        grid-row: 3; /* Colocar h4 en la tercera fila */
-    }
-    
-    .inicio .contenido-banner .redes {
-        margin: -40px 0 0 0;
-        grid-row: 4; /* Colocar las redes en la cuarta fila */
-    }
-    .inicio .contenido-banner .contenedor-img {
-        justify-self: left;
-        margin: -270px 300px 0 0;
-        grid-row: 5; /* Colocar el contenedor de imagen en la quinta fila */
-    }
-    .inicio .contenido-banner .contenedor-img-gracias {
-        justify-self: left;
-        margin: -232px 319px 0 -9px;
-        grid-row: 5;
-    }
-    .inicio .contenido-banner .contenedor-img-discord {
-        justify-self: left;
-        margin: -274px 150px 0px -19px;
-        grid-row: 5;
-    }
-
-    .redes .discord{
-        margin: -20px -185px 0 0;
-    }
-}
-
-
-@media screen and (max-width: 768px) {
-    .inicio .contenido-banner {    
-        /* Puedes ajustar este valor según tus necesidades */
-        margin: 8.5rem auto 0.5rem;
-    }
-}
-
-@keyframes float {
-    0% {
-        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
-        transform: translatey(0px);
-    }
-
-    50% {
-        box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
-        transform: translatey(-20px);
-    }
-
-    100% {
-        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
-        transform: translatey(0px);
-    }
-}
-
-.inicio .contenido-banner img {
-    margin-top: 40px;
-    border: 10px solid #1CB698;
-    display: block;
-    width: 80%;
+    justify-content: center;
+    padding:1rem 2rem 6rem 2rem;
     margin: auto;
+    gap: 15rem;
+
+}
+
+#contenido-glitch {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Para que no interfiera con la interacción del usuario */
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.inicio .box {
+    position: absolute;
+    background: url(../img/fondo2.webp);
+    background-size: cover;
+    background-attachment: fixed;
+    pointer-events: none;
+}
+
+.home-content, .home-img {
+    position: relative; /* Para asegurarse de que el contenido esté por encima del glitch */
+    z-index: 2;
+}
+
+@media (max-width: 1079px) {
+    .inicio .box {
+        display: none; /* Oculta las cajas de glitch en pantallas pequeñas */
+    }
+}
+
+.inicio .home-content{
+    bottom: 3rem;
+    right: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #1e23263e; /* Fondo semitransparente */
+    padding: 0rem 1rem 1rem 2rem; /* Espaciado interno */
+    border-radius: 12px; /* Esquinas redondeadas */
+    z-index: 2;
+}
+
+.inicio .home-content h1 {
+    font-size: 4.5rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    line-height: 1;
+}
+
+.inicio .home-content h1 span {
+    color: #00ffee;
+}
+
+.inicio .home-content h3 {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    font-size: 2.5rem;
+}
+
+
+.inicio .home-img{
     border-radius: 50%;
-    animation: float 6s ease-in-out infinite;
-
+    z-index: 2;
 
 }
 
-.inicio .contenido-banner h1 {
-    margin-top: 40px !important;
-    font-size: 42px !important;
-    font-family: 'Righteous' !important;
+.inicio .home-img img{
+    position: relative;
+    bottom: 4rem;
+    right: 8rem;
+    width: 30vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px #00ffee;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+    animation: float2 6s ease-in-out infinite;
+    
 }
 
-/* Desactivar estilos de Bootstrap para h2 */
-.inicio .contenido-banner h2 {
-    font-size: 15px !important;
-    font-weight: normal !important;
+.inicio .home-img img:hover{
+    box-shadow: 0 0 25px #00ffee,
+                0 0 50px #00ffee,
+                0 0 100px #00ffee;
+}
+@keyframes float2 {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+.inicio .home-content p{
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.8;
+    max-width: 1000px;
 }
 
+.inicio .social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    background: #1e2326ca;
+    border: 2px solid #00ffee;
+    font-size: 2.5rem;
+    border-radius: 50%;
+    color: #00ffee;
+    margin:  1rem 1.5rem 1.8rem 0;
+    transition: 0.3s ease-in-out;
+    text-decoration: none;
+    
+    }
+
+    .inicio .social-icons a i {
+        color: white;
+        font-size: 1.5rem;
+    }
+
+    .inicio .social-icons a:hover{
+        color: white;
+        transform: scale(1.3)translate(-5px);
+        box-shadow: 0 0 25px #00ffee;
+        background-color: #00ffee;
+    }
+    
+
+    .inicio .btn {
+        display: inline-block;
+        padding: 0.5rem 1rem; /* Reduce el relleno */
+        background: #00ffee;
+        box-shadow: 0 0 25px #00ffee;
+        border-radius: 4rem;
+        font-size: 18px; /* Reduce el tamaño de la fuente */
+        color: black;
+        border: 2px solid transparent;
+        letter-spacing: 0.1rem;
+        font-weight: 600;
+        transition: 0.3s ease-in-out;
+        cursor: pointer;
+        margin: 0px 170px 0 0px; /* Reduce el margen */
+    }
+    
+    
+    .inicio .btn:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 50px #00ffee;
+    }
+    
+
+    
+    .inicio .text-animation {
+        font-size: 34px;
+        font-weight: 600;
+        min-width: 280px;
+        position: relative;
+        
+    }
+    
+    
+    .inicio .text-animation span {
+        position: relative;
+        display: inline-block; 
+    }
+    
+    .inicio .text-animation span::before {
+        content: "Web desarrollador";
+        color: #00ffee;
+        animation: words 20s infinite;
+    }
+    
+    .inicio .text-animation span::after {
+        content: "";
+        background-color: #1e2326;
+        position: absolute;
+        width: calc(100% + 8px);
+        height: 100%;
+        border-left: 3px solid #080808;
+        right: -8px;
+        animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+    }
+    
+    @keyframes cursor {
+        to {
+            border-left: 2px solid #00ffee;
+        }
+    }
+    
+    @keyframes words {
+        0%,
+        20% {
+            content: "Developer";
+        }
+        21%,
+        40% {
+            content: "Backend";
+        }
+        41%,
+        60% {
+            content: "Frontend";
+        }
+        61%,
+        80% {
+            content: "Desarrollador";
+        }
+        81%,
+        100% {
+            content: "Programador";
+        } 
+    }
+    
+    @keyframes typing {
+        10%,
+        15%,
+        30%,
+        35%,
+        50%,
+        55%,
+        70%,
+        75%,
+        90%,
+        95% {
+            width: 0;
+        }
+        5%,
+        20%,
+        25%,
+        40%,
+        45%,
+        60%,
+        65%,
+        80%,
+        85% {
+            width: calc(100% + 8px);
+        }
+    }
+    
+
+    @media screen and (max-width: 968px) and (min-width: 739px) {
+        .inicio{
+            padding: 30rem 6% 0rem 6rem;
+            
+        }
+        .inicio .home-content h3{
+            font-size: 1rem;
+        }
+
+        .inicio .home-content{
+        
+            display: flex;  
+            justify-content: left;
+            background-color: #1e232600;
+            padding: 0rem 0rem 2rem 2rem;
+            margin: 0 0px 0 0;
+            border-radius: 12px;
+            z-index: 2;
+            bottom: 16rem;
+            left: 2rem;
+            
+        }
+
+        .inicio .home-content h1{
+            font-size: 2rem;
+            margin-top: 3rem;
+        }
+        .inicio .home-content p{
+            max-width: 800px;
+            font-size: 0.7rem;
+            text-align: left;
+        }
+
+        .social-icons{
+            display: inline-flex;        
+            margin: 0rem 4rem 1rem 0;
+        }
+        .inicio .social-icons a {
+            justify-content: center;
+            width: 2.5rem;
+            height: 2.5rem;
+            font-size: 1.5rem;
+            margin: 0px 5px 4px 5px;
+            
+            }
+
+            .inicio .social-icons a i {
+            justify-content: left;
+                color: white;
+                font-size: 1rem;
+            }
+        .inicio .home-img{
+            bottom: 12rem;
+            right: 2.5rem;
+        }
+        .inicio .home-img img{
+            position: relative;
+            width: 18vw;
+            border-radius: 50%;
+            box-shadow: 0 0 25px #00ffee;
+            cursor: pointer;
+            transition: 0.4s ease-in-out;
+        }
+        
+        
+            .inicio .btn {
+                display: inline-block;
+                padding: 0.5rem 1.8rem;
+                font-size: 10px;
+                letter-spacing: 0.1rem;
+                font-weight: 600;
+        
+                margin: 2px 101px 0 0px
+            }
+    } 
+    
+    
+    @media(max-width: 739px){
+        .inicio{
+            flex-direction: column-reverse;
+            margin: 0;
+        }
+
+        .inicio .home-content{
+            bottom: 3rem;
+            right: 0rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: #1e2326b7; /* Fondo semitransparente */
+            padding: 0rem 1rem 1rem 2rem; /* Espaciado interno */
+            border-radius: 12px; /* Esquinas redondeadas */
+            z-index: 2;
+        }
+        
+
+        .inicio .home-content h3{
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        .inicio .home-content h1{
+            text-align: center;
+            font-size: 2rem;
+            margin-top: 3rem;
+        }
+        .inicio .home-content p{
+            font-size: 0.9rem;
+            max-width: 300px;
+            text-align: center;
+        }
+        
+        .inicio .home-img{
+            top: 15rem;
+            left: 4.5rem;
+        }
+        .inicio .home-img img{
+            position: relative;
+            width: 56vw;
+            border-radius: 50%;
+            box-shadow: 0 0 25px #00ffee;
+            cursor: pointer;
+            transition: 0.4s ease-in-out;
+        }
+
+        .inicio .social-icons {
+            margin-left: 2.2rem;
+              
+            }
+            .inicio .social-icons a {
+                width: 3rem;
+                height: 3rem;
+            }
+            .inicio .social-icons a i {
+               font-size: 1.3rem;
+            }
+        
+            .inicio .btn {
+                display: inline-block;
+                padding: 0rem 1.8rem;
+                background: #00ffee;
+                box-shadow: 0 0 25px #00ffee;
+                border-radius: 4rem;
+                font-size: 15px;
+                color: black;
+                border: 2px solid transparent;
+                letter-spacing: 0.1rem;
+                font-weight: 600;
+                transition: 0.3s ease-in-out;
+                cursor: pointer;
+                margin: 0px 22px 0 22px;
+            }
+    }
 
 .fondo-negro {
     background-color: black;
@@ -517,49 +682,6 @@ html, body {
 
 .botonCopiar:hover {
     background-color: #0c594a;
-}
-
-.inicio .contenido-banner h2 a {
-    font-size: 15px !important;
-    font-weight: normal !important;
-}
-
-.contenido-banner h2 a,
-.inicio h2 a {
-    /* Estilos para los enlaces dentro de h2 en contenido-banner y inicio */
-    color: #1CB698;
-    /* Color del texto */
-    text-decoration: none;
-    /* Quita el subrayado del enlace */
-    font-weight: bold;
-    /* Peso de la fuente */
-    /* Agrega otros estilos según tu diseño */
-}
-
-.contenido-banner h2 a:hover,
-.inicio h2 a:hover {
-    /* Estilos para cuando el cursor pasa sobre los enlaces */
-    color: #FF6600;
-    /* Cambia el color del texto al pasar el cursor */
-    /* Agrega otros estilos según tu diseño */
-}
-
-.inicio .contenido-banner .redes a {
-    color: #fff;
-    display: inline-block;
-    text-decoration: none;
-    border: 1px solid #fff;
-    border-radius: 100%;
-    width: 42px;
-    height: 42px;
-    line-height: 42px;
-    margin: 40px 8px;
-    font-size: 20px;
-    transition: .3s;
-}
-
-.inicio .contenido-banner .redes a:hover {
-    background-color: #1CB698;
 }
 
 
@@ -1890,7 +2012,7 @@ color: #FF6600;
         position: absolute;
         top: 0; right: 0; bottom: 0; left: 0;
         inset: 0 0 0 0;
-        background: #3ae9c6;
+        background: #3a4044;
         z-index: -1;
         transition: transform .3s ease;
     }
@@ -2040,3 +2162,127 @@ color: #FF6600;
   .custom-link:hover {
     color: #ff6347; /* Cambia este valor al color que desees para el hover */
 }
+
+/*sec cv*/
+
+
+
+
+.sec-cv {
+    background: linear-gradient(to top, rgba(30, 35, 38, .8), rgba(30, 35, 38, 1)),
+        url(../img/fondo2.webp);
+    background-size: cover;
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.sec-cv embed{
+    
+    width: 480px;
+    height: 485px;
+    padding: 1rem;
+    
+}
+@media (max-width: 968px) 
+{
+    
+.sec-cv embed{
+    
+   display: none;
+    
+}
+}
+
+.sec-cv .contenido-banner {
+    margin-right: 5rem;
+    padding: 0.95rem;
+    background-color: #1e2326;
+    max-width: 350px;
+    margin: 0.5rem auto 0.5rem;
+    text-align: center;
+    border-radius: 2rem;
+    z-index: 2;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .sec-cv .contenido-banner {    
+        margin: 1.5rem auto 0.5rem;
+    }
+}
+
+@keyframes float {
+    0% {
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+        transform: translatey(0px);
+    }
+
+    50% {
+        box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+        transform: translatey(-20px);
+    }
+
+    100% {
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+        transform: translatey(0px);
+    }
+}
+
+.sec-cv .contenido-banner img {
+    margin-top: 40px;
+    border: 10px solid #1CB698;
+    display: block;
+    width: 80%;
+    margin: auto;
+    border-radius: 50%;
+    animation: float 6s ease-in-out infinite;
+
+
+}
+
+.sec-cv .contenido-banner h1 {
+    margin-top: 40px !important;
+    font-size: 42px !important;
+    font-family: 'Righteous' !important;
+}
+
+
+
+.sec-cv .contenido-banner h2 a {
+    font-size: 15px !important;
+    font-weight: normal !important;
+}
+
+.contenido-banner h2 a,
+.sec-cv h2 a {
+    color: #1CB698;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contenido-banner h2 a:hover,
+.sec-cv h2 a:hover {
+    color: #FF6600;
+}
+
+.sec-cv .contenido-banner .redes a {
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 40px 8px;
+    font-size: 20px;
+    transition: .3s;
+}
+
+.sec-cv .contenido-banner .redes a:hover {
+    background-color: #1CB698;
+} 
+
