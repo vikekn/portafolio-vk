@@ -587,7 +587,7 @@ html, body {
     } 
     
     
-    @media(max-width: 739px){
+    @media(max-width: 740px){
         .inicio{
             flex-direction: column-reverse;
             margin: 0;
@@ -624,7 +624,7 @@ html, body {
         
         .inicio .home-img{
             top: 15rem;
-            left: 4.5rem;
+            left: 8.5rem;
         }
         .inicio .home-img img{
             position: relative;
@@ -637,11 +637,13 @@ html, body {
 
         .inicio .social-icons {
             margin-left: 2.2rem;
-              
+            align-items: center;
+                justify-content: center;
             }
             .inicio .social-icons a {
                 width: 3rem;
                 height: 3rem;
+                
             }
             .inicio .social-icons a i {
                font-size: 1.3rem;
