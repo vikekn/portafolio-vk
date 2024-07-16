@@ -188,10 +188,9 @@ html, body {
 
 .contenedor-header .navegacion a:hover {
     color: #1CB698;
-    background-color: #0d0d0d;
+    border-bottom: 3px solid #1CB698;;
     padding: 3px;
     /* Ajusta el padding según sea necesario */
-    border-radius: 0.5rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     /* Ajusta los valores de la sombra según sea necesario */
     margin-top: 1px;
