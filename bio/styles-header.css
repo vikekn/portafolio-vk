@@ -1,0 +1,13 @@
+	.lnkbio-headingscolor {
+			color: #ffffff;
+		}
+
+		.lnkbio-boxcolor {
+			background-color: #161a1d;
+		}
+		
+
+		.lnkbio-linkcolor,
+		a.linkcolor:not([href]) {
+			color: #ffffff;
+        }

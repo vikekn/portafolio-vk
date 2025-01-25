@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Proyecto</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../bootstrap-5.3.3-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <header>
+        <h1>Red Social</h1>
+        <a href="../index.html" class="btn-back">←Volver al Portafolio</a>
+    </header>
+    <main>
+        <section id="contenido-principal">
+            <div class="left-column">
+                <section id="tecnologias">
+                    <h2>Tecnologías Utilizadas</h2>
+                    <div class="technologies">
+                        <span class="tech"><img width="40" height="40" src="https://img.icons8.com/color/48/javascript--v1.png"
+                            alt="javascript--v1" /></span>
+                        <span class="tech"><img width="40" height="40" src="https://img.icons8.com/officel/40/php-logo.png" alt="php-logo"/></span>
+                        <span class="tech"><img width="40" height="40" src="https://img.icons8.com/color/48/css3.png" alt="css3"/></span>
+                        <span class="tech"> <i class="fa-brands fa-laravel" style="font-size: 38px; color:rgb(200, 10, 10);"></i></span>
+                        <span class="tech"> <img width="48" height="48" src="https://img.icons8.com/color/48/mysql-logo.png" alt="mysql-logo"/></span>
+                    </div>
+                </section>
+            </div>
+            <div class="center-column">
+                <section id="imagenes">
+                    <h2>Imágenes del Proyecto</h2>
+                    <div class="contenedor-carrusel" data-aos="zoom-in">
+                        <div id="carouselExampleIndicators" class="carousel slide">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                    class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                                <!-- Más indicadores -->
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="../img/constructor.webp" class="d-block w-100 img-clickable"
+                                        data-bs-toggle="modal" data-bs-target="#exampleModal" alt="1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/hero.webp" class="d-block w-100 img-clickable"
+                                        data-bs-toggle="modal" data-bs-target="#exampleModal" alt="2">
+                                </div>
+                                <!-- Más imágenes -->
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <img src="" class="img-fluid" id="modal-image" alt="Imagen en tamaño completo">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="right-column">
+                <section id="breve-explicacion">
+                    <h2>Breve Explicación</h2>
+                    <p>Este es un proyecto de una red social con diversas funcionalidades, como la posibilidad de 
+                        compartir publicaciones, dar "me gusta", dejar comentarios, seguir a otros usuarios, notificaciones y
+                         chatear en vivo. Además, ofrece opciones de personalización de perfil, incluyendo el
+                          cambio de foto de perfil, banner, cambio de contraseña o nombre de usuario.</p>
+                </section>
+            </div>
+        </section>
+        <section id="videos">
+            <h2>Video del Proyecto</h2>
+            <div class="video-container">
+                <video controls>
+                    <source src="video1.mp4" type="video/mp4">
+                    Tu navegador no soporta la etiqueta de video.
+                </video>
+            </div>
+        </section>
+        <section id="detalles-proyecto">
+            <div class="contenedor">
+                <h2>Red Social</h2>
+
+                <p>Descripción detallada del proyecto. Aquí puedes explicar los objetivos, las tecnologías utilizadas y cualquier detalle relevante sobre el proyecto.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Incluye Bootstrap y el script principal -->
+    <script src="scripts.js"></script>
+    <script src="../bootstrap-5.3.3-dist/js/bootstrap.js"></script>
+</body>
+</html>

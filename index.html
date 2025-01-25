@@ -1,0 +1,1435 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Programador con experiencia en PHP, Python, C# con .NET, JavaScript, SQL, CSS, Sass, React, Laravel, Django, Flask y Angular. Especializado en desarrollo web y aplicaciones empresariales. Descubre cómo puedo ayudarte con tu próximo proyecto.">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <title>Portafolio Dev Kevin Marmol</title>
+    <link rel="icon" type="image/webp" sizes="16x16" href="img/icon.webp">
+
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.css">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+</head>
+
+<body>
+    <!-- MENU ENCABEZADO -->
+
+    <header class="header">
+        <div class="contenedor-header">
+            <div class="barra">
+                <div class="logo">
+                    <a href="#" class="excluir-activo animacion-hoverme">Kevin <span>Marmol</span></a>
+                </div>
+
+                <div class="mobile-menu">
+                    <img src="img/barras.svg" alt="icono menu responsive" id="menu-icon">
+                </div>
+                <div class="derecha">
+                    <nav class="navegacion" id="nav">
+
+
+                        <a href="#sobremi">SOBRE MI</a>
+                        <a href="#skills">HABILIDADES</a>
+                        <a href="#curriculum">CURRICULUM</a>
+                        <a href="#certificaciones">CERTIFICADOS</a>
+                        <a href="#portfolio" style="color: #00ffee; text-shadow: 
+                       
+                         0 0 5px #00ffee93, 
+                         0 0 10px #00ffee, 
+                         0 0 15px #00ffee, 
+                         0 0 20px #00ffee;">PORTAFOLIO</a>
+
+
+                        <a href="#contacto">CONTACTO</a>
+
+                        <!-- <a href="index-en">LANGUAGE EN</a> -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- SECCION INICIO -->
+    <section id="inicio" class="inicio">
+        <div id="contenido-glitch"></div>
+        <div class="home-content" data-aos="fade-right">
+            <h1>Hola, soy <span>Kevin</span></h1>
+
+            <div class="contenedor-fondo">
+                <h3 class="text-animation">
+                    Yo soy <span id="texto-blink" class="txt-blink" data-period="1500"
+                        data-rotate='["Developer", "Desarrollador", "Programador", "Frontend Dev", "Backend Dev"]'></span>
+                </h3>
+            </div>
+            <p>Técnico Superior en Desarrollo de Software</p>
+            <p>Universidad Blas Pascal</p>
+
+            <div class="social-icons">
+                <a href="Discord" name="Discord" target="_blank"><i class="fa-brands fa-discord"></i></a>
+                <a href="https://www.linkedin.com/in/kevinmarmolr/" target="_blank"><i
+                        class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://github.com/vikekn" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="redes.html" target="_blank"><i class="fa-solid fa-link"></i></a>
+                <a href="#contacto"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+
+
+            <a href="#" class="btn" onclick="descargarCV('1')">Descargar Curriculum PDF</a>
+        </div>
+        <div class="image-container">
+            <div class="home-img" data-aos="fade-left">
+                <img src="img/perfil1hero.webp" alt="Perfil" class="responsive-img">
+            </div>
+        </div>
+
+
+    </section>
+
+    <!-- SECCION SOBRE MI -->
+    <section id="sobremi" class="sobremi">
+        <div class="contenido-seccion">
+            <h2 data-aos="fade-down">
+                <span class="left-bracket">[</span>
+                <span class="static-text">Sobre Mí</span>
+                <span class="right-bracket">]</span>
+            </h2>
+
+            <p class="mensaje">Nuevas actualizaciónes en la sección de Portafolio | Practicando React actualmente...</p>
+
+            <p data-aos="fade-up"><span>Hola, soy Kevin Marmol:</span></p>
+            <p data-aos="fade-down"> Me gradué como Técnico Superior en Desarrollo de Software en la <span> Universidad
+                    Blas Pascal</span>,
+                donde desarrollé aún más mi profunda pasión por la ingeniería de software. Mi enfoque y especialización
+                principal recaen en PHP, donde he acumulado experiencia significativa y he llevado a cabo numerosos
+                proyectos exitosos que demuestran mi destreza en esta área. Mi portafolio refleja mi dedicación y
+                habilidades en PHP, proporcionando ejemplos concretos de mi trabajo en esta tecnología.</p>
+            <p data-aos="fade-down">
+                Tengo certificaciones en cursos de
+                <span style="color: rgb(204, 150, 150);">PHP</span>,
+                <span style="color: green;">Python</span>,
+                <span style="color: rgb(58, 94, 240);">C#</span>,
+                <span style="color: rgb(0, 234, 255);">CSS</span>,
+                <span style="color: pink;">SASS</span>
+                y
+                <span style="color: yellow;">JavaScript</span>,
+                donde adquirí conocimientos tanto en la sintaxis como en la lógica de programación de estos lenguajes.
+                Además, tengo experiencia en el manejo de bases de datos relacionales, especialmente en <span
+                    style="color: orange;">MySql</span> y en lenguajes
+                de marcado como <span style="color: red;">HTML5</span> .
+            </p>
+
+            <p data-aos="fade-down"> Durante mis prácticas universitarias, adquirí capacitación en el uso de Visual
+                Studio Community para el
+                desarrollo web con .NET en C#, en JavaScript y Typescript, lo que complementa mi conjunto de
+                habilidades técnicas, además de en análisis de requerimientos y UML para el diseño de sistemas y bases de datos. 
+                Cuento también con un certificado en seguridad informática, con habilidades en auditorías, pentesting y
+                hacking ético.</p>
+            <p data-aos="fade-down">En la actualidad, me encuentro ampliando mis conocimientos a través de la práctica y
+                haciendo uso de
+                diferentes frameworks como lo son Laravel para php, aprendí de Angular cuando practiqué
+                desarrollo web en mi Universidad,
+                también tengo conocimiento de frameworks como Django y Flask con python y estoy
+                aprendiendo sobre algunas librerías de JS como la React, Vue o Jquery, además de bootstrap y Tailwind para el
+                diseño.
+                Tengo aspiraciones futuras para incursionar en Kotlin o Apache Cordova para
+                aplicaciones móviles.</p>
+            <p data-aos="fade-down">Me considero una persona polifacética en el área, con experiencia en el desarrollo
+                de videojuegos
+                utilizando C# y el motor grafico de Unity, es uno de mis hobbies favoritos, que no puedo llevar a cabo
+                en la actualidad por mi situación económica, que me impide tener el suficiente tiempo libre, ya que debo
+                seguir trabajando en este portafolio, capacitándome
+                y nutriendo mis conocimientos y habilidades con los cursos de desarrollo web que estoy realizando.</p>
+            <p data-aos="fade-down"> Además de mi enorme pasión por programar, una de las razones que también busco
+                empleo es porque estoy
+                interesado en mejorar mi nivel de inglés para abrirme a más oportunidades en el ámbito profesional, si
+                bien verbalmente no puedo tener diálogo, textualmente me las apaño muy bien interpretando textos
+                y bueno también haciendo uso de las nuevas tecnologías, para eso somos gente del mundo de la
+                informática, para automatizar cosas
+                😎 </p>
+            <p data-aos="fade-down">En mis redes sociales, principalmente en mi instagram, tengo 30.000 seguidores
+                actualmente, donde
+                allí muestro mi gran habilidad en photoshop y expreso mi talento artístico, aunque tengo pensado cambiar
+                dentro de poco mi contenido, cuando mi situación económica lo permita, dando un salto al contenido
+                tecnológico
+                y crear una nueva cuenta porque también me encanta el bushcraft y lo disfruto mucho.
+            </p>
+        </div>
+        <div class="fila">
+            <!-- datos personales -->
+            <div class="col">
+
+                <h3 data-aos="fade-right">
+                    <span class="left-bracket">[</span>
+                    <span class="static-text">Datos Personales</span>
+                    <span class="right-bracket">]</span>
+                </h3>
+                <ul data-aos="fade-right">
+                    <li>
+                        <strong><i class="fa-solid fa-cake-candles"></i> Cumpleaños</strong>
+                        25-12-1997
+                    </li>
+                    <li>
+                        <strong><i class="fa-solid fa-envelope"></i> Email</strong>
+                        kevin.marmolr@gmail.com
+                    </li>
+                    <li>
+                        <strong><i class="fa-solid fa-map"></i> Ubicación</strong>
+                        La Pampa, Argentina
+                    </li>
+                    <li>
+                        <strong><i class="fa-solid fa-briefcase"></i> Cargo</strong>
+                        <span>FREELANCE</span>
+                    </li>
+                    <li>
+                        <strong><i class="fa-solid fa-laptop"></i> Equipo de trabajo:</strong>
+                        i7 4790 | GTX 1060 | 24GB de RAM
+                    </li>
+                    <li>
+                        <strong> </strong>
+                        DDR3 | 2 monitores de VGA y 1 de HDMI
+                    </li>
+
+
+                    <li>
+                        <strong> </strong>
+                        Micrófono Blue Yeti y Teléfono S9+
+                    </li>
+                    <li>
+                        <strong> </strong>
+                        Laptop Dell Latitude e6430 | i5 | 8gb RAM
+                    </li>
+                    <li>
+                        <strong><i class="fa-solid fa-gear"></i> Programas Usados:</strong>
+                        Visual Studio Code, Photoshop,
+                    </li>
+                    <li>
+                        <strong> </strong>
+                        Sony Vegas, Heidi SQL, Blender, FLStudio
+                    </li>
+                    <li>
+                        <strong> </strong>
+
+                        <picture>
+                            <source srcset="img/meme.webp" type="image/webp">
+                            <source srcset="img/meme.png" type="image/jpeg">
+                            <img id="meme-img" class="meme hidden" loading="lazy" src="img/meme.webp" alt="meme">
+                            <button id="toggleButton">Ver/Ocultar imagen</button>
+                        </picture>
+
+
+
+                    </li>
+                </ul>
+            </div>
+
+            <!-- intereses -->
+            <div class="col" data-aos="fade-left">
+                <h3 data-aos="fade-left">
+                    <span class="left-bracket">[</span>
+                    <span class="static-text">Intereses</span>
+                    <span class="right-bracket">]</span>
+                </h3>
+                <div class="contenedor-intereses">
+                    <div class="interes">
+                        <i class="fa-solid fa-gamepad"></i>
+                        <span>JUEGOS</span>
+                    </div>
+                    <div class="interes">
+                        <i class="fa-solid fa-headphones"></i>
+                        <span>MÚSICA</span>
+                    </div>
+                    <div class="interes">
+                        <i class="fa-solid fa-plane"></i>
+                        <span>VIAJAR</span>
+                    </div>
+                    <div class="interes">
+                        <i class="fa-solid fa-code"></i>
+                        <span>PROGRAM</span>
+                    </div>
+                    <div class="interes">
+                        <i class="fa-brands fa-dev"></i>
+                        <span>BACKEND/</span>
+                        <span>FRONTEND</span>
+                    </div>
+                    <div class="interes">
+                        <i class="fa-solid fa-microchip"></i>
+                        <span>TECH</span>
+                    </div>
+                    <div class="interes">
+                        <i class="fa-solid fa-robot"></i>
+                        <span>IA</span>
+                    </div>
+                    <div class="interes">
+                        <i class="fa-brands fa-apple"></i>
+                        <span>MAC</span>
+                    </div>
+                    <div class="interes">
+                        <i class="fa-brands fa-linux"></i>
+                        <span>LINUX</span>
+                    </div>
+                    <div class="interes">
+                        <i class="fa-brands fa-windows"></i>
+                        <span>WINDOWS</span>
+                    </div>
+                    <div class="interes">
+                        <i class="fa-solid fa-dumbbell"></i>
+                        <span>DEPORTE</span>
+                    </div>
+                    <div class="interes">
+                        <i class="fa-solid fa-book"></i>
+                        <span>LIBROS</span>
+                    </div>
+                    <div class="interes">
+                        <i class="fa-solid fa-car"></i>
+                        <span>AUTOS</span>
+                    </div>
+                    <div class="interes">
+                        <i class="fa-solid fa-motorcycle"></i>
+                        <span>MOTOS</span>
+                    </div>
+                    <div class="interes">
+                        <i class="fa-solid fa-camera"></i>
+                        <span>FOTOS</span>
+                    </div>
+                    <div class="interes">
+                        <i class="fa-solid fa-campground"></i>
+                        <span>BUSHCRAFT</span>
+                    </div>
+                    <div class="interes">
+                        <i class="fa-solid fa-fish"></i>
+                        <span>PESCA</span>
+                    </div>
+                    <div class="interes">
+                        <i class="fa-solid fa-kitchen-set"></i>
+                        <span>COCINAR</span>
+                    </div>
+                    <div class="interes">
+                        <i class="fa-solid fa-dog"></i>
+                        <span>MASCOTAS</span>
+                    </div>
+                    <div class="interes">
+                        <i class="fa-solid fa-language"></i>
+                        <span>IDIOMAS</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION SKILLS -->
+    <section class="skills" id="skills">
+        <div class="contenido-seccion">
+
+            <h2 data-aos="fade-up">
+                <span class="left-bracket">[</span>
+                <span class="static-text">Habilidades</span>
+                <span class="right-bracket">]</span>
+            </h2>
+            <div class="fila">
+                <!-- Technical Skill -->
+                <div class="col">
+                    <h3 data-aos="fade-right">Habilidades Técnicas</h3>
+
+                    <div data-aos="fade-right">
+                        <div class="skill">
+
+                            <img width="40" height="40" src="https://img.icons8.com/color/48/javascript--v1.png"
+                                alt="javascript--v1" />
+                            <span>Javascript</span>
+                            <div class="barra-skill">
+                                <div class="progreso">
+                                    <span>55%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <i class="fa-brands fa-html5"></i><i class="fa-brands fa-css3-alt"></i> <i
+                                class="fa-brands fa-sass"></i>
+                            <span>HTML, CSS & SASS </span>
+                            <div class="barra-skill">
+                                <div class="progreso">
+                                    <span>65%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <img width="48" height="48" src="https://img.icons8.com/color/48/sony-vegas-pro.png"
+                                alt="sony-vegas-pro" />
+                            <img width="48" height="48" src="https://img.icons8.com/color/48/adobe-photoshop--v1.png"
+                                alt="adobe-photoshop--v1" />
+                            <span>Photoshop y Sony Vegas</span>
+                            <div class="barra-skill">
+                                <div class="progreso">
+                                    <span>95%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <i class="fa-brands fa-php"></i>
+                            <i class="fa-brands fa-laravel" style="font-size: 25px;"></i>
+
+                            <span>PHP <span style="font-size: 11px;">Laravel</span></span>
+                            <div class="barra-skill">
+                                <div class="progreso">
+                                    <span>81%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <img width="48" height="48" src="https://img.icons8.com/color/48/c-sharp-logo.png"
+                                alt="c-sharp-logo" />
+                            <i class="fa-brands fa-angular" style="position: relative; font-size: 25px; top: 12px;"></i>
+                            <span>C# <span style="font-size: 11px;">Angular</span> </span>
+                            <div class="barra-skill">
+                                <div class="progreso">
+                                    <span>50%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <img width="40" height="40" src="https://img.icons8.com/color/48/python--v1.png"
+                                alt="python--v1" />
+                            <img style="top: 5px;" class="django" width="45" height="45"
+                                src="https://img.icons8.com/color/48/django.png" alt="django" />
+
+                            <span>Python <span style="font-size: 11px;">Django</span></span>
+                            <div class="barra-skill">
+                                <div class="progreso">
+                                    <span>50%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <i class="fa-solid fa-database"></i>
+                            <span>MySQL</span>
+                            <div class="barra-skill">
+                                <div class="progreso">
+                                    <span>67%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Professional Skills -->
+                <div class="col">
+                    <h3 data-aos="fade-left">Habilidades Profesionales</h3>
+                    <div data-aos="fade-left">
+                        <div class="skill">
+                            <span>Comunicación</span>
+                            <div class="barra-skill">
+                                <div class="progreso">
+                                    <span>80%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <span>Trabajo en Equipo</span>
+                            <div class="barra-skill">
+                                <div class="progreso">
+                                    <span>85%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <span>Creatividad</span>
+                            <div class="barra-skill">
+                                <div class="progreso">
+                                    <span>99%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <span>Dedicación</span>
+                            <div class="barra-skill">
+                                <div class="progreso">
+                                    <span>99%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <span>Project Management</span>
+                            <div class="barra-skill">
+                                <div class="progreso">
+                                    <span>90%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <span>Autodidacta apasionado</span>
+                            <div class="barra-skill">
+                                <div class="progreso">
+                                    <span>100%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div data-aos="fade-up-left">
+                        <h3>Temas en Proceso de Aprendizaje, Mejora Continua o Actualización:</h3>
+
+                        <div class="skill">
+                            <p><span style="font-weight: bold;">Backend en:</span> <img class="python-img" width="35"
+                                    height="35" src="https://img.icons8.com/color/48/python--v1.png" alt="python--v1" />
+
+
+                                <img class="csharp" width="48" height="48"
+                                    src="https://img.icons8.com/color/48/c-sharp-logo.png" alt="c-sharp-logo" />
+                                <img class="node" width="52" height="52"
+                                    src="https://img.icons8.com/color/48/nodejs.png" alt="nodejs" /> <img class="mongo"
+                                    width="30" height="30"
+                                    src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/24/external-mongodb-a-cross-platform-document-oriented-database-program-logo-color-tal-revivo.png"
+                                    alt="external-mongodb-a-cross-platform-document-oriented-database-program-logo-color-tal-revivo" />
+                            </p>
+                        </div>
+                        <div class="skill">
+                            <p><span style="font-weight: bold;">Frontend/librerias:</span> <i
+                                    class="fa-brands fa-react"></i> <img class="vue" width="30" height="30"
+                                    src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/24/external-vuejs-an-open-source-javascript-framework-for-building-user-interfaces-and-single-page-applications-logo-shadow-tal-revivo.png"
+                                    alt="external-vuejs-an-open-source-javascript-framework-for-building-user-interfaces-and-single-page-applications-logo-shadow-tal-revivo" />
+                                <img class="jquery" width="30" height="30"
+                                    src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/24/external-jquery-is-a-javascript-library-designed-to-simplify-html-logo-shadow-tal-revivo.png"
+                                    alt="external-jquery-is-a-javascript-library-designed-to-simplify-html-logo-shadow-tal-revivo" />
+                                <img class="tailwind" width="48" height="48"
+                                    src="https://img.icons8.com/color/48/tailwind_css.png" alt="tailwind_css" />
+
+                            </p>
+                        </div>
+                        <div class="skill">
+                            <p><span style="font-weight: bold;">Frameworks:</span> <i class="fa-brands fa-laravel"></i>
+                                </i> <i class="fa-brands fa-angular"></i> <img class="django" width="45" height="45"
+                                    src="https://img.icons8.com/color/48/django.png" alt="django" /> <img class="flask"
+                                    width="45" height="45" src="img/icon/flask.png" alt="flask" />
+                            </p>
+                        </div>
+                        <div class="skill">
+                            <p><span style="font-weight: bold;">Otros:</span> <i class="fa-brands fa-docker"></i>
+                                <img class="linux" width="48" height="48"
+                                    src="https://img.icons8.com/color/48/linux--v1.png" alt="linux--v1" />
+                                <img class="cordova" width="48" height="48"
+                                    src="https://img.icons8.com/badges/48/cordova.png" alt="cordova" />
+                                <img class="typescript" width="40" height="40"
+                                    src="https://img.icons8.com/color/48/typescript.png" alt="typescript" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION CURRICULUM -->
+    <section id="curriculum" class="curriculum">
+        <div class="contenido-seccion">
+
+            <h2 data-aos="fade-down">
+                <span class="left-bracket">[</span>
+                <span class="static-text">Curriculum</span>
+                <span class="right-bracket">]</span>
+            </h2>
+            <div class="fila">
+                <div class="col izquierda">
+                    <h3 data-aos="fade-right">Educación</h3>
+                    <div class="item izq" data-aos="fade-right">
+                        <h4>Programación</h4>
+                        <span class="casa">Universidad Blas Pascal</span>
+                        <span class="fecha">2020 - 2023</span>
+                        <table class="tabla">
+                            <th>
+                                <picture>
+                                    <source srcset="img/hero2.webp" type="image/webp">
+                                    <source srcset="img/hero2.png" type="image/jpeg">
+                                    <img loading="lazy" src="img/hero2.webp" alt="meme">
+                                </picture>
+                            </th>
+
+                            <th>
+                                <p>Comencé mis estudios en la Universidad Blas Pascal a distancia, luego de abandonar
+                                    Ingeniería en Sistemas
+                                    por problemas económicos allá por 2016 como consecuencia del divorcio de mis padres
+                                    y
+                                    la carrera de Analista en Sistemas en 2019 faltándome solo un año para titularme, y
+                                    la razón fue
+                                    por diferencias con algunas maneras
+                                    obsoletas de enseñar para los tiempos que corren de algunos docentes, pero tuve un
+                                    gran profesor con el que aprendí de PHP con ejercicios tanto de programación
+                                    estructurada y orientados a Objetos.</p>
+                                <p>En mi paso por la Universidad Blas Pascal conté con clases virtuales y una gran
+                                    asistencia de cada profesor.</p>
+                            </th>
+
+
+                        </table>
+
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item izq" data-aos="fade-right">
+                        <h4>Programación</h4>
+                        <span class="casa">Universidad Blas Pascal</span>
+                        <span class="fecha">2020 - 2023</span>
+                        <p>Durante mi primer año en la Universidad Blas Pascal, adquirí
+                            conocimientos sólidos en Programación Orientada a Objetos en
+                            Lenguaje Java. Las diversas consignas de los trabajos prácticos
+                            me resultaron bastante sencillas, gracias a mi experiencia previa
+                            en la lógica de la programación orientada a objetos de mis carreras anteriores.
+                            Además, aprendí
+                            a crear diversos diagramas, incluyendo Diagramas de Entidad Relación,
+                            Diagramas de Flujo de Datos, Diagramas de Casos de Uso y Diagramas de
+                            Clases. Estos conceptos no solo fortalecieron mi comprensión teórica,
+                            sino que también los apliqué de manera efectiva en la práctica, lo que
+                            me permitió enfrentar los desafíos académicos con confianza y solidez.
+                        </p>
+                        <p>Luego a final de cada cuatrimestre se tomaba una evaluación final en todas las materias
+                            a las que estaba inscripto y esta se hacia
+                            de forma presencial en la sede de la Universidad que se aloja en mi ciudad.
+                        </p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item izq" data-aos="fade-right">
+                        <h4>Programación</h4>
+                        <span class="casa">Universidad Blas Pascal</span>
+                        <span class="fecha">2020 - 2023</span>
+                        <p>Durante mi segundo año aprendí sobre C# utilizando .Net en
+                            Visual Studio Community, donde cree varios proyectos webs con temas significativos,
+                            como un Registro de usuarios que almacenaba sus datos en SQL SERVER y autentificación a
+                            través de un login,
+                            además, con un sistema de Roles, donde el administrador tenía acceso a
+                            un CRUD con cada regitro de usuario o cada temario al que cada
+                            usuario se suscribía. Usé una arquitectura MVC para estos proyectos, pero para pulir
+                            habilidades en
+                            CSS sentí que mi practica en la universidad fue muy pobre de contenido, por ello me
+                            complementé
+                            de cursos de pago extras en Udemy.com y aún sigo puliendo mis habilidades en ello.
+                        </p>
+
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item izq" data-aos="fade-right">
+                        <h4>Programación</h4>
+                        <span class="casa">Universidad Blas Pascal</span>
+                        <span class="fecha">2020 - 2023</span>
+                        <p>En mi tercer y último año aprendí sobre fundamentos básicos de JavaScript
+                            entre ellos eventos de DOM, objetos y arreglos, localstorage, drag-droup y varias cosas más
+                            donde
+                            tuve que ser demasiado autodidacta investigando como por ejemplo sobre Scope y contexto de
+                            ejecución
+                            o Asincronía donde trabajas con operaciones asíncronas utilizando callbacks, promesas y
+                            async/await.
+                            Honestamente sentí que esta parte fue bastante floja en mi paso sobre la universidad, por la
+                            poca práctica que se dio, por lo que
+                            tuve que complementar mi educación y aún lo sigo haciendo, con cursos extras de pago, donde
+                            utilicé
+                            nuevamente la plataforma de Udemy y tengo muchas de mis certificaciones de finalización
+                            completas
+                            que las van a poder apreciar más abajo.
+                        </p>
+                        <p>En este mismo año aprendí a utilizar el framework de Angular y de proyecto final presenté una
+                            Web de Frutas
+                            que lo exigía el mismo profesor, que debía ser de frutas,
+                            y la verdad no fue la mejor web que realicé honestamente, porque su diseño no era tan
+                            responsive que digamos jaja, pero bueno luego mejoré
+                            bastante como desarrollador en ese aspecto ya que conocí el uso de media queries más
+                            adelante con los cursos de Udemy.com, este mismo proyecto lo pueden ver en mi portafolio,
+                            se pueden registrar con cualquier mail que gusten de prueba, ya que hago uso de firebase y
+                            la confirmación de cuenta les llegará a su casilla
+                            sin ningún problema.
+                        </p>
+
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item izq" data-aos="fade-right">
+                        <h4>Programación</h4>
+                        <span class="casa">Después de titularme de la Universidad</span>
+                        <span class="fecha">2020 - 2023</span>
+                        <p>
+                            Seguí con mis prácticas en Udemy.com donde realicé los proyectos destacados que pueden
+                            apreciar
+                            en mi portafolio, ambos con su Backend en PHP, una base de Datos en MySQL, Javascript
+                            incluido en las vistas y SASS
+                            en los estilos haciendo uso de de Gulp para automatizar tareas. También hice uso de
+                            librerías de PHP
+                            como PHPMailer donde lo enlacé con MailTrap para probar la confirmación de Usuarios o el
+                            recuperar
+                            contraseñas
+
+                        </p>
+                        <p>Algún día me gustaría aprender también Kotline o Apache Cordova para el desarrollo en
+                            Android, soy muy
+                            polifacético, me gustaría que me de
+                            la vida para aprenderlo todo, me entusiasma y disfruto mucho
+                            programar webs, apps y videojuegos o exploits y scripts maliciosos, pero esto último es un
+                            secreto a voces,
+                            respeto a todos y sigo la filosofía de <span>Dont Tread on Me</span>.
+                        </p>
+
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col derecha">
+                    <h3 data-aos="fade-left"> Experiencia de trabajo</h3>
+                    <div class="item der" data-aos="fade-left">
+                        <h4>FullStack Developer</h4>
+                        <span class="casa">FreeLance</span>
+                        <span class="fecha">2023 - Actualidad</span>
+                        <p>Sobre mi experiencia laboral, bueno, aquí tengo que hablar y ser muy honesto con ustedes,
+                            no tengo ningún tipo de experiencia laboral con ninguna empresa o trabajo de oficina, pero
+                            tengo experiencia como Freelance a distancia y realizando dos trabajos personalmente en mi
+                            propia localidad para negocios locales.
+                        </p>
+
+                        <p>
+                            La principal razón por la que creé este proyecto de sitio web de portafolio es porque no
+                            tengo experiencia laboral
+                            previa con ninguna empresa. Como recién graduado y desarrollador junior, considero que la
+                            mejor manera de destacar mi
+                            talento es a través de un portafolio que muestre todos y cada uno de los proyectos en los
+                            que he trabajado
+                            hasta ahora, incluido este sitio que estás leyendo, que se irá actualizando y añadiendo más
+                            trabajos de mis prácticas,
+                            porque los trabajos que me surjan como freelance prefiero ser reservado con el código
+                            fuente, este portafolio es mí bala de plata para salir adelante
+                            en lo que tantos años dediqué horas de estudio y práctica.
+                        </p>
+
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                    <div class="item der" data-aos="fade-left">
+                        <h4>FullStack Developer</h4>
+                        <span class="casa">Conseguir trabajo en mi ciudad</span>
+                        <span class="fecha">2023 - Actualidad</span>
+                        <p>En la región donde vivo, La Pampa, la industria tecnológica aún no ha alcanzado
+                            el mismo nivel de desarrollo que en las grandes ciudades. Esto hace que encontrar
+                            oportunidades locales para vivir del desarrollo de software sea muy complicado.
+                            Por esta razón, decidí explorar las posibilidades en el resto del país y en el mundo.
+                            Uno de mis sueños es vivir como un nómada digital y trabajar de forma remota,
+                            especialmente con la llegada de Starlink a Argentina. Sin embargo, sé que siendo
+                            junior es difícil encontrar una oportunidad de este tipo, por lo que estoy dispuesto
+                            a mudarme a cualquier región necesaria y mejorar mis habilidades en la oficina hasta ganarme
+                            el privilegio de trabajar remotamente.</p>
+                        <p>Mis deseos y ambiciones incluyen ver cómo esta región florece y se convierte
+                            en el nuevo Silicon Valley de Sudamérica, y ser parte de ello creando una
+                            gran corporación.</p>
+                        <p>Además, tengo el sueño de fundar un nuevo instituto educativo en el futuro
+                            para atraer a muchos talentos del mundo. Quiero que aquellos que, como yo en mi
+                            adolescencia, no tuvieron acceso a una educación tecnológica adecuada para el nuevo mundo
+                            del mañana, puedan formarse y enfrentar los nuevos desafíos y oportunidades que vendrán.</p>
+
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                    <div class="item der" data-aos="fade-left">
+                        <h4>FullStack Developer</h4>
+                        <span class="casa">Freelance y proyectos locales (2023 - Actualidad)
+                        </span>
+                        <span class="fecha">2023 - Actualidad</span>
+                        <p>Durante mi experiencia como desarrollador FullStack, he trabajado en diversos proyectos, tanto para clientes internacionales en plataformas de trabajo remoto como para negocios locales. Estos son algunos de los proyectos más destacados que he desarrollado.
+                        </p>
+                        <p>También realicé trabajos Presenciales en mi localidad:
+
+                            <span>Proyecto 1:</span>Web para tienda de insumos escolares y fotocopiadora
+                            Este sitio fue diseñado utilizando mi propia plantilla de portafolio, adaptándola completamente a las necesidades del cliente. Implementé un diseño responsivo y optimizado para la experiencia de los usuarios..
+                        </p>
+
+                        <p><span>Proyecto 2</span> C Distribuidora mayorista de refrigerados y embutidos
+                            Diseñé y desarrollé un sitio web profesional, con planes para integrar en el futuro un sistema completo de e-commerce con carrito de compras y registros de usuarios..
+                        </p>
+
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                    <div class="item der" data-aos="fade-left">
+                        <h4>FullStack Developer</h4>
+                        <span class="casa">¿Que trabajo o proyectos estoy haciendo actualmente?</span>
+                        <span class="fecha">2023 - Actualidad</span>
+                        <table class="tabla">
+
+                            <th>
+                                <p>Estoy realizando y tengo varios cursos pendientes actualmente que compré con
+                                    anterioridad, porque como detallé en mi parte
+                                    educativa, siento que no tuve una formación muy buena para el mercado laboral actual
+                                    en el lado de lenguajes como JavaScript o con hojas de estilo en cascada (CSS),
+                                    trato
+                                    de cubrir mis puntos débiles para ser un mejor profesional mañana y porque además
+                                    disfruto mucho de estos
+                                    me encanta seguir aprendiendo, tengo cursos pendientes en para fortalecer mi
+                                    conocimiento en Javascript y luego abrirme a React, TypeScript, jQuery, Vue.js,
+                                    Node.js,
+                                    y seguir practicando con frameworks de php como Laravel.</p>
+
+
+
+                            <th>
+                                <picture>
+                                    <source srcset="img/hero3.webp" type="image/webp">
+                                    <source srcset="img/hero3.png" type="image/jpeg">
+                                    <img loading="lazy" src="img/hero3.webp" alt="meme">
+                                </picture>
+                            </th>
+                            </th>
+
+                        </table>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                    <div class="item der" data-aos="fade-left">
+                        <h4>FullStack Developer</h4>
+                        <span class="casa">Para Finalizar</span>
+                        <span class="fecha">2023 - Actualidad</span>
+                        <p>Php se ha convertido en mi estandarte y caballo de batalla gracias a los cursos tomados en
+                            Udemy, fue donde más me especialicé
+                            , todo el backend de mis sitios esta hecho con ese lenguaje, aunque siento que aún me queda
+                            mucho por descubrir y aprender del mismo
+                            , pero manejo muy bien la sintaxis, en mis proyectos destacados lo podrán apreciar</p>
+
+                        <p>Yo sé muy bien que quien mucho abarca poco aprieta, pero también tengo deseos de aprender
+                            Python en el backend
+                            lo he probado muy poco usando Django y Flask, para cosas muy básicas como un CRUD, y también
+                            con C#, me gusto aprenderlo en mi paso
+                            por la universidad, siempre me gusta estar a la vanguardia con lo que necesita el mercado y
+                            si me tengo que especializar en ello lo haré, por lo que pronto añadiré cosas en mi
+                            portafolio
+                            con estos lenguajes que también aprendí su sintaxis.
+                        </p>
+
+                        <p>Debajo les dejo mi curriculum para descargar y estamos en contacto, pueden escribirme a mi
+                            gmail <span>kevin.marmolr@gmail.com</span> que es la opción más segura
+                            o en mi formulario de contacto debajo del todo del sitio web, en el footer para los
+                            entendidos que son programadores jaja, o agregarme a Discord, por cuestiones de seguridad
+                            ya no hago mas público mi Teléfono personal.</p>
+
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                        <h2 id='desc'></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <button class="bt-descargar" onclick="descargarCV('1')" data-aos="flip-up">
+            Descargar CV <i class="fa-solid fa-download"></i>
+            <span class="overlay"></span>
+        </button>
+
+
+
+        <h2 id="certificaciones"></h2>
+        <h2 data-aos="fade-up">
+            <span class="left-bracket">[</span>
+            <span class="static-text">CERTIFICADOS</span>
+            <span class="right-bracket">]</span>
+        </h2>
+
+
+        <div class="contenedor-carrusel" data-aos="zoom-in">
+            <div id="carouselExampleIndicators" class="carousel slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                        aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                        aria-label="Slide 5"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"
+                        aria-label="Slide 6"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6"
+                        aria-label="Slide 7"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7"
+                        aria-label="Slide 8"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="8"
+                        aria-label="Slide 9"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="9"
+                        aria-label="Slide 10"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="10"
+                        aria-label="Slide 11"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="11"
+                        aria-label="Slide 12"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="12"
+                    aria-label="Slide 13"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="img/certificaciones/titulo.webp" class="d-block w-100 img-clickable"
+                            data-bs-toggle="modal" data-bs-target="#exampleModal" alt="1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/certificaciones/1 (1).webp" class="d-block w-100 img-clickable"
+                            data-bs-toggle="modal" data-bs-target="#exampleModal" alt="2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/certificaciones/1 (2).webp" class="d-block w-100 img-clickable"
+                            data-bs-toggle="modal" data-bs-target="#exampleModal" alt="3">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/certificaciones/1 (3).webp" class="d-block w-100 img-clickable"
+                            data-bs-toggle="modal" data-bs-target="#exampleModal" alt="4">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/certificaciones/1 (4).webp" class="d-block w-100 img-clickable"
+                            data-bs-toggle="modal" data-bs-target="#exampleModal" alt="5">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/certificaciones/1 (5).webp" class="d-block w-100 img-clickable"
+                            data-bs-toggle="modal" data-bs-target="#exampleModal" alt="6">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/certificaciones/1 (6).webp" class="d-block w-100 img-clickable"
+                            data-bs-toggle="modal" data-bs-target="#exampleModal" alt="7">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/certificaciones/1 (7).webp" class="d-block w-100 img-clickable"
+                            data-bs-toggle="modal" data-bs-target="#exampleModal" alt="8">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/certificaciones/1 (8).webp" class="d-block w-100 img-clickable"
+                            data-bs-toggle="modal" data-bs-target="#exampleModal" alt="9">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/certificaciones/1 (9).webp" class="d-block w-100 img-clickable"
+                            data-bs-toggle="modal" data-bs-target="#exampleModal" alt="10">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/certificaciones/1 (10).webp" class="d-block w-100 img-clickable"
+                            data-bs-toggle="modal" data-bs-target="#exampleModal" alt="11">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/certificaciones/1 (11).webp" class="d-block w-100 img-clickable"
+                            data-bs-toggle="modal" data-bs-target="#exampleModal" alt="12">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/certificaciones/1 (12).webp" class="d-block w-100 img-clickable"
+                            data-bs-toggle="modal" data-bs-target="#exampleModal" alt="13">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    id="oculto" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    id="oculto" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+        </div>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+
+                </div>
+                <div class="modal-body">
+                    <img src="" class="img-fluid" id="modal-image" alt="Imagen en tamaño completo">
+                </div>
+            </div>
+        </div>
+        </div>
+
+
+
+    </section>
+
+    <!-- SECCION PORTFOLIO -->
+    <section id="portfolio" class="portfolio">
+        <div class="contenido-seccion">
+            <h2 data-aos="fade-down">
+                <span class="left-bracket">[</span>
+                <span class="static-text">PORTAFOLIO</span>
+                <span class="right-bracket">]</span>
+            </h2>
+            <p data-aos="fade-up">Los Proyectos en <span>Destacado ★</span> poseen todos un backend desarrollado.
+            </p>
+            <p data-aos="fade-up">Los Proyectos en <span style="  color: rgb(200, 149, 250);
+    text-shadow:
+        -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;">Super Destacado ★</span> poseen todos un
+                backend desarrollado
+                y una estructura más elaborada con muchas funcionalidades.</p>
+                
+            <select id="filtro" onchange="filtrarProyectos()">
+                <option value="todo">Mostrar Todo</option>
+                <option value="frontend">Frontend</option>
+                <option value="backend">Backend</option>
+                <option value="php">PHP</option>
+                <option value="javascript">JavaScript</option>
+                <option value="csharp" data-categoria="csharp">C#</option>
+                <option value="python">Python</option>
+            </select>
+
+            <div class="galeria">
+
+                <div class="proyecto superdestacado" data-aos="zoom-in">
+                    <a href="https://dev-webcamp.mnz.dom.my.id/" target="_blank">
+                        <img src="img/p10.webp" alt="">
+                        <div class="overlay">
+                            <h3>Red Social Chat en vivo</h3>
+                            <p>Frontend/Backend PHP Laravel</p>
+                            <p>JavaScript</p>
+                        </div>
+                    </a>
+                </div>
+            
+                <div class="proyecto superdestacado" data-aos="zoom-in">
+                    <a href="https://dev-webcamp.mnz.dom.my.id/" target="_blank">
+                        <img src="img/p11.webp" alt="">
+                        <div class="overlay">
+                            <h3>E-commerce Completo</h3>
+                            <p>Frontend/Backend PHP Laravel</p>
+                            <p>JavaScript</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="proyecto superdestacado" data-aos="zoom-in" data-categoria="csharp">
+                    <a href="https://dev-webcamp.mnz.dom.my.id/" target="_blank">
+                        <img src="img/p15.webp" alt="">
+                        <div class="overlay">
+                            <h3>Gestor Negocio,Sistema Ventas con lector cod.Barras Full</h3>
+                            <p>Frontend/Backend C#</p>
+                            <p>App escritorio</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="proyecto ajust-tam" data-aos="zoom-in">
+                    <a href="https://vikekn.github.io/site-freelance-vk/" target="_blank">
+                        <img src="img/p1.webp" alt="">
+                        <div class="overlay">
+                            <h3>Sitio Freelance</h3>
+                            <p>Frontend</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="proyecto ajust-tam" data-aos="zoom-in">
+                    <a href="https://vikekn.github.io/front-store-vk/" target="_blank">
+                        <img src="img/p2.webp" alt="">
+                        <div class="overlay">
+                            <h3>Frontend Store</h3>
+                            <p>Frontend</p>
+                        </div>
+                    </a>
+                </div>
+            
+                <div class="proyecto ajust-tam" id="destacado" data-aos="zoom-in">
+                    <a href="https://vikekn.github.io/blog-cofee-vk/" target="_blank">
+                        <img src="img/p3.webp" alt="">
+                        <div class="overlay">
+                            <h3>Blog Café</h3>
+                            <p>Frontend</p>
+                        </div>
+                    </a>
+                </div>
+            
+                <div class="proyecto ajust-tam" data-aos="zoom-in">
+                    <a href="https://vikekn.github.io/concierto-festival-vk/" target="_blank">
+                        <img src="img/p4.webp" alt="">
+                        <div class="overlay">
+                            <h3>Festival y Concierto</h3>
+                            <p>Frontend</p>
+                            <p>JavaScript</p>
+                        </div>
+                    </a>
+                </div>
+            
+                <div class="proyecto destacado" data-aos="zoom-in">
+                    <a href="https://hijlaqe.nyc.dom.my.id/" target="_blank">
+                        <img src="img/p5.webp" alt="">
+                        <div class="overlay">
+                            <h3>Bienes Raices</h3>
+                            <p>Frontend/Backend PHP</p>
+                            <p>JavaScript</p>
+                        </div>
+                    </a>
+                </div>
+            
+                <div class="proyecto destacado" data-aos="zoom-in">
+                    <a href="https://maphimu.nyc.dom.my.id/" target="_blank">
+                        <img src="img/p6.webp" alt="">
+                        <div class="overlay">
+                            <h3>Peluqueria</h3>
+                            <p>Frontend/Backend PHP</p>
+                            <p>JavaScript</p>
+                        </div>
+                    </a>
+                </div>
+            
+                <div class="proyecto destacado" data-aos="zoom-in">
+                    <a href="https://dev-webcamp.mnz.dom.my.id/" target="_blank">
+                        <img src="img/p7.webp" alt="">
+                        <div class="overlay">
+                            <h3>DevWebcamp</h3>
+                            <p>Frontend/Backend PHP</p>
+                            <p>JavaScript</p>
+                        </div>
+                    </a>
+                </div>
+            
+                <div class="proyecto ajust-tam" data-aos="zoom-in">
+                    <a href="https://github.com/vikekn/angular-shopping-car-vk" target="_blank">
+                        <img src="img/p8.webp" alt="">
+                        <div class="overlay">
+                            <h3>Angular Carrito de compras</h3>
+                            <p>Trabajo Práctico</p>
+                            <p>de la Universidad 2021</p>
+                            <p>Frontend/APIs </p>
+                        </div>
+                    </a>
+                </div>
+            
+                <div class="proyecto ajust-tam" data-aos="zoom-in">
+                    <a href="https://dev-webcamp.mnz.dom.my.id/" target="_blank">
+                        <img src="img/p9.webp" alt="">
+                        <div class="overlay">
+                            <h3>Blog Completo</h3>
+                            <p>Hecho en el 2019</p>
+                            <p>Frontend/Backend PHP</p>
+                            <p>JavaScript</p>
+                        </div>
+                    </a>
+                </div>
+                   
+            
+                <div class="proyecto superdestacado" data-aos="zoom-in">
+                    <a href="https://dev-webcamp.mnz.dom.my.id/" target="_blank">
+                        <img src="img/p12.webp" alt="">
+                        <div class="overlay">
+                            <h3>Gestor Negocio Sistema Ventas Full</h3>
+                            <p>Frontend/Backend PHP Laravel</p>
+                            <p>JavaScript</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="proyecto ajust-tam" data-aos="zoom-in">
+                    <a href="https://dev-webcamp.mnz.dom.my.id/" target="_blank">
+                        <img src="img/p13.webp" alt="">
+                        <div class="overlay">
+                            <h3>Web Peliculas</h3>
+                            <p>Frontend</p>
+                            <p>JavaScript</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="proyecto destacado" data-aos="zoom-in">
+                    <a href="https://dev-webcamp.mnz.dom.my.id/" target="_blank">
+                        <img src="img/p14.webp" alt="">
+                        <div class="overlay">
+                            <h3>Asistente Virtual v1</h3>
+                            <p>Similar a Siri/Alexa IA</p>
+                            <p>Python</p>
+                        </div>
+                    </a>
+                </div>
+
+         
+
+                <div class="proyecto destacado" data-aos="zoom-in" data-categoria="csharp">
+                    <a href="https://dev-webcamp.mnz.dom.my.id/" target="_blank">
+                        <img src="img/p16.webp" alt="">
+                        <div class="overlay">
+                            <h3>Simulador Cajero</h3>
+                            <p>Frontend/Backend C#</p>
+                            <p>App escritorio</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="proyecto destacado" data-aos="zoom-in" data-categoria="csharp">
+                    <a href="proximamente.html" target="_blank">
+                        <img src="img/p17.webp" alt="">
+                        <div class="overlay">
+                            <h3>Juego 2D</h3>
+                            <p>Desarrollo en Unity/C#</p>
+                            <p>App escritorio</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="proyecto destacado" data-aos="zoom-in">
+                    <a href="https://dev-webcamp.mnz.dom.my.id/" target="_blank">
+                        <img src="img/p18.webp" alt="">
+                        <div class="overlay">
+                            <h3>Conversor de Archivos</h3>
+                            <p>Python</p>
+                            <p>App escritorio</p>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+            
+
+            <script>
+                function filtrarProyectos() {
+                    const filtro = document.getElementById('filtro').value.toLowerCase();
+                    const proyectos = document.querySelectorAll('.proyecto');
+            
+                    proyectos.forEach(proyecto => {
+                        const categorias = proyecto.innerText.toLowerCase();
+                        const categoriaData = proyecto.getAttribute('data-categoria');
+            
+                        // Mostrar/ocultar proyectos según el filtro
+                        if (filtro === 'todo' || 
+                            categorias.includes(filtro) || 
+                            (filtro === 'csharp' && categoriaData === 'csharp')) {
+                            proyecto.style.display = 'block';
+            
+                            // Agregar data-aos solo si es "todo"
+                            if (filtro === 'todo') {
+                                proyecto.setAttribute('data-aos', 'zoom-in');
+                            } else {
+                                proyecto.removeAttribute('data-aos');
+                            }
+                        } else {
+                            proyecto.style.display = 'none';
+                            proyecto.removeAttribute('data-aos'); // Asegurarnos de que se elimine el atributo
+                        }
+                    });
+                }
+            </script>
+            </div>
+    </section>
+
+    <!-- SECCION CONTACTO -->
+    <section id="contacto" class="contacto">
+        <div class="contenido-seccion">
+
+            <h2 id="texto" data-aos="zoom-out-down" class="txt-rotate" data-period="2000"
+                data-rotate='["CONTACTO", "CONTACTO"]'></h2>
+
+            <style>
+                .wrap {
+                    border-right: 0.1em solid #666;
+                    animation: blink 0.8s step-end infinite;
+                    font-family: 'Righteous' !important;
+                }
+
+                @keyframes blink {
+
+                    from,
+                    to {
+                        border-color: transparent;
+                    }
+
+                    20% {
+                        border-color: #666666;
+                    }
+                }
+            </style>
+
+
+
+
+            <p data-aos="fade-right" style="padding-left: 1rem;">Rellene el formulario o escríbame en:
+                <span>kevin.marmolr@gmail.com</span>
+            </p>
+            <div class="fila">
+                <!-- Formulario -->
+                <div class="col">
+                    <form action="https://formsubmit.co/kevin.marmolr@gmail.com" method="POST">
+                        <input type="hidden" name="_next" value="https://vikekn.github.io/portafolio-vk/gracias">
+                        <input type="text" name="Nombre" placeholder="Tú Nombre">
+                        <input type="tel" name="Telefono" placeholder="Número telefónico">
+                        <input type="email" name="Email" placeholder="Dirección de correo">
+                        <input type="text" name="Asunto" placeholder="Asunto">
+                        <textarea name="Mensaje" cols="30" rows="10" placeholder="Mensaje"></textarea>
+                        <button type="submit">
+                            Enviar Mensaje <i class="fa-solid fa-paper-plane"></i>
+                            <span class="overlay"></span>
+                        </button>
+                    </form>
+                </div>
+                <!-- Mapa -->
+                <div class="col">
+                    <h1 class="foco-led" contenteditable spellcheck="false">
+                        <p>Mensajes</p>
+                        <p>Abiertos</p>
+                    </h1>
+                    <div id="mapa" class="mapa"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- footer -->
+    <footer>
+        <a href="#inicio" class="arriba">
+            <i class="fa-solid fa-angles-up"></i>
+        </a>
+
+        <p data-aos="zoom-out">Técnico Superior en Desarrollo de Software - Kevin Marmol - FreeLance - 2024</p>
+        <div class="redes">
+            <a href="Discord" target="_blank"><i class="fa-brands fa-discord"></i></a>
+            <a href="https://www.linkedin.com/in/kevinmarmolr/" target="_blank"><i
+                    class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://github.com/vikekn" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="redes.html" target="_blank"><i class="fa-solid fa-link"></i></a>
+            <a href="#contacto"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+        <p style="font-size: 12px;"> Repositorio de portfolio original usado de <a class="custom-link" target="_blank"
+                href="https://www.youtube.com/watch?v=2s19KJq49rQ">Código Web</a> para ahorrar tiempo y modificado 100%
+            con mi estilo por mí</p>
+        <p style="text-align: center; font-size: 12px;">Agradecer y ser agradecido, es de sabios, gracias Código Web</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/mapa.js"></script>
+    <script src="bootstrap-5.3.3-dist/js/bootstrap.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <!-- parpadear contact -->
+    <script>
+        let TxtRotate = function (el, toRotate, period) {
+            this.toRotate = toRotate;
+            this.el = el;
+            this.loopNum = 0;
+            this.period = parseInt(period, 10) || 2000;
+            this.txt = "";
+            this.tick();
+            this.isDeleting = false;
+        };
+
+        TxtRotate.prototype.tick = function () {
+            let i = this.loopNum % this.toRotate.length;
+            let fullTxt = this.toRotate[i];
+
+            if (this.isDeleting) {
+                this.txt = fullTxt.substring(0, this.txt.length - 1);
+            } else {
+                this.txt = fullTxt.substring(0, this.txt.length + 1);
+            }
+
+            this.el.innerHTML = '<span class="wrap">' + this.txt + "</span>";
+
+            let that = this;
+            let delta = 300 - Math.random() * 100;
+
+            if (this.isDeleting) {
+                delta /= 2;
+            }
+
+            if (!this.isDeleting && this.txt === fullTxt) {
+                delta = this.period;
+                this.isDeleting = true;
+            } else if (this.isDeleting && this.txt === "") {
+                this.isDeleting = false;
+                this.loopNum++;
+                delta = 500;
+            }
+
+            setTimeout(function () {
+                that.tick();
+            }, delta);
+        };
+
+        window.addEventListener("load", function () {
+            let elements = document.getElementsByClassName("txt-rotate");
+            for (let i = 0; i < elements.length; i++) {
+                let toRotate = elements[i].getAttribute("data-rotate");
+                let period = elements[i].getAttribute("data-period");
+                if (toRotate) {
+                    new TxtRotate(elements[i], JSON.parse(toRotate), period);
+                }
+            }
+        });
+    </script>
+
+    <script>
+        let TxtBlink = function (el, toBlink, period) {
+            this.toBlink = toBlink;
+            this.el = el;
+            this.loopNum = 0;
+            this.period = parseInt(period, 10) || 2000;
+            this.txt = "";
+            this.tick();
+            this.isDeleting = false;
+        };
+
+        TxtBlink.prototype.tick = function () {
+            let i = this.loopNum % this.toBlink.length;
+            let fullTxt = this.toBlink[i];
+
+            if (this.isDeleting) {
+                this.txt = fullTxt.substring(0, this.txt.length - 1);
+            } else {
+                this.txt = fullTxt.substring(0, this.txt.length + 1);
+            }
+
+            this.el.innerHTML = '<span class="wrap-blink">' + this.txt + "</span>";
+
+            let that = this;
+            let delta = 300 - Math.random() * 100;
+
+            if (this.isDeleting) {
+                delta /= 2;
+            }
+
+            if (!this.isDeleting && this.txt === fullTxt) {
+                delta = this.period;
+                this.isDeleting = true;
+            } else if (this.isDeleting && this.txt === "") {
+                this.isDeleting = false;
+                this.loopNum++;
+                delta = 500;
+            }
+
+            setTimeout(function () {
+                that.tick();
+            }, delta);
+        };
+
+        window.addEventListener("load", function () {
+            let elements = document.getElementsByClassName("txt-blink");
+            for (let i = 0; i < elements.length; i++) {
+                let toBlink = elements[i].getAttribute("data-rotate");
+                let period = elements[i].getAttribute("data-period");
+                if (toBlink) {
+                    new TxtBlink(elements[i], JSON.parse(toBlink), period);
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
