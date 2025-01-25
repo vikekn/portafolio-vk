@@ -981,15 +981,17 @@
                 backend desarrollado
                 y una estructura más elaborada con muchas funcionalidades.</p>
                 
-            <select id="filtro" onchange="filtrarProyectos()">
-                <option value="todo">Mostrar Todo</option>
-                <option value="frontend">Frontend</option>
-                <option value="backend">Backend</option>
-                <option value="php">PHP</option>
-                <option value="javascript">JavaScript</option>
-                <option value="csharp" data-categoria="csharp">C#</option>
-                <option value="python">Python</option>
-            </select>
+                <select id="filtro" onchange="filtrarProyectos()">
+                    <option value="todo">Mostrar Todo</option>
+                    <option value="frontend">Frontend</option>
+                    <option value="backend">Backend</option>
+                    <option value="php">PHP</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="csharp" data-categoria="csharp">C#</option>
+                    <option value="python">Python</option>
+                    <option value="destacado">Destacados</option>
+                    <option value="superdestacado">Super Destacados</option>
+                </select>
 
             <div class="galeria">
 
@@ -1202,17 +1204,21 @@
                 function filtrarProyectos() {
                     const filtro = document.getElementById('filtro').value.toLowerCase();
                     const proyectos = document.querySelectorAll('.proyecto');
-            
+                    
                     proyectos.forEach(proyecto => {
                         const categorias = proyecto.innerText.toLowerCase();
                         const categoriaData = proyecto.getAttribute('data-categoria');
-            
+                        const esDestacado = proyecto.classList.contains('destacado');
+                        const esSuperDestacado = proyecto.classList.contains('superdestacado');
+                
                         // Mostrar/ocultar proyectos según el filtro
                         if (filtro === 'todo' || 
                             categorias.includes(filtro) || 
-                            (filtro === 'csharp' && categoriaData === 'csharp')) {
+                            (filtro === 'csharp' && categoriaData === 'csharp') ||
+                            (filtro === 'destacado' && esDestacado) ||
+                            (filtro === 'superdestacado' && esSuperDestacado)) {
                             proyecto.style.display = 'block';
-            
+                
                             // Agregar data-aos solo si es "todo"
                             if (filtro === 'todo') {
                                 proyecto.setAttribute('data-aos', 'zoom-in');
