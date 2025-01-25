@@ -227,6 +227,10 @@ p {
     height: auto;
 }
 
+.videos{
+    margin-top: -90px;
+}
+
 /* Media Query para pantallas más pequeñas */
 @media (max-width: 768px) {
     .image-grid {
