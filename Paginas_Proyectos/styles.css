@@ -144,6 +144,8 @@ p {
 
 }
 
+
+
 @media (max-width: 666px) {
 
     .contenedor-carrusel .carousel-control-prev,
@@ -186,16 +188,29 @@ p {
 }
 
 
-.modal-dialog {
-    max-width: 90%;
-    /* Ajusta el ancho máximo del modal */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
 }
 
-.modal-content {
+.image-grid img {
     width: 100%;
-    /* Ajusta el ancho del contenido del modal */
     height: auto;
-    /* Hace que la altura del contenido se ajuste automáticamente */
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Modal CSS para maximizar */
+.modal-dialog-centered {
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0;
+}
+
+.modal-xl {
+    max-width: 100%;
 }
 
 .modal-body {
@@ -205,13 +220,19 @@ p {
     background-color: #000000;
 }
 
-.modal-body img {
-    max-width: none;
-    /* Elimina el ancho máximo de la imagen */
-    max-height: 130vh;
-    /* Altura máxima igual al de la ventana */
+#modal-image {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
 }
 
+/* Media Query para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .image-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 @media only screen and (max-width: 768px) {
     .modal-body img {
         max-width: 110%;
