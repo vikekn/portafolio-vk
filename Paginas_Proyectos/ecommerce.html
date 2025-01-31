@@ -100,11 +100,7 @@
             <h2>Video del Proyecto</h2>
             <div class="video-container">
 
-                <video controls>
-                    <source src="video1.mp4" type="video/mp4">
-                    Tu navegador no soporta la etiqueta de video.
-                </video>
-
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/IOSKkc6HydU?si=UknUots5w3x3G3ge" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </section>
         <section id="detalles-proyecto">
@@ -112,9 +108,15 @@
                 <h2>E-commerce</h2>
 
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore quisquam ipsa doloremque adipisci recusandae dolore, et beatae molestias architecto perspiciatis laboriosam maxime veritatis maiores provident quas expedita culpa obcaecati deleniti?
-
-                </p>
+                    Este es un proyecto de un eCommerce desarrollado en Laravel con una arquitectura Modelo Vista Controlador (MVC). La aplicación proporciona un panel de administración donde los administradores pueden gestionar las ventas, cancelar compras o actualizar el estatus de pedidos a entregados, y atender pagos pendientes, reembolsos o pagos aprobados. Además, permite atender órdenes pendientes, agregar nuevos productos a la tienda, generar facturas de compra utilizando Barryvdh, cambiar el precio de envío, leer mensajes del formulario de contacto, y llevar a cabo un sistema de baneo de usuarios por IP y email.
+                  </p>
+                  <p>
+                    Para los usuarios finales, la aplicación permite cambiar sus datos personales, ver sus pedidos, enviar comprobantes de transferencia de compras realizadas en el carrito, y elegir el método de pago desde PayPal, Mercado Libre, pago al retirar en el local o transferencia bancaria. Los envíos y un sistema de cupones de descuento por porcentaje o valor fijo son funcionalidades adicionales. El carrito de compras está implementado con Darryldecode, y las facturas en PDF se generan con Barryvdh. La base de datos empleada es MySQL, y JavaScript se usa para interactuar con algunas partes de la vista.
+                  </p>
+                  <p>
+                    Los usuarios también pueden utilizar opciones de filtros de búsqueda o búsqueda por texto, así como marcar productos como favoritos. La aplicación está diseñada para ofrecer una experiencia de compra completa y eficiente, tanto para administradores como para usuarios.
+                  </p>
+                  
 
             </div>
         </section>
@@ -157,6 +159,8 @@
             showLessBtn.addEventListener('click', showFirstSix);
         });
     </script>
+
+    
 </body>
 
 </html>
