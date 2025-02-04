@@ -18,6 +18,10 @@
     <header>
         <h1>Asistente Virtual Maki</h1>
         <a href="../index.html#portfolio" class="btn-back">←Volver al Portafolio</a>
+        <button id="toggleTranslate" class="botn-trad">Language EN</button>
+        <div id="translateContainer" style="display:none;">
+            <div id="google_translate_element"></div>
+        </div>
     </header>
     <main>
         <section id="contenido-principal">
@@ -92,6 +96,24 @@
     <!-- Incluye Bootstrap y el script principal -->
     <script src="scripts.js"></script>
     <script src="../bootstrap-5.3.3-dist/js/bootstrap.js"></script>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({pageLanguage: 'es', includedLanguages: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+        }
+    </script>
+    
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <script>
+        document.getElementById('toggleTranslate').addEventListener('click', function() {
+            var translateContainer = document.getElementById('translateContainer');
+            if (translateContainer.style.display === "none" || !translateContainer.style.display) {
+                translateContainer.style.display = "block";
+            } else {
+                translateContainer.style.display = "none";
+            }
+        });
+    </script>
 </body>
 
 </html>

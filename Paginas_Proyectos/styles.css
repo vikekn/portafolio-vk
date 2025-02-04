@@ -42,7 +42,6 @@ header {
 
 
 
-
 .btn-back {
     position: absolute;
     top: 20px;
@@ -52,6 +51,18 @@ header {
     color: #121212;
     text-decoration: none;
     border-radius: 5px;
+}
+
+.botn-trad {
+    position: absolute;
+    top: 20px;
+    right: 20px; /* Esto coloca el botón en la esquina derecha */
+    padding: 10px 20px;
+    background: #00ffcc;
+    color: #121212;
+    border: none; /* Ya que es un botón, no una etiqueta 'a', eliminamos el border por defecto */
+    border-radius: 5px;
+    cursor: pointer; /* Cambia el cursor a una mano al pasar por encima */
 }
 
 h1, h2, h3 {
@@ -335,6 +346,24 @@ p {
         background: linear-gradient(135deg, #0066ff, #00ffcc); /* Fondo degradado inverso */
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Sombra */
         transform: scale(1.05); /* Efecto de ampliación */
+    }
+
+    .botn-trad{
+        position: fixed;
+        top: 10px;
+        right: 320px; /* Ajusta para pantallas pequeñas */
+        font-size: 8px; /* Reduce el tamaño del texto para móviles */
+        padding: 5px 8px; /* Ajusta el espacio interior */
+        background: linear-gradient(135deg, #00ffcc, #0066ff);
+        color: #ebe7e7;
+        border: none;
+        border-radius: 30px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        z-index: 9999;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-family: 'Roboto', sans-serif;
+        letter-spacing: 1px;
     }
     
 }
