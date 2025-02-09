@@ -7,7 +7,10 @@ body {
     font-family: 'Roboto', sans-serif;
     background: linear-gradient(to top, rgba(30, 35, 38, .8), rgba(30, 35, 38, 1)),
     url(../img/fondo2.webp);
-    background-size: cover;
+    background-size: cover; /* Esto asegura que la imagen cubra todo el área sin distorsionarse */
+    background-repeat: no-repeat; /* Esto evita que la imagen se repita */
+    background-position: center center; /* Posiciona la imagen en el centro */
+    background-attachment: fixed; /* Fija la imagen de fondo para que no se mueva al scrollear */
     color: #ffffff !important;
     margin: 0;
     padding: 0;
@@ -15,6 +18,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    min-height: 100vh; /* Asegura que el body cubra toda la altura de la ventana */
 }
 
 header {
