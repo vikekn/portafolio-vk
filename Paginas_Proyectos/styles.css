@@ -1,16 +1,21 @@
-
-html, body {
-    overflow-x: hidden; /* Elimina el scroll horizontal */
+html,
+body {
+    overflow-x: hidden;
+    /* Elimina el scroll horizontal */
 }
 
 body {
     font-family: 'Roboto', sans-serif;
     background: linear-gradient(to top, rgba(30, 35, 38, .8), rgba(30, 35, 38, 1)),
-    url(../img/fondo2.webp);
-    background-size: cover; /* Esto asegura que la imagen cubra todo el área sin distorsionarse */
-    background-repeat: no-repeat; /* Esto evita que la imagen se repita */
-    background-position: center center; /* Posiciona la imagen en el centro */
-    background-attachment: fixed; /* Fija la imagen de fondo para que no se mueva al scrollear */
+        url(../img/fondo2.webp);
+    background-size: cover;
+    /* Esto asegura que la imagen cubra todo el área sin distorsionarse */
+    background-repeat: no-repeat;
+    /* Esto evita que la imagen se repita */
+    background-position: center center;
+    /* Posiciona la imagen en el centro */
+    background-attachment: fixed;
+    /* Fija la imagen de fondo para que no se mueva al scrollear */
     color: #ffffff !important;
     margin: 0;
     padding: 0;
@@ -18,7 +23,8 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh; /* Asegura que el body cubra toda la altura de la ventana */
+    min-height: 100vh;
+    /* Asegura que el body cubra toda la altura de la ventana */
 }
 
 header {
@@ -60,19 +66,25 @@ header {
 .botn-trad {
     position: absolute;
     top: 20px;
-    right: 20px; /* Esto coloca el botón en la esquina derecha */
+    right: 20px;
+    /* Esto coloca el botón en la esquina derecha */
     padding: 10px 20px;
     background: #00ffcc;
     color: #121212;
-    border: none; /* Ya que es un botón, no una etiqueta 'a', eliminamos el border por defecto */
+    border: none;
+    /* Ya que es un botón, no una etiqueta 'a', eliminamos el border por defecto */
     border-radius: 5px;
-    cursor: pointer; /* Cambia el cursor a una mano al pasar por encima */
+    cursor: pointer;
+    /* Cambia el cursor a una mano al pasar por encima */
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     color: #00ffcc;
 }
-h2{
+
+h2 {
     text-align: center;
 }
 
@@ -92,14 +104,15 @@ main {
     margin-bottom: 50px;
 }
 
-.contenedor{
+.contenedor {
     background: #1f1f1f;
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 20px;
 }
 
-.left-column, .right-column {
+.left-column,
+.right-column {
     flex: 1;
     background: #1f1f1f;
     padding: 20px;
@@ -118,12 +131,13 @@ main {
 @media (max-width: 768px) {
     .video-container {
         position: relative;
-        padding-bottom: 56.25%; /* 16:9 */
+        padding-bottom: 56.25%;
+        /* 16:9 */
         height: 0;
         overflow: hidden;
         max-width: 100%;
     }
-    
+
     .video-container iframe {
         position: absolute;
         top: 0;
@@ -132,7 +146,7 @@ main {
         height: 100%;
         border: 0;
     }
-   
+
 }
 
 .video-container {
@@ -268,20 +282,33 @@ p {
 }
 
 .modal-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: #000000;
 }
 
-#modal-image {
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
-    height: auto;
+#projectCarousel {
+    width: 100%;
 }
 
-.videos{
+#projectCarousel .carousel-item {
+    height: 90vh;
+    /* OK: esto no rompe */
+    /* NO tocar display acá */
+}
+
+#projectCarousel .carousel-item img {
+    max-width: 100%;
+    max-height: 90vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    /* centra horizontal */
+}
+
+
+
+.videos {
     margin-top: -90px;
 }
 
@@ -291,6 +318,7 @@ p {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
 @media only screen and (max-width: 768px) {
     .modal-body img {
         max-width: 110%;
@@ -306,21 +334,26 @@ p {
         width: 90%;
     }
 
-    .header{
+    .header {
         width: 90%;
     }
-    
+
 
     #contenido-principal {
         flex-direction: column;
         gap: 20px;
     }
 
-   .left-column, .right-column, .center-column {
-    width: 100%; /* Usa todo el ancho del contenedor en pantallas móviles */
-    max-width: 100%; /* Evita desbordamientos */
-    box-sizing: border-box; /* Incluye el padding y borde */
-}
+    .left-column,
+    .right-column,
+    .center-column {
+        width: 100%;
+        /* Usa todo el ancho del contenedor en pantallas móviles */
+        max-width: 100%;
+        /* Evita desbordamientos */
+        box-sizing: border-box;
+        /* Incluye el padding y borde */
+    }
 
 
     .video-container video {
@@ -329,35 +362,57 @@ p {
 
     .btn-back {
         position: fixed;
-        font-size: 8px; /* Reduce el tamaño del texto */
-        padding: 5px 8px; /* Ajusta el espacio interior */
-        width: auto; /* Asegúrate de que el ancho sea adaptable */
-        top: 10px; /* Ajusta la distancia desde la parte superior */
+        font-size: 8px;
+        /* Reduce el tamaño del texto */
+        padding: 5px 8px;
+        /* Ajusta el espacio interior */
+        width: auto;
+        /* Asegúrate de que el ancho sea adaptable */
+        top: 10px;
+        /* Ajusta la distancia desde la parte superior */
         left: 285px;
-        background: linear-gradient(135deg, #00ffcc, #0066ff); /* Fondo degradado */
-        color: #ebe7e7; /* Texto oscuro */
-        border: none; /* Sin borde */
-        border-radius: 30px; /* Esquinas redondeadas */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra */
-        text-decoration: none; /* Sin subrayado */
-        z-index: 9999; /* Asegura que esté al frente */
-        cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-        transition: all 0.3s ease; /* Animación suave */
-        font-family: 'Roboto', sans-serif; /* Fuente moderna */
-        letter-spacing: 1px; /* Espaciado entre letras */
-    }
-    .btn-back:hover {
-        background: linear-gradient(135deg, #0066ff, #00ffcc); /* Fondo degradado inverso */
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Sombra */
-        transform: scale(1.05); /* Efecto de ampliación */
+        background: linear-gradient(135deg, #00ffcc, #0066ff);
+        /* Fondo degradado */
+        color: #ebe7e7;
+        /* Texto oscuro */
+        border: none;
+        /* Sin borde */
+        border-radius: 30px;
+        /* Esquinas redondeadas */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        /* Sombra */
+        text-decoration: none;
+        /* Sin subrayado */
+        z-index: 9999;
+        /* Asegura que esté al frente */
+        cursor: pointer;
+        /* Cambia el cursor al pasar sobre el botón */
+        transition: all 0.3s ease;
+        /* Animación suave */
+        font-family: 'Roboto', sans-serif;
+        /* Fuente moderna */
+        letter-spacing: 1px;
+        /* Espaciado entre letras */
     }
 
-    .botn-trad{
+    .btn-back:hover {
+        background: linear-gradient(135deg, #0066ff, #00ffcc);
+        /* Fondo degradado inverso */
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+        /* Sombra */
+        transform: scale(1.05);
+        /* Efecto de ampliación */
+    }
+
+    .botn-trad {
         position: fixed;
         top: 10px;
-        right: 320px; /* Ajusta para pantallas pequeñas */
-        font-size: 8px; /* Reduce el tamaño del texto para móviles */
-        padding: 5px 8px; /* Ajusta el espacio interior */
+        right: 320px;
+        /* Ajusta para pantallas pequeñas */
+        font-size: 8px;
+        /* Reduce el tamaño del texto para móviles */
+        padding: 5px 8px;
+        /* Ajusta el espacio interior */
         background: linear-gradient(135deg, #00ffcc, #0066ff);
         color: #ebe7e7;
         border: none;
@@ -369,5 +424,5 @@ p {
         font-family: 'Roboto', sans-serif;
         letter-spacing: 1px;
     }
-    
+
 }

@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalle del Proyecto</title>
-    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="../bootstrap-5.3.3-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
         integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -29,8 +29,9 @@
                 <section id="tecnologias">
                     <h2>Tecnologías Utilizadas</h2>
                     <div class="technologies">
-                        <span class="tech"><img width="48" height="48" src="https://img.icons8.com/color/48/python--v1.png" alt="python--v1"/></span>
-                      
+                        <span class="tech"><img width="48" height="48"
+                                src="https://img.icons8.com/color/48/python--v1.png" alt="python--v1" /></span>
+
                     </div>
                 </section>
             </div>
@@ -41,8 +42,8 @@
                         <img src="img/conversor1.png" class="img-clickable" alt="Imagen 1">
                         <img src="img/conversor2.png" class="img-clickable" alt="Imagen 2">
                         <img src="img/conversor3.png" class="img-clickable" alt="Imagen 3">
-                     
-                        
+
+
 
 
 
@@ -50,16 +51,32 @@
                     </div>
 
                     <!-- Modal -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
-                        aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-xl">
                             <div class="modal-content">
-                                <div class="modal-body">
-                                    <img src="" class="img-fluid" id="modal-image" alt="Imagen en tamaño completo">
+                                <div class="modal-body p-0">
+                                    <div id="projectCarousel" class="carousel slide" data-bs-ride="false"
+                                        data-bs-interval="false">
+                                        <div class="carousel-indicators"></div>
+                                        <div class="carousel-inner"></div>
+
+                                        <button class="carousel-control-prev" type="button"
+                                            data-bs-target="#projectCarousel" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Anterior</span>
+                                        </button>
+
+                                        <button class="carousel-control-next" type="button"
+                                            data-bs-target="#projectCarousel" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Siguiente</span>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                 </section>
             </div>
             <div class="right-column">
@@ -73,7 +90,10 @@
         <section id="videos" class="videos">
             <h2>Video del Proyecto</h2>
             <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/Ev4Qx5U6ylg?si=nfjW3gfHsuzQ423b" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Ev4Qx5U6ylg?si=nfjW3gfHsuzQ423b"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </section>
         <section id="detalles-proyecto">
@@ -81,9 +101,19 @@
                 <h2>Conversor de Archivos</h2>
 
                 <p>
-                    Este proyecto es un conversor de archivos multimedia desarrollado en Python. Utiliza <strong>ffmpeg</strong> para convertir archivos de video y extraer audio de ellos, brindando flexibilidad en la gestión de archivos multimedia. Para convertir imágenes, utiliza la librería <strong>PIL (Pillow)</strong>, la cual maneja diversos formatos de imagen y ofrece opciones de conversión de alta calidad. La interfaz gráfica del usuario está construida con <strong>tkinter</strong>, lo que permite una interacción amigable y visualmente atractiva. El proyecto admite múltiples formatos de archivo: videos en mp4, avi, mov, mkv, flv y wmv; imágenes en jpg, jpeg, png, gif, bmp, tiff, webp e ico; y audios en mp3, wav, aac, flac, ogg y wma. Los usuarios pueden seleccionar un archivo, elegir el formato de salida deseado y realizar la conversión, todo desde una interfaz intuitiva. Además, se proporciona retroalimentación visual mediante cuadros de diálogo para informar sobre el éxito o cualquier error durante el proceso de conversión.
-                  </p>
-                  
+                    Este proyecto es un conversor de archivos multimedia desarrollado en Python. Utiliza
+                    <strong>ffmpeg</strong> para convertir archivos de video y extraer audio de ellos, brindando
+                    flexibilidad en la gestión de archivos multimedia. Para convertir imágenes, utiliza la librería
+                    <strong>PIL (Pillow)</strong>, la cual maneja diversos formatos de imagen y ofrece opciones de
+                    conversión de alta calidad. La interfaz gráfica del usuario está construida con
+                    <strong>tkinter</strong>, lo que permite una interacción amigable y visualmente atractiva. El
+                    proyecto admite múltiples formatos de archivo: videos en mp4, avi, mov, mkv, flv y wmv; imágenes en
+                    jpg, jpeg, png, gif, bmp, tiff, webp e ico; y audios en mp3, wav, aac, flac, ogg y wma. Los usuarios
+                    pueden seleccionar un archivo, elegir el formato de salida deseado y realizar la conversión, todo
+                    desde una interfaz intuitiva. Además, se proporciona retroalimentación visual mediante cuadros de
+                    diálogo para informar sobre el éxito o cualquier error durante el proceso de conversión.
+                </p>
+
 
             </div>
         </section>
@@ -94,14 +124,15 @@
     <script src="../bootstrap-5.3.3-dist/js/bootstrap.js"></script>
     <script type="text/javascript">
         function googleTranslateElementInit() {
-          new google.translate.TranslateElement({pageLanguage: 'es', includedLanguages: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+            new google.translate.TranslateElement({ pageLanguage: 'es', includedLanguages: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
         }
     </script>
-    
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
     <script>
-        document.getElementById('toggleTranslate').addEventListener('click', function() {
+        document.getElementById('toggleTranslate').addEventListener('click', function () {
             var translateContainer = document.getElementById('translateContainer');
             if (translateContainer.style.display === "none" || !translateContainer.style.display) {
                 translateContainer.style.display = "block";

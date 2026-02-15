@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalle del Proyecto</title>
-    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="../bootstrap-5.3.3-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
         integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="icon" type="image/webp" sizes="16x16" href="img/icon.webp">
+    <link rel="icon" type="image/webp" sizes="16x16" href="img/icon.webp">
 
 </head>
+
 <body>
     <header>
         <h1>Bienes Raíces</h1>
-        
-            <a href="../index.html#portfolio" class="btn-back">←Volver al Portafolio</a>
-            <button id="toggleTranslate" class="botn-trad">Language EN</button>
-        
+
+        <a href="../index.html#portfolio" class="btn-back">←Volver al Portafolio</a>
+        <button id="toggleTranslate" class="botn-trad">Language EN</button>
+
         <div id="translateContainer" style="display:none;">
             <div id="google_translate_element"></div>
         </div>
@@ -29,13 +31,18 @@
                 <section id="tecnologias">
                     <h2>Tecnologías Utilizadas</h2>
                     <div class="technologies">
-                        <span class="tech"><img width="40" height="40" src="https://img.icons8.com/color/48/javascript--v1.png"
-                            alt="javascript--v1" /></span>
-                        <span class="tech"><img width="40" height="40" src="https://img.icons8.com/officel/40/php-logo.png" alt="php-logo"/></span>
-                        <span class="tech"> <img width="56" height="56" src="https://img.icons8.com/external-tal-revivo-fresh-tal-revivo/56/external-gulp-an-open-source-javascript-toolkit-by-fractal-innovations-logo-fresh-tal-revivo.png" alt="external-gulp-an-open-source-javascript-toolkit-by-fractal-innovations-logo-fresh-tal-revivo"/></span>
-                        <span class="tech"> <img width="48" height="48" src="https://img.icons8.com/color/48/sass.png" alt="sass"/>
+                        <span class="tech"><img width="40" height="40"
+                                src="https://img.icons8.com/color/48/javascript--v1.png" alt="javascript--v1" /></span>
+                        <span class="tech"><img width="40" height="40"
+                                src="https://img.icons8.com/officel/40/php-logo.png" alt="php-logo" /></span>
+                        <span class="tech"> <img width="56" height="56"
+                                src="https://img.icons8.com/external-tal-revivo-fresh-tal-revivo/56/external-gulp-an-open-source-javascript-toolkit-by-fractal-innovations-logo-fresh-tal-revivo.png"
+                                alt="external-gulp-an-open-source-javascript-toolkit-by-fractal-innovations-logo-fresh-tal-revivo" /></span>
+                        <span class="tech"> <img width="48" height="48" src="https://img.icons8.com/color/48/sass.png"
+                                alt="sass" />
                         </span>
-                        <span class="tech"> <img width="48" height="48" src="https://img.icons8.com/color/48/mysql-logo.png" alt="mysql-logo"/></span>
+                        <span class="tech"> <img width="48" height="48"
+                                src="https://img.icons8.com/color/48/mysql-logo.png" alt="mysql-logo" /></span>
 
                     </div>
                 </section>
@@ -54,26 +61,44 @@
                         <img src="img/bienes-raices8.png" class="img-clickable" alt="Imagen 8">
                         <img src="img/bienes-raices9.png" class="img-clickable" alt="Imagen 9">
 
-                        
+
                         <!-- Añade más imágenes hasta completar el 3x3 -->
                     </div>
 
                     <!-- Modal -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-xl">
                             <div class="modal-content">
-                                <div class="modal-body">
-                                    <img src="" class="img-fluid" id="modal-image" alt="Imagen en tamaño completo">
+                                <div class="modal-body p-0">
+                                    <div id="projectCarousel" class="carousel slide" data-bs-ride="false"
+                                        data-bs-interval="false">
+                                        <div class="carousel-indicators"></div>
+                                        <div class="carousel-inner"></div>
+
+                                        <button class="carousel-control-prev" type="button"
+                                            data-bs-target="#projectCarousel" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Anterior</span>
+                                        </button>
+
+                                        <button class="carousel-control-next" type="button"
+                                            data-bs-target="#projectCarousel" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Siguiente</span>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                 </section>
             </div>
             <div class="right-column">
                 <section id="breve-explicacion">
                     <h2>Breve Explicación</h2>
-                    <p>Este es un proyecto de bienes raíces para una inmobiliria para añadir propiedades en venta desde un CRUD y donde los compradores o vendedores tienen un formulario de contacto
+                    <p>Este es un proyecto de bienes raíces para una inmobiliria para añadir propiedades en venta desde
+                        un CRUD y donde los compradores o vendedores tienen un formulario de contacto
                         para preguntar por propiedades o poner en venta sus propiedades.
                     </p>
                 </section>
@@ -82,16 +107,24 @@
         <section id="videos" class="videos">
             <h2>Video del Proyecto</h2>
             <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/etCns1uzY6c?si=SZuDw83UO-syD_Lf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/etCns1uzY6c?si=SZuDw83UO-syD_Lf"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </section>
         <section id="detalles-proyecto">
             <div class="contenedor">
                 <h2>Bienes Raíces</h2>
 
-                <p>Este es un proyecto de bienes raíces para una inmobiliaria, que permite añadir propiedades en venta desde un sistema CRUD (Crear, Leer, Actualizar, Borrar). Los compradores y vendedores tienen un formulario de contacto para preguntar por propiedades o poner en venta sus propiedades. La aplicación también cuenta con un modo nocturno, el cual facilita su uso en condiciones de poca luz. El proyecto está desarrollado utilizando PHP para la lógica del servidor y una base de datos MySQL para almacenar la información de las propiedades y las interacciones entre usuarios.</p>
+                <p>Este es un proyecto de bienes raíces para una inmobiliaria, que permite añadir propiedades en venta
+                    desde un sistema CRUD (Crear, Leer, Actualizar, Borrar). Los compradores y vendedores tienen un
+                    formulario de contacto para preguntar por propiedades o poner en venta sus propiedades. La
+                    aplicación también cuenta con un modo nocturno, el cual facilita su uso en condiciones de poca luz.
+                    El proyecto está desarrollado utilizando PHP para la lógica del servidor y una base de datos MySQL
+                    para almacenar la información de las propiedades y las interacciones entre usuarios.</p>
 
-                
+
             </div>
         </section>
     </main>
@@ -102,14 +135,15 @@
 
     <script type="text/javascript">
         function googleTranslateElementInit() {
-          new google.translate.TranslateElement({pageLanguage: 'es', includedLanguages: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+            new google.translate.TranslateElement({ pageLanguage: 'es', includedLanguages: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
         }
     </script>
-    
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
     <script>
-        document.getElementById('toggleTranslate').addEventListener('click', function() {
+        document.getElementById('toggleTranslate').addEventListener('click', function () {
             var translateContainer = document.getElementById('translateContainer');
             if (translateContainer.style.display === "none" || !translateContainer.style.display) {
                 translateContainer.style.display = "block";
@@ -119,4 +153,5 @@
         });
     </script>
 </body>
+
 </html>
